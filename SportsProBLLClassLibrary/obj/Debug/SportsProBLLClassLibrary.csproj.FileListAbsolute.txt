@@ -1,0 +1,51 @@
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.dll
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.pdb
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csprojAssemblyReference.cache
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CoreCompileInputs.cache
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CopyComplete
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.dll
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csprojAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CopyComplete
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csprojAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CopyComplete
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.pdb

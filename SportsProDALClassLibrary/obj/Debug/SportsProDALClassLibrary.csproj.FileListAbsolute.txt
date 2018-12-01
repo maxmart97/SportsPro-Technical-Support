@@ -1,0 +1,35 @@
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csprojAssemblyReference.cache
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csproj.CoreCompileInputs.cache
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.dll
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csprojAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.pdb

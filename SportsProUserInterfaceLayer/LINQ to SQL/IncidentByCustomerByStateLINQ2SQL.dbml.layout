@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="IncidentByCustomerByStateLINQ2SQL">
+  <DataContextMoniker Name="/IncidentByCustomerByStateLINQ2SQLDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e19c1d8a-469f-4672-ade0-d7795b43243d" absoluteBounds="4.75, 1.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/IncidentByCustomerByStateLINQ2SQLDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1b39294-512c-4532-a705-49e971e03f89" absoluteBounds="4.765, 2.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0b66b163-f960-46e4-a780-9495a36ff775" absoluteBounds="2, 1.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/IncidentByCustomerByStateLINQ2SQLDataContext/Incident" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ceb7102-8893-45e3-9540-c5264d1b9877" absoluteBounds="2.0149999999999997, 1.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.75 : 2.79890055338542); (4 : 2.79890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IncidentByCustomerByStateLINQ2SQLDataContext/Customer/Customer_Incident" />
+      <nodes>
+        <classShapeMoniker Id="e19c1d8a-469f-4672-ade0-d7795b43243d" />
+        <classShapeMoniker Id="0b66b163-f960-46e4-a780-9495a36ff775" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7b9ed3e8-259c-4004-97aa-dca79d0cf755" absoluteBounds="3.5, 4.5, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/IncidentByCustomerByStateLINQ2SQLDataContext/State" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f58e4b68-994a-4a50-8923-e04ee11fec9c" absoluteBounds="3.5149999999999997, 4.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.125 : 4.5); (5.125 : 4.09780110677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IncidentByCustomerByStateLINQ2SQLDataContext/State/State_Customer" />
+      <nodes>
+        <classShapeMoniker Id="7b9ed3e8-259c-4004-97aa-dca79d0cf755" />
+        <classShapeMoniker Id="e19c1d8a-469f-4672-ade0-d7795b43243d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

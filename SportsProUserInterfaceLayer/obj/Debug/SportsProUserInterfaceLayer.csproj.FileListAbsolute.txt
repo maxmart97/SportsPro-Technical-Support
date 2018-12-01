@@ -1,0 +1,105 @@
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe.config
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.pdb
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.dll
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.dll
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.pdb
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.pdb
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csprojAssemblyReference.cache
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmMain.resources
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewAllIncidents.resources
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Properties.Resources.resources
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.GenerateResource.cache
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.CoreCompileInputs.cache
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.CopyComplete
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.exe
+D:\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.pdb
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe.config
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.pdb
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csprojResolveAssemblyReference.cache
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmMain.resources
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewAllIncidents.resources
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewIncidentsByTechnician.resources
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Properties.Resources.resources
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.GenerateResource.Cache
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.exe
+C:\Users\maxma\Miscellaneous\Desktop\College Stuff\Courses\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe.config
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csprojResolveAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmMain.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewAllIncidents.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewIncidentsByTechnician.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Properties.Resources.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.GenerateResource.Cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.exe
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #2\Maxwell Martin (2B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe.config
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csprojResolveAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmMain.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmOpenIncidentsByTechnician.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewAllIncidents.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewIncidentsByTechnician.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Properties.Resources.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.GenerateResource.Cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.exe
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3A)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe.config
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csprojAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmAddRegistration.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmMain.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmOpenIncidentsByTechnician.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewAllIncidents.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewIncidentsByTechnician.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Properties.Resources.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.GenerateResource.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.CopyComplete
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.exe
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Assignment #3\Maxwell Martin (3B)\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe.config
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.exe
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\bin\Debug\SportsProUserInterfaceLayer.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\bin\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csprojAssemblyReference.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmAddRegistration.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmIncidentsByCustomerByState.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmMain.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmOpenIncidentsByTechnician.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmRegistrationsByProduct.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewAllIncidents.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewIncidentsByTechnician.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Properties.Resources.resources
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.GenerateResource.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.CopyComplete
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.exe
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.pdb
