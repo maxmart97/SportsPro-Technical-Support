@@ -14,7 +14,7 @@ namespace SportsProUserInterfaceLayer
 {
     public partial class FrmIncidentsByCustomerByState : Form
     {
-        IncidentByCustomerByStateLINQ2SQLDataContext dcTechSupportDB = new IncidentByCustomerByStateLINQ2SQLDataContext();
+        TechSupportDB_LINQ2SQLDataContext dcTechSupportDB = new TechSupportDB_LINQ2SQLDataContext();
 
         public FrmIncidentsByCustomerByState()
         {

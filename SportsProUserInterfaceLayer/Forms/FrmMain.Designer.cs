@@ -32,14 +32,18 @@
             this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMaintenance = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiMaintainProducts = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAddProduct = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiUpdateProduct = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDeleteProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMaintainCustomers = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAddCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUpdateCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDeleteCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.maintainIncidentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addIncidentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateIncidentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteIncidentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiMaintainProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAddProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiUpdateProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDeleteProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMaintainRegistrations = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAddRegistration = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUpdateRegistration = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,10 +52,6 @@
             this.tsmiAddTechnician = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUpdateTechnician = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDeleteTechnician = new System.Windows.Forms.ToolStripMenuItem();
-            this.maintainIncidentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addIncidentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateIncidentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteIncidentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRegistration = new System.Windows.Forms.ToolStripMenuItem();
             this.displayRegistrationsByProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiIncidents = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,14 +98,71 @@
             // tsmiMaintenance
             // 
             this.tsmiMaintenance.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiMaintainProducts,
             this.tsmiMaintainCustomers,
+            this.maintainIncidentsToolStripMenuItem,
+            this.tsmiMaintainProducts,
             this.tsmiMaintainRegistrations,
-            this.tsmiMaintainTechnicians,
-            this.maintainIncidentsToolStripMenuItem});
+            this.tsmiMaintainTechnicians});
             this.tsmiMaintenance.Name = "tsmiMaintenance";
             this.tsmiMaintenance.Size = new System.Drawing.Size(106, 24);
             this.tsmiMaintenance.Text = "Maintenance";
+            // 
+            // tsmiMaintainCustomers
+            // 
+            this.tsmiMaintainCustomers.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiAddCustomer,
+            this.tsmiUpdateCustomer,
+            this.tsmiDeleteCustomer});
+            this.tsmiMaintainCustomers.Name = "tsmiMaintainCustomers";
+            this.tsmiMaintainCustomers.Size = new System.Drawing.Size(232, 26);
+            this.tsmiMaintainCustomers.Text = "Maintain Customers";
+            // 
+            // tsmiAddCustomer
+            // 
+            this.tsmiAddCustomer.Name = "tsmiAddCustomer";
+            this.tsmiAddCustomer.Size = new System.Drawing.Size(216, 26);
+            this.tsmiAddCustomer.Text = "Add Customer";
+            this.tsmiAddCustomer.Click += new System.EventHandler(this.DisplayForm);
+            // 
+            // tsmiUpdateCustomer
+            // 
+            this.tsmiUpdateCustomer.Name = "tsmiUpdateCustomer";
+            this.tsmiUpdateCustomer.Size = new System.Drawing.Size(216, 26);
+            this.tsmiUpdateCustomer.Text = "Update Customer";
+            // 
+            // tsmiDeleteCustomer
+            // 
+            this.tsmiDeleteCustomer.Name = "tsmiDeleteCustomer";
+            this.tsmiDeleteCustomer.Size = new System.Drawing.Size(216, 26);
+            this.tsmiDeleteCustomer.Text = "Delete Customer";
+            // 
+            // maintainIncidentsToolStripMenuItem
+            // 
+            this.maintainIncidentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addIncidentToolStripMenuItem,
+            this.updateIncidentToolStripMenuItem,
+            this.deleteIncidentToolStripMenuItem});
+            this.maintainIncidentsToolStripMenuItem.Name = "maintainIncidentsToolStripMenuItem";
+            this.maintainIncidentsToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.maintainIncidentsToolStripMenuItem.Text = "Maintain Incidents";
+            // 
+            // addIncidentToolStripMenuItem
+            // 
+            this.addIncidentToolStripMenuItem.Name = "addIncidentToolStripMenuItem";
+            this.addIncidentToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
+            this.addIncidentToolStripMenuItem.Text = "Add Incident";
+            // 
+            // updateIncidentToolStripMenuItem
+            // 
+            this.updateIncidentToolStripMenuItem.Name = "updateIncidentToolStripMenuItem";
+            this.updateIncidentToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
+            this.updateIncidentToolStripMenuItem.Text = "Update Incident";
+            // 
+            // deleteIncidentToolStripMenuItem
+            // 
+            this.deleteIncidentToolStripMenuItem.Name = "deleteIncidentToolStripMenuItem";
+            this.deleteIncidentToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
+            this.deleteIncidentToolStripMenuItem.Text = "Delete Incident";
             // 
             // tsmiMaintainProducts
             // 
@@ -134,34 +191,6 @@
             this.tsmiDeleteProduct.Name = "tsmiDeleteProduct";
             this.tsmiDeleteProduct.Size = new System.Drawing.Size(188, 26);
             this.tsmiDeleteProduct.Text = "Delete Product";
-            // 
-            // tsmiMaintainCustomers
-            // 
-            this.tsmiMaintainCustomers.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiAddCustomer,
-            this.tsmiUpdateCustomer,
-            this.tsmiDeleteCustomer});
-            this.tsmiMaintainCustomers.Name = "tsmiMaintainCustomers";
-            this.tsmiMaintainCustomers.Size = new System.Drawing.Size(232, 26);
-            this.tsmiMaintainCustomers.Text = "Maintain Customers";
-            // 
-            // tsmiAddCustomer
-            // 
-            this.tsmiAddCustomer.Name = "tsmiAddCustomer";
-            this.tsmiAddCustomer.Size = new System.Drawing.Size(200, 26);
-            this.tsmiAddCustomer.Text = "Add Customer";
-            // 
-            // tsmiUpdateCustomer
-            // 
-            this.tsmiUpdateCustomer.Name = "tsmiUpdateCustomer";
-            this.tsmiUpdateCustomer.Size = new System.Drawing.Size(200, 26);
-            this.tsmiUpdateCustomer.Text = "Update Customer";
-            // 
-            // tsmiDeleteCustomer
-            // 
-            this.tsmiDeleteCustomer.Name = "tsmiDeleteCustomer";
-            this.tsmiDeleteCustomer.Size = new System.Drawing.Size(200, 26);
-            this.tsmiDeleteCustomer.Text = "Delete Customer";
             // 
             // tsmiMaintainRegistrations
             // 
@@ -219,34 +248,6 @@
             this.tsmiDeleteTechnician.Name = "tsmiDeleteTechnician";
             this.tsmiDeleteTechnician.Size = new System.Drawing.Size(206, 26);
             this.tsmiDeleteTechnician.Text = "Delete Technician";
-            // 
-            // maintainIncidentsToolStripMenuItem
-            // 
-            this.maintainIncidentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addIncidentToolStripMenuItem,
-            this.updateIncidentToolStripMenuItem,
-            this.deleteIncidentToolStripMenuItem});
-            this.maintainIncidentsToolStripMenuItem.Name = "maintainIncidentsToolStripMenuItem";
-            this.maintainIncidentsToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
-            this.maintainIncidentsToolStripMenuItem.Text = "Maintain Incidents";
-            // 
-            // addIncidentToolStripMenuItem
-            // 
-            this.addIncidentToolStripMenuItem.Name = "addIncidentToolStripMenuItem";
-            this.addIncidentToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
-            this.addIncidentToolStripMenuItem.Text = "Add Incident";
-            // 
-            // updateIncidentToolStripMenuItem
-            // 
-            this.updateIncidentToolStripMenuItem.Name = "updateIncidentToolStripMenuItem";
-            this.updateIncidentToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
-            this.updateIncidentToolStripMenuItem.Text = "Update Incident";
-            // 
-            // deleteIncidentToolStripMenuItem
-            // 
-            this.deleteIncidentToolStripMenuItem.Name = "deleteIncidentToolStripMenuItem";
-            this.deleteIncidentToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
-            this.deleteIncidentToolStripMenuItem.Text = "Delete Incident";
             // 
             // tsmiRegistration
             // 

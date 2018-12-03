@@ -45,10 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LINQ to SQL\IncidentByCustomerByStateLINQ2SQL.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IncidentByCustomerByStateLINQ2SQL.dbml</DependentUpon>
+    <Compile Include="Forms\FrmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddCustomer.Designer.cs">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmAddRegistration.cs">
       <SubType>Form</SubType>
@@ -92,6 +93,11 @@
     <Compile Include="Forms\FrmViewIncidentsByTechnician.Designer.cs">
       <DependentUpon>FrmViewIncidentsByTechnician.cs</DependentUpon>
     </Compile>
+    <Compile Include="LINQ to SQL\TechSupportDB_LINQ2SQL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechSupportDB_LINQ2SQL.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FrmAddRegistration.resx">
@@ -115,6 +121,9 @@
     <EmbeddedResource Include="Forms\FrmViewIncidentsByTechnician.resx">
       <DependentUpon>FrmViewIncidentsByTechnician.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddCustomer.resx">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -124,19 +133,25 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="LINQ to SQL\IncidentByCustomerByStateLINQ2SQL.dbml">
+    <None Include="LINQ to SQL\TechSupportDB_LINQ2SQL.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>IncidentByCustomerByStateLINQ2SQL.designer.cs</LastGenOutput>
+      <LastGenOutput>TechSupportDB_LINQ2SQL.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="LINQ to SQL\IncidentByCustomerByStateLINQ2SQL.dbml.layout">
-      <DependentUpon>IncidentByCustomerByStateLINQ2SQL.dbml</DependentUpon>
+    <None Include="LINQ to SQL\TechSupportDB_LINQ2SQL.dbml.layout">
+      <DependentUpon>TechSupportDB_LINQ2SQL.dbml</DependentUpon>
     </None>
     <None Include="Properties\DataSources\Customer.datasource" />
     <None Include="Properties\DataSources\Incident.datasource" />
+    <None Include="Properties\DataSources\Product.datasource" />
+    <None Include="Properties\DataSources\Registration.datasource" />
+    <None Include="Properties\DataSources\SportsProBLLClassLibrary.Customer.datasource" />
+    <None Include="Properties\DataSources\SportsProBLLClassLibrary.Incident.datasource" />
     <None Include="Properties\DataSources\SportsProBLLClassLibrary.Product.datasource" />
     <None Include="Properties\DataSources\SportsProBLLClassLibrary.Registration.datasource" />
+    <None Include="Properties\DataSources\SportsProBLLClassLibrary.Technician.datasource" />
     <None Include="Properties\DataSources\State.datasource" />
+    <None Include="Properties\DataSources\Technician.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

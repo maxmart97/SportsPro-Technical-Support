@@ -64,7 +64,7 @@ namespace SportsProUserInterfaceLayer
             //Checks if user has selected both a customer and a product.
             if (cboCustomer.SelectedIndex != -1 && cboProduct.SelectedIndex != -1)
             {
-                Registration myRegistration = new Registration();
+                SportsProBLLClassLibrary.Registration myRegistration = new SportsProBLLClassLibrary.Registration();
                 RegistrationBLL myRegistrationBLL = new RegistrationBLL();
 
                 //Sets up Registration object.

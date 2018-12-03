@@ -69,7 +69,7 @@ namespace SportsProUserInterfaceLayer
         {
             TechnicianBLL myTechnicianBLL = new TechnicianBLL();
             IncidentBLL myIncidentBLL = new IncidentBLL();
-            Technician selectedTechnician = new Technician();
+            SportsProBLLClassLibrary.Technician selectedTechnician = new SportsProBLLClassLibrary.Technician();
             List<SportsProBLLClassLibrary.Incident> lstOpenIncidentsByTechnician = new List<SportsProBLLClassLibrary.Incident>();
 
             //Gets the selected technician.

@@ -103,3 +103,4 @@ C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_T
 C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.csproj.CopyComplete
 C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.exe
 C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.pdb
+C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmAddCustomer.resources

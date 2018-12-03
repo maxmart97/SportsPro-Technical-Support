@@ -14,7 +14,7 @@ namespace SportsProUserInterfaceLayer
     public partial class FrmRegistrationsByProduct : Form
     {
         //Holds all customer registrations.
-        List<Registration> lstCustRegForSpecifiedProd = new List<Registration>();
+        List<SportsProBLLClassLibrary.Registration> lstCustRegForSpecifiedProd = new List<SportsProBLLClassLibrary.Registration>();
 
         public FrmRegistrationsByProduct()
         {
@@ -53,7 +53,7 @@ namespace SportsProUserInterfaceLayer
         private void FrmRegistrationsByProduct_Load(object sender, EventArgs e)
         {
             ProductBLL myProductBLL = new ProductBLL();
-            List<Product> lstAllProducts = new List<Product>();
+            List<SportsProBLLClassLibrary.Product> lstAllProducts = new List<SportsProBLLClassLibrary.Product>();
 
             try
             {
