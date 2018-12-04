@@ -37,17 +37,17 @@
             System.Windows.Forms.Label cityLabel;
             System.Windows.Forms.Label zipCodeLabel;
             this.txtAddress = new System.Windows.Forms.TextBox();
+            this.bsCustomer = new System.Windows.Forms.BindingSource(this.components);
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.cboState = new System.Windows.Forms.ComboBox();
+            this.bsState = new System.Windows.Forms.BindingSource(this.components);
             this.lblInstructions = new System.Windows.Forms.Label();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnReturnToMainMenu = new System.Windows.Forms.Button();
-            this.bsCustomer = new System.Windows.Forms.BindingSource(this.components);
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.zipCodeTextBox = new System.Windows.Forms.TextBox();
-            this.bsState = new System.Windows.Forms.BindingSource(this.components);
             lblAddress = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             lblName = new System.Windows.Forms.Label();
@@ -104,6 +104,24 @@
             stateLabel1.TabIndex = 16;
             stateLabel1.Text = "*State:";
             // 
+            // cityLabel
+            // 
+            cityLabel.AutoSize = true;
+            cityLabel.Location = new System.Drawing.Point(631, 336);
+            cityLabel.Name = "cityLabel";
+            cityLabel.Size = new System.Drawing.Size(40, 17);
+            cityLabel.TabIndex = 23;
+            cityLabel.Text = "*City:";
+            // 
+            // zipCodeLabel
+            // 
+            zipCodeLabel.AutoSize = true;
+            zipCodeLabel.Location = new System.Drawing.Point(956, 336);
+            zipCodeLabel.Name = "zipCodeLabel";
+            zipCodeLabel.Size = new System.Drawing.Size(74, 17);
+            zipCodeLabel.TabIndex = 24;
+            zipCodeLabel.Text = "*Zip Code:";
+            // 
             // txtAddress
             // 
             this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "Address", true));
@@ -111,6 +129,10 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(337, 22);
             this.txtAddress.TabIndex = 1;
+            // 
+            // bsCustomer
+            // 
+            this.bsCustomer.DataSource = typeof(SportsProUserInterfaceLayer.Customer);
             // 
             // emailTextBox
             // 
@@ -148,6 +170,10 @@
             this.cboState.TabIndex = 2;
             this.cboState.ValueMember = "StateCode";
             // 
+            // bsState
+            // 
+            this.bsState.DataSource = typeof(SportsProUserInterfaceLayer.State);
+            // 
             // lblInstructions
             // 
             this.lblInstructions.AutoSize = true;
@@ -179,19 +205,6 @@
             this.btnReturnToMainMenu.Text = "Return to Main Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
             // 
-            // bsCustomer
-            // 
-            this.bsCustomer.DataSource = typeof(SportsProUserInterfaceLayer.Customer);
-            // 
-            // cityLabel
-            // 
-            cityLabel.AutoSize = true;
-            cityLabel.Location = new System.Drawing.Point(631, 336);
-            cityLabel.Name = "cityLabel";
-            cityLabel.Size = new System.Drawing.Size(40, 17);
-            cityLabel.TabIndex = 23;
-            cityLabel.Text = "*City:";
-            // 
             // cityTextBox
             // 
             this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "City", true));
@@ -200,15 +213,6 @@
             this.cityTextBox.Size = new System.Drawing.Size(220, 22);
             this.cityTextBox.TabIndex = 3;
             // 
-            // zipCodeLabel
-            // 
-            zipCodeLabel.AutoSize = true;
-            zipCodeLabel.Location = new System.Drawing.Point(956, 336);
-            zipCodeLabel.Name = "zipCodeLabel";
-            zipCodeLabel.Size = new System.Drawing.Size(74, 17);
-            zipCodeLabel.TabIndex = 24;
-            zipCodeLabel.Text = "*Zip Code:";
-            // 
             // zipCodeTextBox
             // 
             this.zipCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "ZipCode", true));
@@ -216,10 +220,6 @@
             this.zipCodeTextBox.Name = "zipCodeTextBox";
             this.zipCodeTextBox.Size = new System.Drawing.Size(100, 22);
             this.zipCodeTextBox.TabIndex = 4;
-            // 
-            // bsState
-            // 
-            this.bsState.DataSource = typeof(SportsProUserInterfaceLayer.State);
             // 
             // FrmAddCustomer
             // 

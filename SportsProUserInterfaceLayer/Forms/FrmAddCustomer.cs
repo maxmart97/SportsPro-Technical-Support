@@ -14,6 +14,8 @@ namespace SportsProUserInterfaceLayer
     {
         TechSupportDB_LINQ2SQLDataContext dcTechSupportDB = new TechSupportDB_LINQ2SQLDataContext();
 
+        string errorMessage;
+
         public FrmAddCustomer()
         {
             InitializeComponent();
@@ -31,17 +33,17 @@ namespace SportsProUserInterfaceLayer
 
         private void BtnAddCustomer_Click(object sender, EventArgs e)
         {
-            /* Example of how to insert a customer with LINQ to SQL
-
+            if (IsCustomerDataValid())
+            {
                 Customer myCustomer = new Customer
                 {
-                    Name = "Joe Smith",
-                    Address = "123 Main Street",
-                    City = "Austin",
-                    State = "TX",
-                    ZipCode = "78701",
-                    Phone = "(512) 123-4567",
-                    Email = "joe.smith@gmail.com"
+                    Name = nameTextBox.Text,
+                    Address = txtAddress.Text,
+                    City = cityTextBox.Text,
+                    State = cboState.SelectedValue.ToString(),
+                    ZipCode = zipCodeTextBox.Text,
+                    Phone = FormatPhoneNumber(phoneTextBox.Text),
+                    Email = emailTextBox.Text
                 };
 
                 dcTechSupportDB.Customers.InsertOnSubmit(myCustomer);
@@ -49,13 +51,104 @@ namespace SportsProUserInterfaceLayer
                 try
                 {
                     dcTechSupportDB.SubmitChanges();
-                    MessageBox.Show("Successfully added a customer.");
+                    MessageBox.Show("Customer: '" + nameTextBox.Text + "' has been successfully added.");
                 }
-                catch (Exception exception)
+                catch
                 {
-                    MessageBox.Show(exception.Message);
+                    MessageBox.Show("Error adding customer. Please contact program developer.");
                 }
-            */
+
+            }
+            else
+            {
+                MessageBox.Show(errorMessage, "Invalid entry", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool IsCustomerDataValid()
+        {
+            if (!string.IsNullOrWhiteSpace(nameTextBox.Text) && nameTextBox.Text.Length <= 50)
+            {
+                if (!string.IsNullOrWhiteSpace(txtAddress.Text) && txtAddress.Text.Length <= 50)
+                {
+                    if (cboState.SelectedIndex != -1)
+                    {
+                        if (!string.IsNullOrWhiteSpace(cityTextBox.Text) && cityTextBox.Text.Length <= 20)
+                        {
+                            if (!string.IsNullOrWhiteSpace(zipCodeTextBox.Text) && 
+                                (zipCodeTextBox.Text.Length >= 3 && zipCodeTextBox.Text.Length <= 5))
+                            {
+                                if (IsPhoneNumberValid(phoneTextBox.Text))
+                                {
+                                    if (emailTextBox.Text.Length <= 50)
+                                    {
+                                        return true;
+                                    }
+                                    else
+                                    {
+                                        errorMessage = "Email is invalid.";
+                                    }
+                                }
+                                else
+                                {
+                                    errorMessage = "Phone number is invalid. Please only enter in 10 digits.";
+                                }
+                            }
+                            else
+                            {
+                                errorMessage = "Zip Code is invalid.";
+                            }
+                        }
+                        else
+                        {
+                            errorMessage = "City is invalid.";
+                        }
+                    }
+                    else
+                    {
+                        errorMessage = "Please choose a state.";
+                    }
+                }
+                else
+                {
+                    errorMessage = "Address is invalid.";
+                }
+            }
+            else
+            {
+                errorMessage = "Name is invalid.";
+            }
+
+            return false;
+        }
+
+        private bool IsPhoneNumberValid(string phoneNumber)
+        {
+            if (phoneNumber.Length == 10)
+            {
+                foreach (char digit in phoneNumber)
+                {
+                    if (!char.IsDigit(digit))
+                        return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private string FormatPhoneNumber(string phoneNumber)
+        {
+            string formattedPhoneNumber = phoneNumber;
+
+            formattedPhoneNumber = formattedPhoneNumber.Insert(0, "(");
+            formattedPhoneNumber = formattedPhoneNumber.Insert(3, ") ");
+            formattedPhoneNumber = formattedPhoneNumber.Insert(8, "-");
+
+            return formattedPhoneNumber;
         }
     }
 }
