@@ -54,16 +54,13 @@ namespace SportsProUserInterfaceLayer
             //Prevents previous data from stacking on top of each other.
             dgvIncidents.Rows.Clear();
 
-            string selectedState = cboState.SelectedValue.ToString();
-
-            //LINQ query to retrieve all customers in the selected state.
-            var customers = from customer in dcTechSupportDB.Customers
-                            where customer.State == selectedState
-                            orderby customer.Name
-                            select customer;
+            //LINQ query to retrieve selected state data.
+            var selectedState = (from state in dcTechSupportDB.States
+                                where state.StateCode == cboState.SelectedValue.ToString()
+                                select state).Single();
 
             //Executes query and displays customer(s) data in corresponding DGV.
-            bsCustomer.DataSource = customers;
+            bsCustomer.DataSource = selectedState.Customers;
 
             //Prevents a pre-selected customer in DGV.
             dgvCustomers.ClearSelection();
@@ -78,20 +75,20 @@ namespace SportsProUserInterfaceLayer
              * has the input focus. */
             if (dgvCustomers.Focused)
             {
-                /* Prevents error label from appearing over a selection with data
+                /*Prevents error label from appearing over a selection with data
                  * after a selection contained no data. */
                 lblNoResultsFoundIncident.Hide();
 
                 //Sets groupbox text to represent selected customer.
                 grpIncidents.Text = "Incidents for " + dgvCustomers.SelectedCells[1].Value;
 
-                //LINQ query to get all incidents for the selected customer.
-                var incidents = from incident in dcTechSupportDB.Incidents
-                                where incident.CustomerID == (int)dgvCustomers.SelectedCells[0].Value
-                                select incident;
+                //LINQ query to get the selected customer.
+                var selectedCustomer = (from customer in dcTechSupportDB.Customers
+                                        where customer.CustomerID == (int)dgvCustomers.SelectedCells[0].Value
+                                        select customer).Single();
 
                 //Executes query and displays data in incidents DGV.
-                bsIncident.DataSource = incidents;
+                bsIncident.DataSource = selectedCustomer.Incidents;
 
                 //Prevents a pre-selected incident in DGV.
                 dgvIncidents.ClearSelection();

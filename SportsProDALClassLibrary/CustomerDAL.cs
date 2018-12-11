@@ -19,7 +19,7 @@ namespace SportsProDALClassLibrary
         /// Queries TechSupport database to get CustomerID and Name for all customers from the Customers table.
         /// </summary>
         /// <returns>A DataTable containing the CustomerID and Name of all customers.</returns>
-        public DataTable RetrieveCustomerIDandName()
+        public DataTable RetrieveAllCustomers()
         {
             DataTable dtCustomerIDandName = new DataTable();
 

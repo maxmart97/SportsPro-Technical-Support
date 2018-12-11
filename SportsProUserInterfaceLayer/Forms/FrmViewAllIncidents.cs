@@ -13,20 +13,6 @@ namespace SportsProUserInterfaceLayer
 {
     public partial class FrmViewAllIncidents : Form
     {
-        //Variable to reference close button.
-        private const int CP_NOCLOSE_BUTTON = 0x200;
-
-        //Property method to disable to close button.
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams myCp = base.CreateParams;
-                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
-                return myCp;
-            }
-        }
-
         public FrmViewAllIncidents()
         {
             InitializeComponent();
@@ -39,6 +25,8 @@ namespace SportsProUserInterfaceLayer
             try
             {
                 dgvAllIncidents.DataSource = bllIncident.GetAllIncidents();
+
+                dgvAllIncidents.DefaultCellStyle.NullValue = "NULL";
             }
             /* Action performed after exception has bubbled up from DAL
              * when the database is unreachable. */

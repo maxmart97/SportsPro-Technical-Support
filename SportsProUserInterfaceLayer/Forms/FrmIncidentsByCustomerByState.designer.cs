@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label lblInstructions;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bsState = new System.Windows.Forms.BindingSource(this.components);
             this.cboState = new System.Windows.Forms.ComboBox();
             this.bsCustomer = new System.Windows.Forms.BindingSource(this.components);
@@ -150,8 +150,8 @@
             // dgvColCustomersCustomerID
             // 
             this.dgvColCustomersCustomerID.DataPropertyName = "CustomerID";
-            dataGridViewCellStyle33.NullValue = "NULL";
-            this.dgvColCustomersCustomerID.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle1.NullValue = "NULL";
+            this.dgvColCustomersCustomerID.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvColCustomersCustomerID.HeaderText = "CustomerID";
             this.dgvColCustomersCustomerID.Name = "dgvColCustomersCustomerID";
             this.dgvColCustomersCustomerID.ReadOnly = true;
@@ -160,8 +160,8 @@
             // dgvColName
             // 
             this.dgvColName.DataPropertyName = "Name";
-            dataGridViewCellStyle34.NullValue = "NULL";
-            this.dgvColName.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle2.NullValue = "NULL";
+            this.dgvColName.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvColName.HeaderText = "Name";
             this.dgvColName.Name = "dgvColName";
             this.dgvColName.ReadOnly = true;
@@ -170,8 +170,8 @@
             // dgvColAddress
             // 
             this.dgvColAddress.DataPropertyName = "Address";
-            dataGridViewCellStyle35.NullValue = "NULL";
-            this.dgvColAddress.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle3.NullValue = "NULL";
+            this.dgvColAddress.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvColAddress.HeaderText = "Address";
             this.dgvColAddress.Name = "dgvColAddress";
             this.dgvColAddress.ReadOnly = true;
@@ -180,8 +180,8 @@
             // dgvColCity
             // 
             this.dgvColCity.DataPropertyName = "City";
-            dataGridViewCellStyle36.NullValue = "NULL";
-            this.dgvColCity.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle4.NullValue = "NULL";
+            this.dgvColCity.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvColCity.HeaderText = "City";
             this.dgvColCity.Name = "dgvColCity";
             this.dgvColCity.ReadOnly = true;
@@ -190,8 +190,8 @@
             // dgvColState
             // 
             this.dgvColState.DataPropertyName = "State";
-            dataGridViewCellStyle37.NullValue = "NULL";
-            this.dgvColState.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle5.NullValue = "NULL";
+            this.dgvColState.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvColState.HeaderText = "State";
             this.dgvColState.Name = "dgvColState";
             this.dgvColState.ReadOnly = true;
@@ -200,8 +200,8 @@
             // dgvColZipCode
             // 
             this.dgvColZipCode.DataPropertyName = "ZipCode";
-            dataGridViewCellStyle38.NullValue = "NULL";
-            this.dgvColZipCode.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle6.NullValue = "NULL";
+            this.dgvColZipCode.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvColZipCode.HeaderText = "ZipCode";
             this.dgvColZipCode.Name = "dgvColZipCode";
             this.dgvColZipCode.ReadOnly = true;
@@ -210,8 +210,8 @@
             // dgvColPhone
             // 
             this.dgvColPhone.DataPropertyName = "Phone";
-            dataGridViewCellStyle39.NullValue = "NULL";
-            this.dgvColPhone.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle7.NullValue = "NULL";
+            this.dgvColPhone.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvColPhone.HeaderText = "Phone";
             this.dgvColPhone.Name = "dgvColPhone";
             this.dgvColPhone.ReadOnly = true;
@@ -220,8 +220,8 @@
             // dgvColEmail
             // 
             this.dgvColEmail.DataPropertyName = "Email";
-            dataGridViewCellStyle40.NullValue = "NULL";
-            this.dgvColEmail.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle8.NullValue = "NULL";
+            this.dgvColEmail.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvColEmail.HeaderText = "Email";
             this.dgvColEmail.Name = "dgvColEmail";
             this.dgvColEmail.ReadOnly = true;
@@ -306,8 +306,8 @@
             // dgvColIncidentID
             // 
             this.dgvColIncidentID.DataPropertyName = "IncidentID";
-            dataGridViewCellStyle41.NullValue = "NULL";
-            this.dgvColIncidentID.DefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle9.NullValue = "NULL";
+            this.dgvColIncidentID.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvColIncidentID.HeaderText = "IncidentID";
             this.dgvColIncidentID.Name = "dgvColIncidentID";
             this.dgvColIncidentID.ReadOnly = true;
@@ -315,8 +315,8 @@
             // dgvColIncidentsCustomerID
             // 
             this.dgvColIncidentsCustomerID.DataPropertyName = "CustomerID";
-            dataGridViewCellStyle42.NullValue = "NULL";
-            this.dgvColIncidentsCustomerID.DefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle10.NullValue = "NULL";
+            this.dgvColIncidentsCustomerID.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvColIncidentsCustomerID.HeaderText = "CustomerID";
             this.dgvColIncidentsCustomerID.Name = "dgvColIncidentsCustomerID";
             this.dgvColIncidentsCustomerID.ReadOnly = true;
@@ -324,8 +324,8 @@
             // dgvColProductCode
             // 
             this.dgvColProductCode.DataPropertyName = "ProductCode";
-            dataGridViewCellStyle43.NullValue = "NULL";
-            this.dgvColProductCode.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle11.NullValue = "NULL";
+            this.dgvColProductCode.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvColProductCode.HeaderText = "ProductCode";
             this.dgvColProductCode.Name = "dgvColProductCode";
             this.dgvColProductCode.ReadOnly = true;
@@ -333,8 +333,8 @@
             // dgvColTitle
             // 
             this.dgvColTitle.DataPropertyName = "Title";
-            dataGridViewCellStyle44.NullValue = "NULL";
-            this.dgvColTitle.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle12.NullValue = "NULL";
+            this.dgvColTitle.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvColTitle.HeaderText = "Title";
             this.dgvColTitle.Name = "dgvColTitle";
             this.dgvColTitle.ReadOnly = true;
@@ -342,8 +342,8 @@
             // dgvColDescription
             // 
             this.dgvColDescription.DataPropertyName = "Description";
-            dataGridViewCellStyle45.NullValue = "NULL";
-            this.dgvColDescription.DefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle13.NullValue = "NULL";
+            this.dgvColDescription.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvColDescription.HeaderText = "Description";
             this.dgvColDescription.Name = "dgvColDescription";
             this.dgvColDescription.ReadOnly = true;
@@ -351,9 +351,9 @@
             // dgvColDateOpened
             // 
             this.dgvColDateOpened.DataPropertyName = "DateOpened";
-            dataGridViewCellStyle46.Format = "d";
-            dataGridViewCellStyle46.NullValue = "NULL";
-            this.dgvColDateOpened.DefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle14.Format = "d";
+            dataGridViewCellStyle14.NullValue = "NULL";
+            this.dgvColDateOpened.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvColDateOpened.HeaderText = "DateOpened";
             this.dgvColDateOpened.Name = "dgvColDateOpened";
             this.dgvColDateOpened.ReadOnly = true;
@@ -361,9 +361,9 @@
             // dgvColDateClosed
             // 
             this.dgvColDateClosed.DataPropertyName = "DateClosed";
-            dataGridViewCellStyle47.Format = "d";
-            dataGridViewCellStyle47.NullValue = "NULL";
-            this.dgvColDateClosed.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle15.Format = "d";
+            dataGridViewCellStyle15.NullValue = "NULL";
+            this.dgvColDateClosed.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvColDateClosed.HeaderText = "DateClosed";
             this.dgvColDateClosed.Name = "dgvColDateClosed";
             this.dgvColDateClosed.ReadOnly = true;
@@ -371,8 +371,8 @@
             // dgvColTechID
             // 
             this.dgvColTechID.DataPropertyName = "TechID";
-            dataGridViewCellStyle48.NullValue = "NULL";
-            this.dgvColTechID.DefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle16.NullValue = "NULL";
+            this.dgvColTechID.DefaultCellStyle = dataGridViewCellStyle16;
             this.dgvColTechID.HeaderText = "TechID";
             this.dgvColTechID.Name = "dgvColTechID";
             this.dgvColTechID.ReadOnly = true;

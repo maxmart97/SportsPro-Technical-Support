@@ -95,7 +95,7 @@ namespace SportsProBLLClassLibrary
                 myIncident.DateOpened = (DateTime)row["DateOpened"];
 
                 //Checks if DateClosed is null or empty before assigning value.
-                if (row["DateClosed"] == DBNull.Value || row["DateClosed"].ToString() == string.Empty)
+                if (String.IsNullOrWhiteSpace(row["DateClosed"].ToString()))
                     myIncident.DateClosed = null;
                 else
                     myIncident.DateClosed = (DateTime)row["DateClosed"];

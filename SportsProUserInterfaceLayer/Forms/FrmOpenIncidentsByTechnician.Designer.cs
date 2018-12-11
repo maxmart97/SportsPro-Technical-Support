@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblInstructions = new System.Windows.Forms.Label();
             this.lblTechnicianEmailOutputDesc = new System.Windows.Forms.Label();
             this.lblTechnicianPhoneOutputDesc = new System.Windows.Forms.Label();
@@ -37,8 +38,20 @@
             this.tlpFrmOpenIncidentsByTechnician = new System.Windows.Forms.TableLayoutPanel();
             this.btnReturnToMainMenu = new System.Windows.Forms.Button();
             this.dgvOpenIncidentsByTechnician = new System.Windows.Forms.DataGridView();
+            this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.incidentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.incidentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.techIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOpenedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateClosedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpFrmOpenIncidentsByTechnician.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOpenIncidentsByTechnician)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.incidentsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInstructions
@@ -77,6 +90,8 @@
             // cboTechnicians
             // 
             this.cboTechnicians.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cboTechnicians.DataSource = this.technicianBindingSource;
+            this.cboTechnicians.DisplayMember = "Name";
             this.cboTechnicians.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTechnicians.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTechnicians.FormattingEnabled = true;
@@ -84,12 +99,14 @@
             this.cboTechnicians.Name = "cboTechnicians";
             this.cboTechnicians.Size = new System.Drawing.Size(386, 28);
             this.cboTechnicians.TabIndex = 0;
+            this.cboTechnicians.ValueMember = "TechID";
             this.cboTechnicians.SelectionChangeCommitted += new System.EventHandler(this.CboTechnicians_SelectionChangeCommitted);
             // 
             // lblTechnicianEmail
             // 
             this.lblTechnicianEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblTechnicianEmail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTechnicianEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.technicianBindingSource, "Email", true));
             this.lblTechnicianEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTechnicianEmail.Location = new System.Drawing.Point(294, 112);
             this.lblTechnicianEmail.Name = "lblTechnicianEmail";
@@ -101,6 +118,7 @@
             // 
             this.lblTechnicianPhone.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblTechnicianPhone.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTechnicianPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.technicianBindingSource, "Phone", true));
             this.lblTechnicianPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTechnicianPhone.Location = new System.Drawing.Point(294, 190);
             this.lblTechnicianPhone.Name = "lblTechnicianPhone";
@@ -156,15 +174,90 @@
             this.dgvOpenIncidentsByTechnician.AllowUserToDeleteRows = false;
             this.dgvOpenIncidentsByTechnician.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvOpenIncidentsByTechnician.AutoGenerateColumns = false;
             this.dgvOpenIncidentsByTechnician.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOpenIncidentsByTechnician.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOpenIncidentsByTechnician.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.incidentIDDataGridViewTextBoxColumn,
+            this.customerIDDataGridViewTextBoxColumn,
+            this.productCodeDataGridViewTextBoxColumn,
+            this.techIDDataGridViewTextBoxColumn,
+            this.dateOpenedDataGridViewTextBoxColumn,
+            this.dateClosedDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn});
             this.tlpFrmOpenIncidentsByTechnician.SetColumnSpan(this.dgvOpenIncidentsByTechnician, 3);
+            this.dgvOpenIncidentsByTechnician.DataSource = this.incidentsBindingSource;
             this.dgvOpenIncidentsByTechnician.Location = new System.Drawing.Point(3, 247);
             this.dgvOpenIncidentsByTechnician.Name = "dgvOpenIncidentsByTechnician";
             this.dgvOpenIncidentsByTechnician.ReadOnly = true;
             this.dgvOpenIncidentsByTechnician.RowTemplate.Height = 24;
             this.dgvOpenIncidentsByTechnician.Size = new System.Drawing.Size(1031, 339);
             this.dgvOpenIncidentsByTechnician.TabIndex = 1;
+            // 
+            // technicianBindingSource
+            // 
+            this.technicianBindingSource.DataSource = typeof(SportsProUserInterfaceLayer.Technician);
+            // 
+            // incidentsBindingSource
+            // 
+            this.incidentsBindingSource.DataSource = typeof(SportsProUserInterfaceLayer.Incident);
+            // 
+            // incidentIDDataGridViewTextBoxColumn
+            // 
+            this.incidentIDDataGridViewTextBoxColumn.DataPropertyName = "IncidentID";
+            this.incidentIDDataGridViewTextBoxColumn.HeaderText = "IncidentID";
+            this.incidentIDDataGridViewTextBoxColumn.Name = "incidentIDDataGridViewTextBoxColumn";
+            this.incidentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customerIDDataGridViewTextBoxColumn
+            // 
+            this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "CustomerID";
+            this.customerIDDataGridViewTextBoxColumn.HeaderText = "CustomerID";
+            this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
+            this.customerIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productCodeDataGridViewTextBoxColumn
+            // 
+            this.productCodeDataGridViewTextBoxColumn.DataPropertyName = "ProductCode";
+            this.productCodeDataGridViewTextBoxColumn.HeaderText = "ProductCode";
+            this.productCodeDataGridViewTextBoxColumn.Name = "productCodeDataGridViewTextBoxColumn";
+            this.productCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // techIDDataGridViewTextBoxColumn
+            // 
+            this.techIDDataGridViewTextBoxColumn.DataPropertyName = "TechID";
+            this.techIDDataGridViewTextBoxColumn.HeaderText = "TechID";
+            this.techIDDataGridViewTextBoxColumn.Name = "techIDDataGridViewTextBoxColumn";
+            this.techIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateOpenedDataGridViewTextBoxColumn
+            // 
+            this.dateOpenedDataGridViewTextBoxColumn.DataPropertyName = "DateOpened";
+            this.dateOpenedDataGridViewTextBoxColumn.HeaderText = "DateOpened";
+            this.dateOpenedDataGridViewTextBoxColumn.Name = "dateOpenedDataGridViewTextBoxColumn";
+            this.dateOpenedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateClosedDataGridViewTextBoxColumn
+            // 
+            this.dateClosedDataGridViewTextBoxColumn.DataPropertyName = "DateClosed";
+            this.dateClosedDataGridViewTextBoxColumn.HeaderText = "DateClosed";
+            this.dateClosedDataGridViewTextBoxColumn.Name = "dateClosedDataGridViewTextBoxColumn";
+            this.dateClosedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FrmOpenIncidentsByTechnician
             // 
@@ -180,6 +273,8 @@
             this.tlpFrmOpenIncidentsByTechnician.ResumeLayout(false);
             this.tlpFrmOpenIncidentsByTechnician.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOpenIncidentsByTechnician)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.incidentsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,5 +290,15 @@
         private System.Windows.Forms.TableLayoutPanel tlpFrmOpenIncidentsByTechnician;
         private System.Windows.Forms.Button btnReturnToMainMenu;
         public System.Windows.Forms.DataGridView dgvOpenIncidentsByTechnician;
+        private System.Windows.Forms.BindingSource technicianBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn incidentIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn techIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateOpenedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateClosedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource incidentsBindingSource;
     }
 }

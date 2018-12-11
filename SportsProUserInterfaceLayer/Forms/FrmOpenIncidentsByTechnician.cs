@@ -13,19 +13,7 @@ namespace SportsProUserInterfaceLayer
 {
     public partial class FrmOpenIncidentsByTechnician : Form
     {
-        //Variable to reference close button.
-        private const int CP_NOCLOSE_BUTTON = 0x200;
-
-        //Property method to disable to close button.
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams myCp = base.CreateParams;
-                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
-                return myCp;
-            }
-        }
+        TechSupportDB_LINQ2SQLDataContext dc = new TechSupportDB_LINQ2SQLDataContext();
 
         public FrmOpenIncidentsByTechnician()
         {
@@ -34,23 +22,12 @@ namespace SportsProUserInterfaceLayer
 
         private void FrmOpenIncidentsByTechnician_Load(object sender, EventArgs e)
         {
-            TechnicianBLL myTechnicianBLL = new TechnicianBLL();
+            var allTechnicians = from technician in dc.Technicians
+                                 select technician;
 
-            try
-            {
-                //Sets up technician ComboBox.
-                cboTechnicians.DisplayMember = "Name";
-                cboTechnicians.ValueMember = "TechID";
-                cboTechnicians.DataSource = myTechnicianBLL.GetTechnicianNames();
-                cboTechnicians.SelectedIndex = -1;
-            }
-            /* Action performed after exception has bubbled up from DAL
-             * when the database is unreachable. */
-            catch
-            {
-                MessageBox.Show("Error accessing database.");
-            }
-            
+            technicianBindingSource.DataSource = allTechnicians;
+
+            ClearData();
         }
 
         private void BtnReturnToMainMenu_Click(object sender, EventArgs e)
@@ -58,54 +35,33 @@ namespace SportsProUserInterfaceLayer
             this.Hide();
 
             //Resets various controls on form to original state.
-            cboTechnicians.SelectedIndex = -1;
-            lblTechnicianEmail.Text = string.Empty;
-            lblTechnicianPhone.Text = string.Empty;
-            dgvOpenIncidentsByTechnician.DataSource = null;
+            ClearData();
         }
 
         //Action that occurs when user selects a technician from the CBO.
         private void CboTechnicians_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            TechnicianBLL myTechnicianBLL = new TechnicianBLL();
-            IncidentBLL myIncidentBLL = new IncidentBLL();
-            SportsProBLLClassLibrary.Technician selectedTechnician = new SportsProBLLClassLibrary.Technician();
-            List<SportsProBLLClassLibrary.Incident> lstOpenIncidentsByTechnician = new List<SportsProBLLClassLibrary.Incident>();
+            technicianBindingSource.ResetCurrentItem();
 
-            //Gets the selected technician.
-            int techID = (int)cboTechnicians.SelectedValue;
+            var openIncidentsForSelectedTechnician = from incident in dc.Incidents
+                                                     where incident.DateClosed == null && 
+                                                           incident.TechID == (int)cboTechnicians.SelectedValue
+                                                     select incident;
 
-            /* Prevents data from appearing in DGV from previously selected technician
-               if the next technician selected has no open incidents. */
+            incidentsBindingSource.DataSource = openIncidentsForSelectedTechnician;
+
+            if (openIncidentsForSelectedTechnician.Count() != 0)
+                dgvOpenIncidentsByTechnician.DataSource = incidentsBindingSource;
+            else
+                MessageBox.Show(cboTechnicians.Text + " has no open incidents.");
+        }
+
+        private void ClearData()
+        {
+            cboTechnicians.SelectedIndex = -1;
+            lblTechnicianEmail.Text = string.Empty;
+            lblTechnicianPhone.Text = string.Empty;
             dgvOpenIncidentsByTechnician.DataSource = null;
-
-            try
-            {
-                selectedTechnician = myTechnicianBLL.GetTechnicianDetails(techID);
-
-                //Sets the email and phone lables to corresponding technician values.
-                lblTechnicianEmail.Text = selectedTechnician.TechEmail;
-                lblTechnicianPhone.Text = selectedTechnician.TechPhone;
-
-                lstOpenIncidentsByTechnician = myIncidentBLL.GetOpenIncidentsByTechnician(techID);
-
-                //Checks if the selected technician actually has any open incidents.
-                if (lstOpenIncidentsByTechnician.Count == 0)
-                {
-                    MessageBox.Show("No open incidents for selected technician.");
-                    cboTechnicians.Focus();
-                }
-                else
-                {
-                    dgvOpenIncidentsByTechnician.DataSource = lstOpenIncidentsByTechnician;
-                }
-            }
-            /* Action performed after exception has bubbled up from DAL
-             * when the database is unreachable. */
-            catch
-            {
-                MessageBox.Show("Error accessing database.");
-            }
         }
     }
 }

@@ -19,7 +19,7 @@ namespace SportsProBLLClassLibrary
         /// Retrieves the CustomerID and Name of all customers from the CustomerDAL.
         /// </summary>
         /// <returns>A List of all Customers with each Customer containing his or her CustomerID and Name.</returns>
-        public List<Customer> GetCustomerIDandName()
+        public List<Customer> GetAllCustomers()
         {
             DataTable dtCustomerIDandName = new DataTable();
             List<Customer> lstCustomerIDandName = new List<Customer>();
@@ -27,7 +27,7 @@ namespace SportsProBLLClassLibrary
 
             try
             {
-                dtCustomerIDandName = myCustomerDAL.RetrieveCustomerIDandName();
+                dtCustomerIDandName = myCustomerDAL.RetrieveAllCustomers();
             }
             catch //Throws exception to calling method.
             {

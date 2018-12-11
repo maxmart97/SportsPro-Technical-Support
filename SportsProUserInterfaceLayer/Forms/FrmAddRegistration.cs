@@ -13,20 +13,6 @@ namespace SportsProUserInterfaceLayer
 {
     public partial class FrmAddRegistration : Form
     {
-        //Variable to reference close button.
-        private const int CP_NOCLOSE_BUTTON = 0x200;
-
-        //Property method to disable to close button.
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams myCP = base.CreateParams;
-                myCP.ClassStyle = myCP.ClassStyle | CP_NOCLOSE_BUTTON;
-                return myCP;
-            }
-        }
-
         public FrmAddRegistration()
         {
             InitializeComponent();
@@ -42,7 +28,7 @@ namespace SportsProUserInterfaceLayer
                 //Sets up customer ComboBox.
                 cboCustomer.DisplayMember = "Name";
                 cboCustomer.ValueMember = "CustomerID";
-                cboCustomer.DataSource = myCustomerBLL.GetCustomerIDandName();
+                cboCustomer.DataSource = myCustomerBLL.GetAllCustomers();
                 cboCustomer.SelectedIndex = -1;
 
                 //Sets up product ComboBox.

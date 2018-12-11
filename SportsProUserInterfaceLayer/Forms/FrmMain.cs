@@ -65,6 +65,8 @@ namespace SportsProUserInterfaceLayer
                     HideAndResetOtherForms(allOpenIncidentsByTechnicianFrm.Name);
                     allOpenIncidentsByTechnicianFrm.Show();
                     allOpenIncidentsByTechnicianFrm.cboTechnicians.Focus();
+                    allOpenIncidentsByTechnicianFrm.lblTechnicianEmail.Text = string.Empty;
+                    allOpenIncidentsByTechnicianFrm.lblTechnicianPhone.Text = string.Empty;
                     break;
                 case "Add Registration":
                     HideAndResetOtherForms(addRegistrationFrm.Name);
