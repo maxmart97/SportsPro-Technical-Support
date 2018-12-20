@@ -129,6 +129,7 @@
             this.tsmiUpdateCustomer.Name = "tsmiUpdateCustomer";
             this.tsmiUpdateCustomer.Size = new System.Drawing.Size(216, 26);
             this.tsmiUpdateCustomer.Text = "Update Customer";
+            this.tsmiUpdateCustomer.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiDeleteCustomer
             // 

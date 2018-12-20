@@ -9,6 +9,11 @@ namespace SportsProDALClassLibrary
 {
     public static class TechSupportDB
     {
+        static TechSupportDB()
+        {
+            //Default constructor.
+        }
+
         /// <summary>
         /// Gets the location of the TechSupport database.
         /// </summary>

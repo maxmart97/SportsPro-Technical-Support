@@ -33,8 +33,23 @@ namespace SportsProBLLClassLibrary
             foreach (DataRow dr in dt.Rows)
             {
                 Customer myCustomer = new Customer();
+
                 myCustomer.CustomerID = (int)dr["CustomerID"];
                 myCustomer.Name = dr["Name"].ToString();
+                myCustomer.Address = dr["Address"].ToString();
+                myCustomer.City = dr["City"].ToString();
+                myCustomer.State = dr["State"].ToString();
+                myCustomer.ZipCode = dr["ZipCode"].ToString();
+
+                if (string.IsNullOrWhiteSpace(dr["Phone"].ToString()))
+                    myCustomer.Phone = null;
+                else
+                    myCustomer.Phone = dr["Phone"].ToString();
+
+                if (string.IsNullOrWhiteSpace(dr["Email"].ToString()))
+                    myCustomer.Email = null;
+                else
+                    myCustomer.Email = dr["Email"].ToString();
 
                 lst.Add(myCustomer);
             }

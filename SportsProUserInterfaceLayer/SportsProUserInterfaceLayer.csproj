@@ -81,6 +81,12 @@
     <Compile Include="Forms\FrmRegistrationsByProduct.designer.cs">
       <DependentUpon>FrmRegistrationsByProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmUpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUpdateCustomer.Designer.cs">
+      <DependentUpon>FrmUpdateCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmViewAllIncidents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRegistrationsByProduct.resx">
       <DependentUpon>FrmRegistrationsByProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUpdateCustomer.resx">
+      <DependentUpon>FrmUpdateCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmViewAllIncidents.resx">
       <DependentUpon>FrmViewAllIncidents.cs</DependentUpon>

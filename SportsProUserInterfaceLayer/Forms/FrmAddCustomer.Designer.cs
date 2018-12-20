@@ -30,31 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label lblAddress;
-            System.Windows.Forms.Label emailLabel;
+            System.Windows.Forms.Label lblEmail;
             System.Windows.Forms.Label lblName;
-            System.Windows.Forms.Label phoneLabel;
-            System.Windows.Forms.Label stateLabel1;
-            System.Windows.Forms.Label cityLabel;
-            System.Windows.Forms.Label zipCodeLabel;
+            System.Windows.Forms.Label lblPhone;
+            System.Windows.Forms.Label lblState;
+            System.Windows.Forms.Label lblCity;
+            System.Windows.Forms.Label lblZipCode;
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.bsCustomer = new System.Windows.Forms.BindingSource(this.components);
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.cboState = new System.Windows.Forms.ComboBox();
             this.bsState = new System.Windows.Forms.BindingSource(this.components);
             this.lblInstructions = new System.Windows.Forms.Label();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnReturnToMainMenu = new System.Windows.Forms.Button();
-            this.cityTextBox = new System.Windows.Forms.TextBox();
-            this.zipCodeTextBox = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtZipCode = new System.Windows.Forms.TextBox();
             lblAddress = new System.Windows.Forms.Label();
-            emailLabel = new System.Windows.Forms.Label();
+            lblEmail = new System.Windows.Forms.Label();
             lblName = new System.Windows.Forms.Label();
-            phoneLabel = new System.Windows.Forms.Label();
-            stateLabel1 = new System.Windows.Forms.Label();
-            cityLabel = new System.Windows.Forms.Label();
-            zipCodeLabel = new System.Windows.Forms.Label();
+            lblPhone = new System.Windows.Forms.Label();
+            lblState = new System.Windows.Forms.Label();
+            lblCity = new System.Windows.Forms.Label();
+            lblZipCode = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bsCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsState)).BeginInit();
             this.SuspendLayout();
@@ -68,14 +68,14 @@
             lblAddress.TabIndex = 1;
             lblAddress.Text = "*Address:";
             // 
-            // emailLabel
+            // lblEmail
             // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(631, 408);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(46, 17);
-            emailLabel.TabIndex = 7;
-            emailLabel.Text = "Email:";
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new System.Drawing.Point(631, 408);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new System.Drawing.Size(46, 17);
+            lblEmail.TabIndex = 7;
+            lblEmail.Text = "Email:";
             // 
             // lblName
             // 
@@ -86,41 +86,41 @@
             lblName.TabIndex = 9;
             lblName.Text = "*Name:";
             // 
-            // phoneLabel
+            // lblPhone
             // 
-            phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(284, 408);
-            phoneLabel.Name = "phoneLabel";
-            phoneLabel.Size = new System.Drawing.Size(53, 17);
-            phoneLabel.TabIndex = 11;
-            phoneLabel.Text = "Phone:";
+            lblPhone.AutoSize = true;
+            lblPhone.Location = new System.Drawing.Point(284, 408);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new System.Drawing.Size(53, 17);
+            lblPhone.TabIndex = 11;
+            lblPhone.Text = "Phone:";
             // 
-            // stateLabel1
+            // lblState
             // 
-            stateLabel1.AutoSize = true;
-            stateLabel1.Location = new System.Drawing.Point(284, 336);
-            stateLabel1.Name = "stateLabel1";
-            stateLabel1.Size = new System.Drawing.Size(50, 17);
-            stateLabel1.TabIndex = 16;
-            stateLabel1.Text = "*State:";
+            lblState.AutoSize = true;
+            lblState.Location = new System.Drawing.Point(284, 336);
+            lblState.Name = "lblState";
+            lblState.Size = new System.Drawing.Size(50, 17);
+            lblState.TabIndex = 16;
+            lblState.Text = "*State:";
             // 
-            // cityLabel
+            // lblCity
             // 
-            cityLabel.AutoSize = true;
-            cityLabel.Location = new System.Drawing.Point(631, 336);
-            cityLabel.Name = "cityLabel";
-            cityLabel.Size = new System.Drawing.Size(40, 17);
-            cityLabel.TabIndex = 23;
-            cityLabel.Text = "*City:";
+            lblCity.AutoSize = true;
+            lblCity.Location = new System.Drawing.Point(631, 336);
+            lblCity.Name = "lblCity";
+            lblCity.Size = new System.Drawing.Size(40, 17);
+            lblCity.TabIndex = 23;
+            lblCity.Text = "*City:";
             // 
-            // zipCodeLabel
+            // lblZipCode
             // 
-            zipCodeLabel.AutoSize = true;
-            zipCodeLabel.Location = new System.Drawing.Point(956, 336);
-            zipCodeLabel.Name = "zipCodeLabel";
-            zipCodeLabel.Size = new System.Drawing.Size(74, 17);
-            zipCodeLabel.TabIndex = 24;
-            zipCodeLabel.Text = "*Zip Code:";
+            lblZipCode.AutoSize = true;
+            lblZipCode.Location = new System.Drawing.Point(956, 336);
+            lblZipCode.Name = "lblZipCode";
+            lblZipCode.Size = new System.Drawing.Size(74, 17);
+            lblZipCode.TabIndex = 24;
+            lblZipCode.Text = "*Zip Code:";
             // 
             // txtAddress
             // 
@@ -134,29 +134,29 @@
             // 
             this.bsCustomer.DataSource = typeof(SportsProUserInterfaceLayer.Customer);
             // 
-            // emailTextBox
+            // txtEmail
             // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(688, 405);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(352, 22);
-            this.emailTextBox.TabIndex = 6;
+            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "Email", true));
+            this.txtEmail.Location = new System.Drawing.Point(688, 405);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(352, 22);
+            this.txtEmail.TabIndex = 6;
             // 
-            // nameTextBox
+            // txtName
             // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(367, 209);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(337, 22);
-            this.nameTextBox.TabIndex = 0;
+            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "Name", true));
+            this.txtName.Location = new System.Drawing.Point(367, 209);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(337, 22);
+            this.txtName.TabIndex = 0;
             // 
-            // phoneTextBox
+            // txtPhone
             // 
-            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "Phone", true));
-            this.phoneTextBox.Location = new System.Drawing.Point(367, 405);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(220, 22);
-            this.phoneTextBox.TabIndex = 5;
+            this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "Phone", true));
+            this.txtPhone.Location = new System.Drawing.Point(367, 405);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(220, 22);
+            this.txtPhone.TabIndex = 5;
             // 
             // cboState
             // 
@@ -205,21 +205,21 @@
             this.btnReturnToMainMenu.Text = "Return to Main Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
             // 
-            // cityTextBox
+            // txtCity
             // 
-            this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "City", true));
-            this.cityTextBox.Location = new System.Drawing.Point(688, 331);
-            this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Size = new System.Drawing.Size(220, 22);
-            this.cityTextBox.TabIndex = 3;
+            this.txtCity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "City", true));
+            this.txtCity.Location = new System.Drawing.Point(688, 331);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(220, 22);
+            this.txtCity.TabIndex = 3;
             // 
-            // zipCodeTextBox
+            // txtZipCode
             // 
-            this.zipCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "ZipCode", true));
-            this.zipCodeTextBox.Location = new System.Drawing.Point(1043, 333);
-            this.zipCodeTextBox.Name = "zipCodeTextBox";
-            this.zipCodeTextBox.Size = new System.Drawing.Size(100, 22);
-            this.zipCodeTextBox.TabIndex = 4;
+            this.txtZipCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCustomer, "ZipCode", true));
+            this.txtZipCode.Location = new System.Drawing.Point(1043, 333);
+            this.txtZipCode.Name = "txtZipCode";
+            this.txtZipCode.Size = new System.Drawing.Size(100, 22);
+            this.txtZipCode.TabIndex = 4;
             // 
             // FrmAddCustomer
             // 
@@ -229,23 +229,23 @@
             this.CancelButton = this.btnReturnToMainMenu;
             this.ClientSize = new System.Drawing.Size(1432, 777);
             this.ControlBox = false;
-            this.Controls.Add(zipCodeLabel);
-            this.Controls.Add(this.zipCodeTextBox);
-            this.Controls.Add(cityLabel);
-            this.Controls.Add(this.cityTextBox);
+            this.Controls.Add(lblZipCode);
+            this.Controls.Add(this.txtZipCode);
+            this.Controls.Add(lblCity);
+            this.Controls.Add(this.txtCity);
             this.Controls.Add(this.btnReturnToMainMenu);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.lblInstructions);
-            this.Controls.Add(stateLabel1);
+            this.Controls.Add(lblState);
             this.Controls.Add(this.cboState);
             this.Controls.Add(lblAddress);
             this.Controls.Add(this.txtAddress);
-            this.Controls.Add(emailLabel);
-            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(lblEmail);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(lblName);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(phoneLabel);
-            this.Controls.Add(this.phoneTextBox);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(lblPhone);
+            this.Controls.Add(this.txtPhone);
             this.Name = "FrmAddCustomer";
             this.Text = "Add Customer";
             this.Load += new System.EventHandler(this.FrmAddCustomer_Load);
@@ -258,16 +258,16 @@
 
         #endregion
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.ComboBox cboState;
         private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Button btnReturnToMainMenu;
         private System.Windows.Forms.BindingSource bsCustomer;
-        private System.Windows.Forms.TextBox cityTextBox;
-        private System.Windows.Forms.TextBox zipCodeTextBox;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.TextBox txtZipCode;
         private System.Windows.Forms.BindingSource bsState;
     }
 }

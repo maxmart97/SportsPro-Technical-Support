@@ -15,6 +15,7 @@ namespace SportsProUserInterfaceLayer
         TechSupportDB_LINQ2SQLDataContext dcTechSupportDB = new TechSupportDB_LINQ2SQLDataContext();
 
         string errorMessage;
+        string name, address, city, state, zipCode, phone, email;
 
         public FrmAddCustomer()
         {
@@ -37,21 +38,24 @@ namespace SportsProUserInterfaceLayer
             {
                 Customer myCustomer = new Customer
                 {
-                    Name = nameTextBox.Text,
+                    Name = txtName.Text,
                     Address = txtAddress.Text,
-                    City = cityTextBox.Text,
+                    City = txtCity.Text,
                     State = cboState.SelectedValue.ToString(),
-                    ZipCode = zipCodeTextBox.Text,
-                    Phone = FormatPhoneNumber(phoneTextBox.Text),
-                    Email = emailTextBox.Text
+                    ZipCode = txtZipCode.Text,
+                    Phone = FormatPhoneNumber(txtPhone.Text),
+                    Email = txtEmail.Text
                 };
+
+                var customer = from customers in dcTechSupportDB.Customers
+                               where 
 
                 dcTechSupportDB.Customers.InsertOnSubmit(myCustomer);
 
                 try
                 {
                     dcTechSupportDB.SubmitChanges();
-                    MessageBox.Show("Customer: '" + nameTextBox.Text + "' has been successfully added.");
+                    MessageBox.Show("Customer: '" + txtName.Text + "' has been successfully added.");
                 }
                 catch
                 {
@@ -67,21 +71,28 @@ namespace SportsProUserInterfaceLayer
 
         private bool IsCustomerDataValid()
         {
-            if (!string.IsNullOrWhiteSpace(nameTextBox.Text) && nameTextBox.Text.Length <= 50)
+            if (!string.IsNullOrWhiteSpace(txtName.Text) && txtName.Text.Length <= 50)
             {
                 if (!string.IsNullOrWhiteSpace(txtAddress.Text) && txtAddress.Text.Length <= 50)
                 {
                     if (cboState.SelectedIndex != -1)
                     {
-                        if (!string.IsNullOrWhiteSpace(cityTextBox.Text) && cityTextBox.Text.Length <= 20)
+                        if (!string.IsNullOrWhiteSpace(txtCity.Text) && txtCity.Text.Length <= 20)
                         {
-                            if (!string.IsNullOrWhiteSpace(zipCodeTextBox.Text) && 
-                                (zipCodeTextBox.Text.Length >= 3 && zipCodeTextBox.Text.Length <= 5))
+                            if (IsZipCodeValid(txtZipCode.Text))
                             {
-                                if (IsPhoneNumberValid(phoneTextBox.Text))
+                                if (IsPhoneNumberValid(txtPhone.Text))
                                 {
-                                    if (emailTextBox.Text.Length <= 50)
+                                    if (txtEmail.Text.Length <= 50)
                                     {
+                                        name = txtName.Text;
+                                        address = txtAddress.Text;
+                                        city = txtCity.Text;
+                                        state = cboState.SelectedValue.ToString();
+                                        zipCode = txtZipCode.Text;
+                                        phone = txtPhone.Text;
+
+
                                         return true;
                                     }
                                     else
@@ -135,6 +146,32 @@ namespace SportsProUserInterfaceLayer
             else
             {
                 return false;
+            }
+
+            return true;
+        }
+
+        private bool IsZipCodeValid(string zipCode)
+        {
+            int index = 0;
+            bool foundNonDigit = false;
+
+            if (zipCode.Length != 5)
+            {
+                return false;
+            }
+            else
+            {
+                while (index < zipCode.Length && !foundNonDigit)
+                {
+                    if (!char.IsDigit(zipCode[index]))
+                    {
+                        foundNonDigit = true;
+                        return false;
+                    }
+
+                    index++;
+                }
             }
 
             return true;

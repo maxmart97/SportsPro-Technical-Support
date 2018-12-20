@@ -21,22 +21,22 @@ namespace SportsProBLLClassLibrary
         /// <returns>A List of all Customers with each Customer containing his or her CustomerID and Name.</returns>
         public List<Customer> GetAllCustomers()
         {
-            DataTable dtCustomerIDandName = new DataTable();
-            List<Customer> lstCustomerIDandName = new List<Customer>();
+            DataTable dtCustomers = new DataTable();
+            List<Customer> lstCustomers = new List<Customer>();
             CustomerDAL myCustomerDAL = new CustomerDAL();
 
             try
             {
-                dtCustomerIDandName = myCustomerDAL.RetrieveAllCustomers();
+                dtCustomers = myCustomerDAL.RetrieveAllCustomers();
             }
             catch //Throws exception to calling method.
             {
                 throw;
             }
 
-            DataTableToList.Transfer_Customers(dtCustomerIDandName, lstCustomerIDandName);
+            DataTableToList.Transfer_Customers(dtCustomers, lstCustomers);
 
-            return lstCustomerIDandName;
+            return lstCustomers;
         }
     }
 }

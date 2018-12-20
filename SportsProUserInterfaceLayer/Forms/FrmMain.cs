@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SportsProBLLClassLibrary;
+using SportsProUserInterfaceLayer.Forms;
 
 namespace SportsProUserInterfaceLayer
 {
@@ -21,6 +22,7 @@ namespace SportsProUserInterfaceLayer
         static FrmIncidentsByCustomerByState incidentByCustomerByStateFrm = new FrmIncidentsByCustomerByState();
         static FrmRegistrationsByProduct registrationsByProductFrm = new FrmRegistrationsByProduct();
         static FrmAddCustomer addCustomerFrm = new FrmAddCustomer();
+        static FrmUpdateCustomer updateCustomerFrm = new FrmUpdateCustomer();
 
         public FrmMain()
         {
@@ -42,6 +44,7 @@ namespace SportsProUserInterfaceLayer
             GenericMethods.FormatMdiChild(incidentByCustomerByStateFrm, this);
             GenericMethods.FormatMdiChild(registrationsByProductFrm, this);
             GenericMethods.FormatMdiChild(addCustomerFrm, this);
+            GenericMethods.FormatMdiChild(updateCustomerFrm, this);
         }
 
         private void DisplayForm(object sender, EventArgs e)
@@ -84,6 +87,10 @@ namespace SportsProUserInterfaceLayer
                 case "Add Customer":
                     HideAndResetOtherForms(addCustomerFrm.Name);
                     addCustomerFrm.Show();
+                    break;
+                case "Update Customer":
+                    HideAndResetOtherForms(updateCustomerFrm.Name);
+                    updateCustomerFrm.Show();
                     break;
                 default: //Do nothing.
                     break;
@@ -136,6 +143,9 @@ namespace SportsProUserInterfaceLayer
                             frm.Hide();
                             break;
                         case "FrmAddCustomer":
+                            frm.Hide();
+                            break;
+                        case "FrmUpdateCustomer":
                             frm.Hide();
                             break;
                         default: //Do nothing.

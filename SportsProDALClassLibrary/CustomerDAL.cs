@@ -21,10 +21,10 @@ namespace SportsProDALClassLibrary
         /// <returns>A DataTable containing the CustomerID and Name of all customers.</returns>
         public DataTable RetrieveAllCustomers()
         {
-            DataTable dtCustomerIDandName = new DataTable();
+            DataTable dtCustomers = new DataTable();
 
             string selectStatement =
-                "SELECT CustomerID, Name " +
+                "SELECT CustomerID, [Name], Address, City, State, ZipCode, Phone, Email " +
                 "FROM dbo.Customers;";
 
             //Creates a SqlCommand using the parameterized constructor. CommandType by default is Text.
@@ -35,7 +35,7 @@ namespace SportsProDALClassLibrary
                 selectCommand.Connection.Open();
 
                 //Executes query and loads result set into DataTable.
-                dtCustomerIDandName.Load(selectCommand.ExecuteReader());
+                dtCustomers.Load(selectCommand.ExecuteReader());
             }
             catch //Throws exception to calling method.
             {
@@ -46,7 +46,7 @@ namespace SportsProDALClassLibrary
                 selectCommand.Connection.Close();
             }
 
-            return dtCustomerIDandName;
+            return dtCustomers;
         }
     }
 }
