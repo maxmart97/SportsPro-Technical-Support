@@ -29,63 +29,63 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label zipCodeLabel;
-            System.Windows.Forms.Label cityLabel;
-            System.Windows.Forms.Label stateLabel1;
+            System.Windows.Forms.Label lblZipCode;
+            System.Windows.Forms.Label lblCity;
+            System.Windows.Forms.Label lblState;
             System.Windows.Forms.Label lblAddress;
-            System.Windows.Forms.Label emailLabel;
+            System.Windows.Forms.Label lblEmail;
             System.Windows.Forms.Label lblName;
-            System.Windows.Forms.Label phoneLabel;
+            System.Windows.Forms.Label lblPhone;
             this.lblInstructions = new System.Windows.Forms.Label();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lbName = new System.Windows.Forms.ListBox();
-            this.zipCodeTextBox = new System.Windows.Forms.TextBox();
-            this.cityTextBox = new System.Windows.Forms.TextBox();
+            this.bsCustomer = new System.Windows.Forms.BindingSource(this.components);
+            this.lbCustomers = new System.Windows.Forms.ListBox();
+            this.txtZipCode = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
             this.cboState = new System.Windows.Forms.ComboBox();
+            this.bsState = new System.Windows.Forms.BindingSource(this.components);
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.btnUpdateCustomer = new System.Windows.Forms.Button();
             this.btnReturnToMainMenu = new System.Windows.Forms.Button();
-            this.stateBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            zipCodeLabel = new System.Windows.Forms.Label();
-            cityLabel = new System.Windows.Forms.Label();
-            stateLabel1 = new System.Windows.Forms.Label();
+            lblZipCode = new System.Windows.Forms.Label();
+            lblCity = new System.Windows.Forms.Label();
+            lblState = new System.Windows.Forms.Label();
             lblAddress = new System.Windows.Forms.Label();
-            emailLabel = new System.Windows.Forms.Label();
+            lblEmail = new System.Windows.Forms.Label();
             lblName = new System.Windows.Forms.Label();
-            phoneLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stateBindingSource)).BeginInit();
+            lblPhone = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsState)).BeginInit();
             this.SuspendLayout();
             // 
-            // zipCodeLabel
+            // lblZipCode
             // 
-            zipCodeLabel.AutoSize = true;
-            zipCodeLabel.Location = new System.Drawing.Point(992, 410);
-            zipCodeLabel.Name = "zipCodeLabel";
-            zipCodeLabel.Size = new System.Drawing.Size(74, 17);
-            zipCodeLabel.TabIndex = 38;
-            zipCodeLabel.Text = "*Zip Code:";
+            lblZipCode.AutoSize = true;
+            lblZipCode.Location = new System.Drawing.Point(992, 410);
+            lblZipCode.Name = "lblZipCode";
+            lblZipCode.Size = new System.Drawing.Size(74, 17);
+            lblZipCode.TabIndex = 38;
+            lblZipCode.Text = "*Zip Code:";
             // 
-            // cityLabel
+            // lblCity
             // 
-            cityLabel.AutoSize = true;
-            cityLabel.Location = new System.Drawing.Point(667, 410);
-            cityLabel.Name = "cityLabel";
-            cityLabel.Size = new System.Drawing.Size(40, 17);
-            cityLabel.TabIndex = 37;
-            cityLabel.Text = "*City:";
+            lblCity.AutoSize = true;
+            lblCity.Location = new System.Drawing.Point(667, 410);
+            lblCity.Name = "lblCity";
+            lblCity.Size = new System.Drawing.Size(40, 17);
+            lblCity.TabIndex = 37;
+            lblCity.Text = "*City:";
             // 
-            // stateLabel1
+            // lblState
             // 
-            stateLabel1.AutoSize = true;
-            stateLabel1.Location = new System.Drawing.Point(320, 410);
-            stateLabel1.Name = "stateLabel1";
-            stateLabel1.Size = new System.Drawing.Size(50, 17);
-            stateLabel1.TabIndex = 36;
-            stateLabel1.Text = "*State:";
+            lblState.AutoSize = true;
+            lblState.Location = new System.Drawing.Point(320, 410);
+            lblState.Name = "lblState";
+            lblState.Size = new System.Drawing.Size(50, 17);
+            lblState.TabIndex = 36;
+            lblState.Text = "*State:";
             // 
             // lblAddress
             // 
@@ -96,14 +96,14 @@
             lblAddress.TabIndex = 26;
             lblAddress.Text = "*Address:";
             // 
-            // emailLabel
+            // lblEmail
             // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(667, 482);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(46, 17);
-            emailLabel.TabIndex = 33;
-            emailLabel.Text = "Email:";
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new System.Drawing.Point(667, 482);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new System.Drawing.Size(46, 17);
+            lblEmail.TabIndex = 33;
+            lblEmail.Text = "Email:";
             // 
             // lblName
             // 
@@ -114,60 +114,57 @@
             lblName.TabIndex = 34;
             lblName.Text = "*Name:";
             // 
-            // phoneLabel
+            // lblPhone
             // 
-            phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(320, 482);
-            phoneLabel.Name = "phoneLabel";
-            phoneLabel.Size = new System.Drawing.Size(53, 17);
-            phoneLabel.TabIndex = 35;
-            phoneLabel.Text = "Phone:";
+            lblPhone.AutoSize = true;
+            lblPhone.Location = new System.Drawing.Point(320, 482);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new System.Drawing.Size(53, 17);
+            lblPhone.TabIndex = 35;
+            lblPhone.Text = "Phone:";
             // 
             // lblInstructions
             // 
             this.lblInstructions.Location = new System.Drawing.Point(461, 115);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(170, 79);
+            this.lblInstructions.Size = new System.Drawing.Size(189, 79);
             this.lblInstructions.TabIndex = 0;
-            this.lblInstructions.Text = "Select a Customer and then modify his or her information in the textboxes at the " +
-    "bottom.";
+            this.lblInstructions.Text = "Select a Customer and then modify his or her information in the textboxes.";
             // 
-            // customerBindingSource
+            // bsCustomer
             // 
-            this.customerBindingSource.DataSource = typeof(SportsProBLLClassLibrary.Customer);
+            this.bsCustomer.DataSource = typeof(SportsProBLLClassLibrary.Customer);
             // 
-            // lbName
+            // lbCustomers
             // 
-            this.lbName.DataSource = this.customerBindingSource;
-            this.lbName.DisplayMember = "Name";
-            this.lbName.FormattingEnabled = true;
-            this.lbName.ItemHeight = 16;
-            this.lbName.Location = new System.Drawing.Point(675, 24);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(251, 212);
-            this.lbName.TabIndex = 3;
-            this.lbName.ValueMember = "CustomerID";
-            this.lbName.SelectedIndexChanged += new System.EventHandler(this.LbName_SelectedIndexChanged);
+            this.lbCustomers.DataSource = this.bsCustomer;
+            this.lbCustomers.DisplayMember = "Name";
+            this.lbCustomers.FormattingEnabled = true;
+            this.lbCustomers.ItemHeight = 16;
+            this.lbCustomers.Location = new System.Drawing.Point(675, 24);
+            this.lbCustomers.Name = "lbCustomers";
+            this.lbCustomers.Size = new System.Drawing.Size(251, 212);
+            this.lbCustomers.TabIndex = 3;
+            this.lbCustomers.ValueMember = "CustomerID";
+            this.lbCustomers.SelectedIndexChanged += new System.EventHandler(this.LbName_SelectedIndexChanged);
             // 
-            // zipCodeTextBox
+            // txtZipCode
             // 
-            this.zipCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "ZipCode", true));
-            this.zipCodeTextBox.Location = new System.Drawing.Point(1079, 407);
-            this.zipCodeTextBox.Name = "zipCodeTextBox";
-            this.zipCodeTextBox.Size = new System.Drawing.Size(100, 22);
-            this.zipCodeTextBox.TabIndex = 30;
+            this.txtZipCode.Location = new System.Drawing.Point(1079, 407);
+            this.txtZipCode.Name = "txtZipCode";
+            this.txtZipCode.Size = new System.Drawing.Size(100, 22);
+            this.txtZipCode.TabIndex = 30;
             // 
-            // cityTextBox
+            // txtCity
             // 
-            this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "City", true));
-            this.cityTextBox.Location = new System.Drawing.Point(724, 405);
-            this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Size = new System.Drawing.Size(220, 22);
-            this.cityTextBox.TabIndex = 29;
+            this.txtCity.Location = new System.Drawing.Point(724, 405);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(220, 22);
+            this.txtCity.TabIndex = 29;
             // 
             // cboState
             // 
-            this.cboState.DataSource = this.stateBindingSource;
+            this.cboState.DataSource = this.bsState;
             this.cboState.DisplayMember = "StateName";
             this.cboState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboState.FormattingEnabled = true;
@@ -177,37 +174,37 @@
             this.cboState.TabIndex = 28;
             this.cboState.ValueMember = "StateCode";
             // 
+            // bsState
+            // 
+            this.bsState.DataSource = typeof(SportsProUserInterfaceLayer.State);
+            // 
             // txtAddress
             // 
-            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Address", true));
             this.txtAddress.Location = new System.Drawing.Point(403, 338);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(337, 22);
             this.txtAddress.TabIndex = 27;
             // 
-            // emailTextBox
+            // txtEmail
             // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(724, 479);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(352, 22);
-            this.emailTextBox.TabIndex = 32;
+            this.txtEmail.Location = new System.Drawing.Point(724, 479);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(352, 22);
+            this.txtEmail.TabIndex = 32;
             // 
-            // nameTextBox
+            // txtName
             // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(403, 283);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(337, 22);
-            this.nameTextBox.TabIndex = 25;
+            this.txtName.Location = new System.Drawing.Point(403, 283);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(337, 22);
+            this.txtName.TabIndex = 25;
             // 
-            // phoneTextBox
+            // txtPhone
             // 
-            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Phone", true));
-            this.phoneTextBox.Location = new System.Drawing.Point(403, 479);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(220, 22);
-            this.phoneTextBox.TabIndex = 31;
+            this.txtPhone.Location = new System.Drawing.Point(403, 479);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(220, 22);
+            this.txtPhone.TabIndex = 31;
             // 
             // btnUpdateCustomer
             // 
@@ -217,6 +214,7 @@
             this.btnUpdateCustomer.TabIndex = 39;
             this.btnUpdateCustomer.Text = "Update Customer";
             this.btnUpdateCustomer.UseVisualStyleBackColor = true;
+            this.btnUpdateCustomer.Click += new System.EventHandler(this.BtnUpdateCustomer_Click);
             // 
             // btnReturnToMainMenu
             // 
@@ -228,10 +226,7 @@
             this.btnReturnToMainMenu.TabIndex = 40;
             this.btnReturnToMainMenu.Text = "Return to Main Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
-            // 
-            // stateBindingSource
-            // 
-            this.stateBindingSource.DataSource = typeof(SportsProUserInterfaceLayer.State);
+            this.btnReturnToMainMenu.Click += new System.EventHandler(this.BtnReturnToMainMenu_Click);
             // 
             // FrmUpdateCustomer
             // 
@@ -241,27 +236,27 @@
             this.ControlBox = false;
             this.Controls.Add(this.btnReturnToMainMenu);
             this.Controls.Add(this.btnUpdateCustomer);
-            this.Controls.Add(zipCodeLabel);
-            this.Controls.Add(this.zipCodeTextBox);
-            this.Controls.Add(cityLabel);
-            this.Controls.Add(this.cityTextBox);
-            this.Controls.Add(stateLabel1);
+            this.Controls.Add(lblZipCode);
+            this.Controls.Add(this.txtZipCode);
+            this.Controls.Add(lblCity);
+            this.Controls.Add(this.txtCity);
+            this.Controls.Add(lblState);
             this.Controls.Add(this.cboState);
             this.Controls.Add(lblAddress);
             this.Controls.Add(this.txtAddress);
-            this.Controls.Add(emailLabel);
-            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(lblEmail);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(lblName);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(phoneLabel);
-            this.Controls.Add(this.phoneTextBox);
-            this.Controls.Add(this.lbName);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(lblPhone);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.lbCustomers);
             this.Controls.Add(this.lblInstructions);
             this.Name = "FrmUpdateCustomer";
             this.Text = "Update Customer";
             this.Load += new System.EventHandler(this.FrmUpdateCustomer_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stateBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsState)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,17 +265,17 @@
         #endregion
 
         private System.Windows.Forms.Label lblInstructions;
-        private System.Windows.Forms.BindingSource customerBindingSource;
-        private System.Windows.Forms.ListBox lbName;
-        private System.Windows.Forms.TextBox zipCodeTextBox;
-        private System.Windows.Forms.TextBox cityTextBox;
+        private System.Windows.Forms.BindingSource bsCustomer;
+        private System.Windows.Forms.ListBox lbCustomers;
+        private System.Windows.Forms.TextBox txtZipCode;
+        private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.ComboBox cboState;
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Button btnUpdateCustomer;
         private System.Windows.Forms.Button btnReturnToMainMenu;
-        private System.Windows.Forms.BindingSource stateBindingSource;
+        private System.Windows.Forms.BindingSource bsState;
     }
 }

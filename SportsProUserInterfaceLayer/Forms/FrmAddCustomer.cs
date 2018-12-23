@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SportsProBLLClassLibrary;
+using SportsProBLLClassLibrary.Miscellaneous_Classes;
 
 namespace SportsProUserInterfaceLayer
 {
@@ -14,8 +16,7 @@ namespace SportsProUserInterfaceLayer
     {
         TechSupportDB_LINQ2SQLDataContext dcTechSupportDB = new TechSupportDB_LINQ2SQLDataContext();
 
-        string errorMessage;
-        string name, address, city, state, zipCode, phone, email;
+        string name, address, city, stateCode, zipCode, phone, email;
 
         public FrmAddCustomer()
         {
@@ -34,158 +35,77 @@ namespace SportsProUserInterfaceLayer
 
         private void BtnAddCustomer_Click(object sender, EventArgs e)
         {
-            if (IsCustomerDataValid())
+            this.SetValues();
+
+            string validatorResult = Validator.IsCustomerDataValid(name, address, stateCode, city, zipCode, phone, email);
+
+            if (validatorResult == "Data entered is valid.")
             {
-                Customer myCustomer = new Customer
+                CustomerBLL myBLL = new CustomerBLL();
+
+                SportsProBLLClassLibrary.Customer myCustomer = new SportsProBLLClassLibrary.Customer
                 {
-                    Name = txtName.Text,
-                    Address = txtAddress.Text,
-                    City = txtCity.Text,
-                    State = cboState.SelectedValue.ToString(),
-                    ZipCode = txtZipCode.Text,
-                    Phone = FormatPhoneNumber(txtPhone.Text),
-                    Email = txtEmail.Text
+                    Name = name,
+                    Address = address,
+                    City = city,
+                    State = stateCode,
+                    ZipCode = zipCode,
+                    Phone = Format.PhoneNumber(phone),
+                    Email = email,
                 };
-
-                var customer = from customers in dcTechSupportDB.Customers
-                               where 
-
-                dcTechSupportDB.Customers.InsertOnSubmit(myCustomer);
 
                 try
                 {
-                    dcTechSupportDB.SubmitChanges();
-                    MessageBox.Show("Customer: '" + txtName.Text + "' has been successfully added.");
-                }
-                catch
-                {
-                    MessageBox.Show("Error adding customer. Please contact program developer.");
-                }
-
-            }
-            else
-            {
-                MessageBox.Show(errorMessage, "Invalid entry", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private bool IsCustomerDataValid()
-        {
-            if (!string.IsNullOrWhiteSpace(txtName.Text) && txtName.Text.Length <= 50)
-            {
-                if (!string.IsNullOrWhiteSpace(txtAddress.Text) && txtAddress.Text.Length <= 50)
-                {
-                    if (cboState.SelectedIndex != -1)
+                    if (myBLL.RequestToAddCustomer(myCustomer) is true)
                     {
-                        if (!string.IsNullOrWhiteSpace(txtCity.Text) && txtCity.Text.Length <= 20)
-                        {
-                            if (IsZipCodeValid(txtZipCode.Text))
-                            {
-                                if (IsPhoneNumberValid(txtPhone.Text))
-                                {
-                                    if (txtEmail.Text.Length <= 50)
-                                    {
-                                        name = txtName.Text;
-                                        address = txtAddress.Text;
-                                        city = txtCity.Text;
-                                        state = cboState.SelectedValue.ToString();
-                                        zipCode = txtZipCode.Text;
-                                        phone = txtPhone.Text;
-
-
-                                        return true;
-                                    }
-                                    else
-                                    {
-                                        errorMessage = "Email is invalid.";
-                                    }
-                                }
-                                else
-                                {
-                                    errorMessage = "Phone number is invalid. Please only enter in 10 digits.";
-                                }
-                            }
-                            else
-                            {
-                                errorMessage = "Zip Code is invalid.";
-                            }
-                        }
-                        else
-                        {
-                            errorMessage = "City is invalid.";
-                        }
+                        MessageBox.Show("Customer: '" + myCustomer.Name + "' has been successfully added.");
+                        this.ClearAll();
                     }
                     else
                     {
-                        errorMessage = "Please choose a state.";
+                        MessageBox.Show("Customer: '" + myCustomer.Name + "' already exists.");
                     }
                 }
-                else
+                catch
                 {
-                    errorMessage = "Address is invalid.";
+                    MessageBox.Show("Error adding customer. Please contact software developer.");
                 }
+
             }
             else
             {
-                errorMessage = "Name is invalid.";
+                MessageBox.Show(validatorResult, "Invalid entry", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            return false;
         }
 
-        private bool IsPhoneNumberValid(string phoneNumber)
+        public void SetValues()
         {
-            if (phoneNumber.Length == 10)
-            {
-                foreach (char digit in phoneNumber)
-                {
-                    if (!char.IsDigit(digit))
-                        return false;
-                }
-            }
+            name = txtName.Text;
+            address = txtAddress.Text;
+            city = txtCity.Text;
+
+            if (cboState.SelectedValue == null)
+                stateCode = null;
             else
-            {
-                return false;
-            }
+                stateCode = cboState.SelectedValue.ToString();
 
-            return true;
+            zipCode = txtZipCode.Text;
+            phone = txtPhone.Text;
+            email = txtEmail.Text;
         }
 
-        private bool IsZipCodeValid(string zipCode)
+        private void ClearAll()
         {
-            int index = 0;
-            bool foundNonDigit = false;
+            foreach (TextBox txt in this.Controls.OfType<TextBox>())
+                txt.Clear();
 
-            if (zipCode.Length != 5)
-            {
-                return false;
-            }
-            else
-            {
-                while (index < zipCode.Length && !foundNonDigit)
-                {
-                    if (!char.IsDigit(zipCode[index]))
-                    {
-                        foundNonDigit = true;
-                        return false;
-                    }
-
-                    index++;
-                }
-            }
-
-            return true;
+            cboState.SelectedIndex = -1;
         }
 
-        private string FormatPhoneNumber(string phoneNumber)
+        private void BtnReturnToMainMenu_Click(object sender, EventArgs e)
         {
-            string formattedPhoneNumber = phoneNumber;
-
-            formattedPhoneNumber = formattedPhoneNumber.Insert(0, "(");
-            formattedPhoneNumber = formattedPhoneNumber.Insert(3, ") ");
-            formattedPhoneNumber = formattedPhoneNumber.Insert(8, "-");
-
-            return formattedPhoneNumber;
+            this.Hide();
+            this.ClearAll();
         }
     }
 }

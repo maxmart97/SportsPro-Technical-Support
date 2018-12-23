@@ -33,3 +33,9 @@ C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_T
 C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.dll
 C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csprojAssemblyReference.cache

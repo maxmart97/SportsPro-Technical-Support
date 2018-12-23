@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Miscellaneous Classes\Format.cs" />
     <Compile Include="Miscellaneous Classes\GenericMethods.cs" />
     <Compile Include="Miscellaneous Classes\Validator.cs" />
     <Compile Include="Model Classes\Customer.cs" />

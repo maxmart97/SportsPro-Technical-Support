@@ -177,12 +177,11 @@
             // lblInstructions
             // 
             this.lblInstructions.AutoSize = true;
-            this.lblInstructions.Location = new System.Drawing.Point(397, 127);
+            this.lblInstructions.Location = new System.Drawing.Point(424, 126);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(665, 17);
+            this.lblInstructions.Size = new System.Drawing.Size(559, 17);
             this.lblInstructions.TabIndex = 20;
-            this.lblInstructions.Text = "Enter in values for the customer you want to add. Fields with an asterisk at the " +
-    "beginning are mandatory.";
+            this.lblInstructions.Text = "Enter in values for the customer you want to add. Fields with an asterisk are mandatory.";
             // 
             // btnAddCustomer
             // 
@@ -204,6 +203,7 @@
             this.btnReturnToMainMenu.TabIndex = 22;
             this.btnReturnToMainMenu.Text = "Return to Main Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
+            this.btnReturnToMainMenu.Click += new System.EventHandler(this.BtnReturnToMainMenu_Click);
             // 
             // txtCity
             // 

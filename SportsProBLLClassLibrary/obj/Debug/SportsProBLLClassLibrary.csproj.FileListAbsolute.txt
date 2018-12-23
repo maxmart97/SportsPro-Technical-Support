@@ -49,3 +49,12 @@ C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_T
 C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CopyComplete
 C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.dll
 C:\Users\maxma\Desktop\College Stuff\Fall 2018\CIS 3325.002\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Debug\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csprojAssemblyReference.cache
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.csproj.CopyComplete
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Debug\SportsProBLLClassLibrary.pdb
