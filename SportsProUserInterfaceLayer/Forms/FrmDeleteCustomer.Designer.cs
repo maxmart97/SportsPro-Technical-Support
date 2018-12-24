@@ -257,6 +257,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 785);
+            this.ControlBox = false;
             this.Controls.Add(this.btnReturnToMainMenu);
             this.Controls.Add(this.lblCustomerIDNumber);
             this.Controls.Add(lblCustomerID);

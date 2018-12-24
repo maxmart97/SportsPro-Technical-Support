@@ -23,12 +23,12 @@ namespace SportsProDALClassLibrary
         /// all technicians in the Technicians tables.
         /// </summary>
         /// <returns>A DataTable of the TechID and Name of all technicians.</returns>
-        public DataTable RetrieveTechnicianNames()
+        public DataTable RetrieveAllTechnicians()
         {
-            DataTable dtTechnicianNames = new DataTable();
+            DataTable dtTechnicians = new DataTable();
 
             string selectStatement =
-                "SELECT TechID, Name " +
+                "SELECT TechID, Name, Email, Phone " +
                 "FROM dbo.Technicians;";
 
             //Creates a SqlCommand using the parameterized constructor. CommandType by default is Text.
@@ -39,7 +39,7 @@ namespace SportsProDALClassLibrary
                 selectTechnicianNames.Connection.Open();
 
                 //Executes query and loads result set into DataTable.
-                dtTechnicianNames.Load(selectTechnicianNames.ExecuteReader());
+                dtTechnicians.Load(selectTechnicianNames.ExecuteReader());
             }
             catch //Throws exception to calling method.
             {
@@ -50,7 +50,7 @@ namespace SportsProDALClassLibrary
                 selectTechnicianNames.Connection.Close();
             }
 
-            return dtTechnicianNames;
+            return dtTechnicians;
         }
 
         /// <summary>

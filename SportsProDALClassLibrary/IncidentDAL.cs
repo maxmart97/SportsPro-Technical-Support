@@ -134,5 +134,73 @@ namespace SportsProDALClassLibrary
 
             return dtOpenIncidentsByTechnician;
         }
+
+        public bool AddIncident(int customerID, string productCode, int? techID, DateTime dateOpened,
+            DateTime? dateClosed, string title, string description)
+        {
+            string selectStatement =
+                "SELECT COUNT(*) " +
+                "FROM Incidents " +
+                "WHERE CustomerID = @CustomerID AND ProductCode = @ProductCode " +
+                "AND DateOpened = @DateOpened AND Title = @Title AND Description = @Description;";
+
+            string insertStatement =
+                "INSERT INTO Incidents " +
+                "VALUES (@CustomerID, @ProductCode, @TechID, @DateOpened, @DateClosed, @Title, @Description);";
+
+            SqlCommand cmdAddIncident = new SqlCommand();
+
+            cmdAddIncident.Connection = tsDBConn;
+            cmdAddIncident.CommandText = selectStatement;
+
+            cmdAddIncident.Parameters.AddWithValue("@CustomerID", customerID);
+            cmdAddIncident.Parameters.AddWithValue("@ProductCode", productCode);
+
+            if (techID == null)
+                cmdAddIncident.Parameters.AddWithValue("@TechID", DBNull.Value);
+            else
+                cmdAddIncident.Parameters.AddWithValue("@TechID", techID);
+
+            cmdAddIncident.Parameters.AddWithValue("@DateOpened", dateOpened);
+
+            if (dateClosed == null)
+                cmdAddIncident.Parameters.AddWithValue("@DateClosed", DBNull.Value);
+            else
+                cmdAddIncident.Parameters.AddWithValue("@DateClosed", dateClosed);
+
+            cmdAddIncident.Parameters.AddWithValue("@Title", title);
+            cmdAddIncident.Parameters.AddWithValue("@Description", description);
+
+            try
+            {
+                cmdAddIncident.Connection.Open();
+
+                int numberOfIncidents = (int)cmdAddIncident.ExecuteScalar();
+
+                if (numberOfIncidents == 0)
+                {
+                    cmdAddIncident.CommandText = insertStatement;
+
+                    int numberOfRowsAffected = cmdAddIncident.ExecuteNonQuery();
+
+                    if (numberOfRowsAffected == 1)
+                        return true;
+                    else
+                        return false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cmdAddIncident.Connection.Close();
+            }
+        }
     }
 }

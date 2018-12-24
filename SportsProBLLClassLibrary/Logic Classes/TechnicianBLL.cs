@@ -19,23 +19,46 @@ namespace SportsProBLLClassLibrary
         }
 
         /// <summary>
-        /// Gets names of all technicians from the TechnicianDAL.
+        /// Gets all technicians from the TechnicianDAL.
         /// </summary>
-        /// <returns>A DataTable containing the Name and TechID of each technician.</returns>
-        public DataTable GetTechnicianNames()
+        /// <returns>A DataTable containing each technician.</returns>
+        public DataTable GetAllTechnicians_AsDataTable()
         {
-            DataTable dtTechnicianNames = new DataTable();
+            DataTable dtTechnicians = new DataTable();
 
             try
             {
-                dtTechnicianNames  = myTechnicianDAL.RetrieveTechnicianNames();
+                dtTechnicians  = myTechnicianDAL.RetrieveAllTechnicians();
             }
             catch //Throws exception to calling method.
             {
                 throw;
             }
 
-            return dtTechnicianNames;
+            return dtTechnicians;
+        }
+
+        /// <summary>
+        /// Gets all technicians from the TechnicianDAL.
+        /// </summary>
+        /// <returns>A List containing each technician.</returns>
+        public List<Technician> GetAllTechnicians_AsList()
+        {
+            DataTable dtTechnicians = new DataTable();
+            List<Technician> lstTechnicians = new List<Technician>();
+
+            try
+            {
+                dtTechnicians = myTechnicianDAL.RetrieveAllTechnicians();
+            }
+            catch //Throws exception to calling method.
+            {
+                throw;
+            }
+
+            DataTableToList.Transfer_Technicians(dtTechnicians, lstTechnicians);
+
+            return lstTechnicians;
         }
 
         /// <summary>
@@ -59,8 +82,8 @@ namespace SportsProBLLClassLibrary
             }
 
             //Sets value of Email and Phone to corresponding Technician object properties.
-            myTechnician.TechEmail = dtTechnicianDetails.Rows[0]["Email"].ToString();
-            myTechnician.TechPhone = dtTechnicianDetails.Rows[0]["Phone"].ToString();
+            myTechnician.Email = dtTechnicianDetails.Rows[0]["Email"].ToString();
+            myTechnician.Phone = dtTechnicianDetails.Rows[0]["Phone"].ToString();
 
             return myTechnician;
         }

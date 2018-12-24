@@ -10,9 +10,9 @@ namespace SportsProBLLClassLibrary
     {
         //Backing fields.
         private int techID;
-        private string techName;
-        private string techEmail;
-        private string techPhone;
+        private string name;
+        private string email;
+        private string phone;
 
         public Technician()
         {
@@ -22,37 +22,21 @@ namespace SportsProBLLClassLibrary
         /// <summary>
         /// Gets or sets technician ID.
         /// </summary>
-        public int TechID
-        {
-            get { return techID; }
-            set { techID = value; }
-        }
+        public int TechID { get => techID; set => techID = value; }
 
         /// <summary>
         /// Gets or sets technician name.
         /// </summary>
-        public string TechName
-        {
-            get { return techName; }
-            set { techName = value; }
-        }
+        public string Name { get => name; set => name = value; }
 
         /// <summary>
         /// Gets or sets technician email.
         /// </summary>
-        public string TechEmail
-        {
-            get { return techEmail; }
-            set { techEmail = value; }
-        }
+        public string Email { get => email; set => email = value; }
 
         /// <summary>
         /// Gets or sets technician phone number.
         /// </summary>
-        public string TechPhone
-        {
-            get { return techPhone; }
-            set { techPhone = value; }
-        }
+        public string Phone { get => phone; set => phone = value; }
     }
 }

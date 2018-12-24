@@ -24,6 +24,8 @@ namespace SportsProUserInterfaceLayer
         static FrmAddCustomer addCustomerFrm = new FrmAddCustomer();
         static FrmUpdateCustomer updateCustomerFrm = new FrmUpdateCustomer();
         static FrmDeleteCustomer deleteCustomerFrm = new FrmDeleteCustomer();
+        static FrmAddIncident addIncidentFrm = new FrmAddIncident();
+        static FrmUpdateIncident updateIncidentFrm = new FrmUpdateIncident();
 
         public FrmMain()
         {
@@ -47,6 +49,8 @@ namespace SportsProUserInterfaceLayer
             GenericMethods.FormatMdiChild(addCustomerFrm, this);
             GenericMethods.FormatMdiChild(updateCustomerFrm, this);
             GenericMethods.FormatMdiChild(deleteCustomerFrm, this);
+            GenericMethods.FormatMdiChild(addIncidentFrm, this);
+            GenericMethods.FormatMdiChild(updateIncidentFrm, this);
         }
 
         private void DisplayForm(object sender, EventArgs e)
@@ -98,6 +102,14 @@ namespace SportsProUserInterfaceLayer
                     HideAndResetOtherForms(deleteCustomerFrm.Name);
                     deleteCustomerFrm.ClearAll();
                     deleteCustomerFrm.Show();
+                    break;
+                case "Add Incident":
+                    HideAndResetOtherForms(addIncidentFrm.Name);
+                    addIncidentFrm.Show();
+                    break;
+                case "Update Incident":
+                    HideAndResetOtherForms(updateIncidentFrm.Name);
+                    updateIncidentFrm.Show();
                     break;
                 default: //Do nothing.
                     break;
@@ -156,6 +168,12 @@ namespace SportsProUserInterfaceLayer
                             frm.Hide();
                             break;
                         case "FrmDeleteCustomer":
+                            frm.Hide();
+                            break;
+                        case "FrmAddIncident":
+                            frm.Hide();
+                            break;
+                        case "FrmUpdateIncident":
                             frm.Hide();
                             break;
                         default: //Do nothing.

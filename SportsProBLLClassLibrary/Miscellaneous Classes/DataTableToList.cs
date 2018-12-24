@@ -143,5 +143,20 @@ namespace SportsProBLLClassLibrary
             }
         }
 
+        public static void Transfer_Technicians(DataTable dt, List<Technician> lst)
+        {
+            foreach (DataRow dr in dt.Rows)
+            {
+                Technician myTechnician = new Technician();
+
+                myTechnician.TechID = (int)dr["TechID"];
+                myTechnician.Name = dr["Name"].ToString();
+                myTechnician.Email = dr["Email"].ToString();
+                myTechnician.Phone = dr["Phone"].ToString();
+
+                lst.Add(myTechnician);
+            }
+        }
+
     }
 }

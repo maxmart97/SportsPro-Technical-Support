@@ -11,6 +11,8 @@ namespace SportsProBLLClassLibrary
         //Backing fields.
         private string productCode;
         private string name;
+        private decimal version;
+        private DateTime releaseDate;
 
         public Product()
         {
@@ -26,5 +28,15 @@ namespace SportsProBLLClassLibrary
         /// Gets or sets the product's name.
         /// </summary>
         public string Name { get => name; set => name = value; }
+
+        /// <summary>
+        /// Gets or sets the product's version.
+        /// </summary>
+        public decimal Version { get => version; set => version = value; }
+
+        /// <summary>
+        /// Gets or sets the product's release date.
+        /// </summary>
+        public DateTime ReleaseDate { get => releaseDate; set => releaseDate = value; }
     }
 }
