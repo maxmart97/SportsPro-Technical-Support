@@ -107,5 +107,23 @@ namespace SportsProBLLClassLibrary
                 throw;
             }
         }
+
+        public bool RequestToUpdateIncident(Incident inc)
+        {
+            IncidentDAL myincidentDAL = new IncidentDAL();
+
+            try
+            {
+                if (myincidentDAL.UpdateIncident(inc.IncidentID, inc.CustomerID, inc.ProductCode, inc.TechID,
+                    inc.DateOpened, inc.DateClosed, inc.Title, inc.Description) is true)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }

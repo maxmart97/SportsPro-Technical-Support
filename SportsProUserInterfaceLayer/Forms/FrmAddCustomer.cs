@@ -37,7 +37,7 @@ namespace SportsProUserInterfaceLayer
         {
             this.SetValues();
 
-            string validatorResult = Validator.IsCustomerDataValid(name, address, stateCode, city, zipCode, phone, email);
+            string validatorResult = CustomerValidator.IsCustomerDataValid(name, address, stateCode, city, zipCode, phone, email);
 
             if (validatorResult == "Data entered is valid.")
             {

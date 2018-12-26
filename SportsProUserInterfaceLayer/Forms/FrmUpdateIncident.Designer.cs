@@ -39,6 +39,13 @@
             this.btnReturnToMainMenu = new System.Windows.Forms.Button();
             this.bsIncident = new System.Windows.Forms.BindingSource(this.components);
             this.dgvIncidents = new System.Windows.Forms.DataGridView();
+            this.IncidentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOpenedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateClosed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblInstructions = new System.Windows.Forms.Label();
             this.btnUpdateIncident = new System.Windows.Forms.Button();
             this.rtbDescription = new System.Windows.Forms.RichTextBox();
@@ -48,13 +55,6 @@
             this.cboTechnicians = new System.Windows.Forms.ComboBox();
             this.cboProducts = new System.Windows.Forms.ComboBox();
             this.cboCustomers = new System.Windows.Forms.ComboBox();
-            this.IncidentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOpenedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateClosed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             lblDescription = new System.Windows.Forms.Label();
             lblTitle = new System.Windows.Forms.Label();
             lblDateClosed = new System.Windows.Forms.Label();
@@ -139,6 +139,7 @@
             this.btnReturnToMainMenu.TabIndex = 68;
             this.btnReturnToMainMenu.Text = "Return to Main Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
+            this.btnReturnToMainMenu.Click += new System.EventHandler(this.btnReturnToMainMenu_Click);
             // 
             // bsIncident
             // 
@@ -172,10 +173,59 @@
             this.dgvIncidents.TabIndex = 69;
             this.dgvIncidents.SelectionChanged += new System.EventHandler(this.DgvIncidents_SelectionChanged);
             // 
+            // IncidentID
+            // 
+            this.IncidentID.DataPropertyName = "IncidentID";
+            this.IncidentID.HeaderText = "IncidentID";
+            this.IncidentID.Name = "IncidentID";
+            this.IncidentID.ReadOnly = true;
+            // 
+            // Customer
+            // 
+            this.Customer.DataPropertyName = "CustomerName";
+            this.Customer.HeaderText = "Customer";
+            this.Customer.Name = "Customer";
+            this.Customer.ReadOnly = true;
+            // 
+            // Product
+            // 
+            this.Product.DataPropertyName = "ProductName";
+            this.Product.HeaderText = "Product";
+            this.Product.Name = "Product";
+            this.Product.ReadOnly = true;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateOpenedDataGridViewTextBoxColumn
+            // 
+            this.dateOpenedDataGridViewTextBoxColumn.DataPropertyName = "DateOpened";
+            this.dateOpenedDataGridViewTextBoxColumn.HeaderText = "DateOpened";
+            this.dateOpenedDataGridViewTextBoxColumn.Name = "dateOpenedDataGridViewTextBoxColumn";
+            this.dateOpenedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // DateClosed
+            // 
+            this.DateClosed.DataPropertyName = "DateClosed";
+            this.DateClosed.HeaderText = "DateClosed";
+            this.DateClosed.Name = "DateClosed";
+            this.DateClosed.ReadOnly = true;
+            // 
             // lblInstructions
             // 
             this.lblInstructions.AutoSize = true;
-            this.lblInstructions.Location = new System.Drawing.Point(500, 20);
+            this.lblInstructions.Location = new System.Drawing.Point(490, 20);
             this.lblInstructions.Name = "lblInstructions";
             this.lblInstructions.Size = new System.Drawing.Size(431, 17);
             this.lblInstructions.TabIndex = 70;
@@ -189,6 +239,7 @@
             this.btnUpdateIncident.TabIndex = 85;
             this.btnUpdateIncident.Text = "Update Incident";
             this.btnUpdateIncident.UseVisualStyleBackColor = true;
+            this.btnUpdateIncident.Click += new System.EventHandler(this.BtnUpdateIncident_Click);
             // 
             // rtbDescription
             // 
@@ -261,60 +312,12 @@
             this.cboCustomers.TabIndex = 73;
             this.cboCustomers.ValueMember = "CustomerID";
             // 
-            // IncidentID
-            // 
-            this.IncidentID.DataPropertyName = "IncidentID";
-            this.IncidentID.HeaderText = "IncidentID";
-            this.IncidentID.Name = "IncidentID";
-            this.IncidentID.ReadOnly = true;
-            // 
-            // Customer
-            // 
-            this.Customer.DataPropertyName = "CustomerName";
-            this.Customer.HeaderText = "Customer";
-            this.Customer.Name = "Customer";
-            this.Customer.ReadOnly = true;
-            // 
-            // Product
-            // 
-            this.Product.DataPropertyName = "ProductName";
-            this.Product.HeaderText = "Product";
-            this.Product.Name = "Product";
-            this.Product.ReadOnly = true;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateOpenedDataGridViewTextBoxColumn
-            // 
-            this.dateOpenedDataGridViewTextBoxColumn.DataPropertyName = "DateOpened";
-            this.dateOpenedDataGridViewTextBoxColumn.HeaderText = "DateOpened";
-            this.dateOpenedDataGridViewTextBoxColumn.Name = "dateOpenedDataGridViewTextBoxColumn";
-            this.dateOpenedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // DateClosed
-            // 
-            this.DateClosed.DataPropertyName = "DateClosed";
-            this.DateClosed.HeaderText = "DateClosed";
-            this.DateClosed.Name = "DateClosed";
-            this.DateClosed.ReadOnly = true;
-            // 
             // FrmUpdateIncident
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1448, 793);
+            this.ControlBox = false;
             this.Controls.Add(this.btnUpdateIncident);
             this.Controls.Add(lblDescription);
             this.Controls.Add(this.rtbDescription);

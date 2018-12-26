@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="Miscellaneous Classes\Format.cs" />
     <Compile Include="Miscellaneous Classes\GenericMethods.cs" />
-    <Compile Include="Miscellaneous Classes\Validator.cs" />
+    <Compile Include="Miscellaneous Classes\CustomerValidator.cs" />
     <Compile Include="Model Classes\Customer.cs" />
     <Compile Include="Logic Classes\CustomerBLL.cs" />
     <Compile Include="Miscellaneous Classes\DataTableToList.cs" />

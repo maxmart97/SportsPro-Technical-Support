@@ -84,7 +84,7 @@ namespace SportsProUserInterfaceLayer.Forms
         {
             if (cboState.SelectedIndex != -1)
             {
-                string validatorResult = Validator.IsCustomerDataValid(txtName.Text, txtAddress.Text,
+                string validatorResult = CustomerValidator.IsCustomerDataValid(txtName.Text, txtAddress.Text,
                     cboState.SelectedValue.ToString(), txtCity.Text, txtZipCode.Text, txtPhone.Text, txtEmail.Text);
 
                 if (validatorResult == "Data entered is valid.")

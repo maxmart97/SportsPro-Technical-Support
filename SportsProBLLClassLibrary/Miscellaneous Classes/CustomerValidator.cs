@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace SportsProBLLClassLibrary.Miscellaneous_Classes
 {
-    public static class Validator
+    public static class CustomerValidator
     {
         public static string IsCustomerDataValid(string name, string address, string stateCode, 
             string city, string zipCode, string phoneNumber, string email)
@@ -16,9 +16,9 @@ namespace SportsProBLLClassLibrary.Miscellaneous_Classes
             {
                 if (IsAddressValid(address))
                 {
-                    if (IsStateCodeValid(stateCode))
+                    if (IsCityValid(city))
                     {
-                        if (IsCityValid(city))
+                        if (IsStateCodeValid(stateCode))
                         {
                             if (IsZipCodeValid(zipCode))
                             {
@@ -26,7 +26,7 @@ namespace SportsProBLLClassLibrary.Miscellaneous_Classes
                                 {
                                     if (IsEmailValid(email))
                                     {
-                                        return "Data entered is valid.";
+                                        return "Valid.";
                                     }
                                     else
                                     {
@@ -45,12 +45,12 @@ namespace SportsProBLLClassLibrary.Miscellaneous_Classes
                         }
                         else
                         {
-                            return "City is invalid.";
+                            return "StateCode is invalid.";
                         }
                     }
                     else
                     {
-                        return "StateCode is invalid.";
+                        return "City is invalid.";
                     }
                 }
                 else

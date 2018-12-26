@@ -202,5 +202,56 @@ namespace SportsProDALClassLibrary
                 cmdAddIncident.Connection.Close();
             }
         }
+
+        public bool UpdateIncident(int incidentID, int customerID, string productCode, int? techID, DateTime dateOpened,
+            DateTime? dateClosed, string title, string description)
+        {
+            string updateStatement =
+                "UPDATE Incidents " +
+                "SET CustomerID = @CustomerID, ProductCode = @ProductCode, TechID = @TechID, " +
+                "DateOpened = @DateOpened, DateClosed = @DateClosed, Title = @Title, Description = @Description " +
+                "WHERE IncidentID = @IncidentID;";
+
+            SqlCommand cmdUpdateIncident = new SqlCommand(updateStatement, tsDBConn);
+
+            cmdUpdateIncident.Parameters.AddWithValue("@IncidentID", incidentID);
+            cmdUpdateIncident.Parameters.AddWithValue("@CustomerID", customerID);
+            cmdUpdateIncident.Parameters.AddWithValue("@ProductCode", productCode);
+
+            if (techID == null)
+                cmdUpdateIncident.Parameters.AddWithValue("@TechID", DBNull.Value);
+            else
+                cmdUpdateIncident.Parameters.AddWithValue("@TechID", techID);
+
+            cmdUpdateIncident.Parameters.AddWithValue("@DateOpened", dateOpened);
+
+            if (dateClosed == null)
+                cmdUpdateIncident.Parameters.AddWithValue("@DateClosed", DBNull.Value);
+            else
+                cmdUpdateIncident.Parameters.AddWithValue("@DateClosed", dateClosed);
+
+            cmdUpdateIncident.Parameters.AddWithValue("@Title", title);
+            cmdUpdateIncident.Parameters.AddWithValue("@Description", description);
+
+            try
+            {
+                cmdUpdateIncident.Connection.Open();
+
+                int numberOfRowsAffected = cmdUpdateIncident.ExecuteNonQuery();
+
+                if (numberOfRowsAffected == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cmdUpdateIncident.Connection.Close();
+            }
+        }
     }
 }
