@@ -11,7 +11,7 @@ namespace SportsProDALClassLibrary
     public class IncidentDAL
     {
         //A "global" SqlConnection object that can be use as needed for methods below.
-        private static readonly SqlConnection tsDBConn = TechSupportDB.RetrieveTechSupportConnection();
+        private static readonly SqlConnection connTsDb = TechSupportDB.RetrieveTechSupportConnection();
 
         public IncidentDAL()
         {
@@ -32,7 +32,7 @@ namespace SportsProDALClassLibrary
                 "FROM dbo.Incidents;";
 
             //Creates a SqlCommand using the parameterized constructor. CommandType by default is Text.
-            SqlCommand selectAllIncidents = new SqlCommand(selectStatement, tsDBConn);
+            SqlCommand selectAllIncidents = new SqlCommand(selectStatement, connTsDb);
             
             try
             {
@@ -70,7 +70,7 @@ namespace SportsProDALClassLibrary
                 "WHERE TechID = @techID";
 
             //Creates a SqlCommand using the parameterized constructor. CommandType by default is Text.
-            SqlCommand selectIncidentsByTechID = new SqlCommand(selectStatement, tsDBConn);
+            SqlCommand selectIncidentsByTechID = new SqlCommand(selectStatement, connTsDb);
 
             //Sets up and adds parameter to command. Default direction is 'Input'.
             selectIncidentsByTechID.Parameters.AddWithValue("@techID", techID);
@@ -111,7 +111,7 @@ namespace SportsProDALClassLibrary
                 "WHERE TechID = @techID AND DateClosed IS NULL;";
 
             //Creates a SqlCommand using the parameterized constructor. CommandType by default is Text.
-            SqlCommand selectOpenIncidentsByTechID = new SqlCommand(selectStatement, tsDBConn);
+            SqlCommand selectOpenIncidentsByTechID = new SqlCommand(selectStatement, connTsDb);
 
             //Sets up and adds parameter to command. Default direction is 'Input'.
             selectOpenIncidentsByTechID.Parameters.AddWithValue("@techID", techID);
@@ -150,7 +150,7 @@ namespace SportsProDALClassLibrary
 
             SqlCommand cmdAddIncident = new SqlCommand();
 
-            cmdAddIncident.Connection = tsDBConn;
+            cmdAddIncident.Connection = connTsDb;
             cmdAddIncident.CommandText = selectStatement;
 
             cmdAddIncident.Parameters.AddWithValue("@CustomerID", customerID);
@@ -212,7 +212,7 @@ namespace SportsProDALClassLibrary
                 "DateOpened = @DateOpened, DateClosed = @DateClosed, Title = @Title, Description = @Description " +
                 "WHERE IncidentID = @IncidentID;";
 
-            SqlCommand cmdUpdateIncident = new SqlCommand(updateStatement, tsDBConn);
+            SqlCommand cmdUpdateIncident = new SqlCommand(updateStatement, connTsDb);
 
             cmdUpdateIncident.Parameters.AddWithValue("@IncidentID", incidentID);
             cmdUpdateIncident.Parameters.AddWithValue("@CustomerID", customerID);
@@ -251,6 +251,37 @@ namespace SportsProDALClassLibrary
             finally
             {
                 cmdUpdateIncident.Connection.Close();
+            }
+        }
+
+        public bool DeleteIncident(int incidentID)
+        {
+            string deleteStatement =
+                "DELETE FROM Incidents " +
+                "WHERE IncidentID = @IncidentID;";
+
+            SqlCommand cmdDeleteIncident = new SqlCommand(deleteStatement, connTsDb);
+
+            cmdDeleteIncident.Parameters.AddWithValue("@IncidentID", incidentID);
+
+            try
+            {
+                cmdDeleteIncident.Connection.Open();
+
+                int numberOfRowsAffected = cmdDeleteIncident.ExecuteNonQuery();
+
+                if (numberOfRowsAffected == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cmdDeleteIncident.Connection.Close();
             }
         }
     }

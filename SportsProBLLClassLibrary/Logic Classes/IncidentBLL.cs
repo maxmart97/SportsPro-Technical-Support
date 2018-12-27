@@ -125,5 +125,20 @@ namespace SportsProBLLClassLibrary
                 throw;
             }
         }
+
+        public bool RequestToDeleteIncident(int incidentID)
+        {
+            try
+            {
+                if (myIncidentDAL.DeleteIncident(incidentID) is true)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }

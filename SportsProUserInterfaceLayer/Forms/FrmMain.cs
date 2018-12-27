@@ -112,11 +112,13 @@ namespace SportsProUserInterfaceLayer
                 case "Update Incident":
                     HideAndResetOtherForms(updateIncidentFrm.Name);
                     updateIncidentFrm.Show();
+                    updateIncidentFrm.LoadIncidents();
                     updateIncidentFrm.ClearAll();
                     break;
                 case "Delete Incident":
                     HideAndResetOtherForms(deleteIncidentFrm.Name);
                     deleteIncidentFrm.Show();
+                    deleteIncidentFrm.LoadIncidents();
                     deleteIncidentFrm.ClearAll();
                     break;
                 default: //Do nothing.

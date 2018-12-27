@@ -36,8 +36,8 @@
             System.Windows.Forms.Label lblDateClosedOutputDesc;
             System.Windows.Forms.Label lblCustomerOutputDesc;
             System.Windows.Forms.Label lblDateOpenedOutputDesc;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblIncidentID = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblDateOpened = new System.Windows.Forms.Label();
@@ -45,18 +45,18 @@
             this.lblDateClosed = new System.Windows.Forms.Label();
             this.lblProduct = new System.Windows.Forms.Label();
             this.lblCustomer = new System.Windows.Forms.Label();
-            this.btnDeleteCustomer = new System.Windows.Forms.Button();
+            this.btnDeleteIncident = new System.Windows.Forms.Button();
             this.dgvIncidents = new System.Windows.Forms.DataGridView();
             this.dgvColIncidentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColDateClosed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblInstructions = new System.Windows.Forms.Label();
+            this.btnReturnToMainMenu = new System.Windows.Forms.Button();
             this.dgvColTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColDateOpened = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColDateClosed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsIncident = new System.Windows.Forms.BindingSource(this.components);
-            this.lblInstructions = new System.Windows.Forms.Label();
-            this.btnReturnToMainMenu = new System.Windows.Forms.Button();
             lblIncidentIDOutputDesc = new System.Windows.Forms.Label();
             lblDescOutputDesc = new System.Windows.Forms.Label();
             lblTitleOutputDesc = new System.Windows.Forms.Label();
@@ -193,14 +193,15 @@
             this.lblCustomer.TabIndex = 74;
             this.lblCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnDeleteCustomer
+            // btnDeleteIncident
             // 
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(560, 559);
-            this.btnDeleteCustomer.Name = "btnDeleteCustomer";
-            this.btnDeleteCustomer.Size = new System.Drawing.Size(294, 65);
-            this.btnDeleteCustomer.TabIndex = 73;
-            this.btnDeleteCustomer.Text = "Delete Customer";
-            this.btnDeleteCustomer.UseVisualStyleBackColor = true;
+            this.btnDeleteIncident.Location = new System.Drawing.Point(560, 559);
+            this.btnDeleteIncident.Name = "btnDeleteIncident";
+            this.btnDeleteIncident.Size = new System.Drawing.Size(294, 65);
+            this.btnDeleteIncident.TabIndex = 73;
+            this.btnDeleteIncident.Text = "Delete Incident";
+            this.btnDeleteIncident.UseVisualStyleBackColor = true;
+            this.btnDeleteIncident.Click += new System.EventHandler(this.BtnDeleteIncident_Click);
             // 
             // dgvIncidents
             // 
@@ -251,6 +252,37 @@
             this.dgvColProduct.Name = "dgvColProduct";
             this.dgvColProduct.ReadOnly = true;
             // 
+            // dgvColDateClosed
+            // 
+            this.dgvColDateClosed.DataPropertyName = "DateClosed";
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dgvColDateClosed.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvColDateClosed.HeaderText = "DateClosed";
+            this.dgvColDateClosed.Name = "dgvColDateClosed";
+            this.dgvColDateClosed.ReadOnly = true;
+            // 
+            // lblInstructions
+            // 
+            this.lblInstructions.AutoSize = true;
+            this.lblInstructions.Location = new System.Drawing.Point(567, 31);
+            this.lblInstructions.Name = "lblInstructions";
+            this.lblInstructions.Size = new System.Drawing.Size(287, 17);
+            this.lblInstructions.TabIndex = 84;
+            this.lblInstructions.Text = "Select an incident and click \'Delete Incident.\'";
+            // 
+            // btnReturnToMainMenu
+            // 
+            this.btnReturnToMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReturnToMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnReturnToMainMenu.Location = new System.Drawing.Point(1274, 734);
+            this.btnReturnToMainMenu.Name = "btnReturnToMainMenu";
+            this.btnReturnToMainMenu.Size = new System.Drawing.Size(162, 47);
+            this.btnReturnToMainMenu.TabIndex = 85;
+            this.btnReturnToMainMenu.Text = "Return to Main Menu";
+            this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
+            this.btnReturnToMainMenu.Click += new System.EventHandler(this.BtnReturnToMainMenu_Click);
+            // 
             // dgvColTitle
             // 
             this.dgvColTitle.DataPropertyName = "Title";
@@ -275,40 +307,9 @@
             this.dgvColDateOpened.Name = "dgvColDateOpened";
             this.dgvColDateOpened.ReadOnly = true;
             // 
-            // dgvColDateClosed
-            // 
-            this.dgvColDateClosed.DataPropertyName = "DateClosed";
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dgvColDateClosed.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvColDateClosed.HeaderText = "DateClosed";
-            this.dgvColDateClosed.Name = "dgvColDateClosed";
-            this.dgvColDateClosed.ReadOnly = true;
-            // 
             // bsIncident
             // 
             this.bsIncident.DataSource = typeof(SportsProUserInterfaceLayer.Incident);
-            // 
-            // lblInstructions
-            // 
-            this.lblInstructions.AutoSize = true;
-            this.lblInstructions.Location = new System.Drawing.Point(567, 31);
-            this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(287, 17);
-            this.lblInstructions.TabIndex = 84;
-            this.lblInstructions.Text = "Select an incident and click \'Delete Incident.\'";
-            // 
-            // btnReturnToMainMenu
-            // 
-            this.btnReturnToMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReturnToMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnReturnToMainMenu.Location = new System.Drawing.Point(1274, 734);
-            this.btnReturnToMainMenu.Name = "btnReturnToMainMenu";
-            this.btnReturnToMainMenu.Size = new System.Drawing.Size(162, 47);
-            this.btnReturnToMainMenu.TabIndex = 85;
-            this.btnReturnToMainMenu.Text = "Return to Main Menu";
-            this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
-            this.btnReturnToMainMenu.Click += new System.EventHandler(this.BtnReturnToMainMenu_Click);
             // 
             // FrmDeleteIncident
             // 
@@ -327,7 +328,7 @@
             this.Controls.Add(this.lblDateClosed);
             this.Controls.Add(this.lblProduct);
             this.Controls.Add(this.lblCustomer);
-            this.Controls.Add(this.btnDeleteCustomer);
+            this.Controls.Add(this.btnDeleteIncident);
             this.Controls.Add(lblDescOutputDesc);
             this.Controls.Add(lblTitleOutputDesc);
             this.Controls.Add(lblProductOutputDesc);
@@ -353,7 +354,7 @@
         private System.Windows.Forms.Label lblDateClosed;
         private System.Windows.Forms.Label lblProduct;
         private System.Windows.Forms.Label lblCustomer;
-        private System.Windows.Forms.Button btnDeleteCustomer;
+        private System.Windows.Forms.Button btnDeleteIncident;
         public System.Windows.Forms.DataGridView dgvIncidents;
         private System.Windows.Forms.BindingSource bsIncident;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColIncidentID;

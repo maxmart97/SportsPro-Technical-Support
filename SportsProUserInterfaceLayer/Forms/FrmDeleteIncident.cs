@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SportsProBLLClassLibrary;
 
 namespace SportsProUserInterfaceLayer.Forms
 {
@@ -32,8 +33,10 @@ namespace SportsProUserInterfaceLayer.Forms
             }
         }
 
-        private void LoadIncidents()
+        public void LoadIncidents()
         {
+            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Incidents);
+
             var incidents = (from incident in dc.Incidents
                              select new
                              {
@@ -51,7 +54,7 @@ namespace SportsProUserInterfaceLayer.Forms
 
         private void DgvIncidents_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvIncidents.Focused)
+            if (dgvIncidents.Focused && dgvIncidents.SelectedRows.Count == 1)
             {
                 var incidentInformation = (from incident in dc.Incidents
                                            where incident.IncidentID == (int)dgvIncidents.SelectedCells[0].Value
@@ -92,6 +95,47 @@ namespace SportsProUserInterfaceLayer.Forms
         {
             this.Hide();
             this.ClearAll();
+        }
+
+        private void BtnDeleteIncident_Click(object sender, EventArgs e)
+        {
+            if (dgvIncidents.SelectedRows.Count > 0)
+            {
+                DialogResult userChoice = MessageBox.Show("Are you sure you want to delete Incident " + lblIncidentID.Text + "?",
+                    "Confirm deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                if (userChoice == DialogResult.Yes)
+                {
+                    try
+                    {
+                        IncidentBLL myIncidentBLL = new IncidentBLL();
+
+                        if (myIncidentBLL.RequestToDeleteIncident((int)dgvIncidents.SelectedCells[0].Value) is true)
+                        {
+                            MessageBox.Show("Incident " + lblIncidentID.Text + " has been successfully deleted.", "Deletion successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.LoadIncidents();
+                            this.ClearAll();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Incident " + lblIncidentID.Text + " could not be deleted.", "Deletion unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error accessing database. Please contact software developer.", "Database Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Deletion canceled.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an incident.");
+            }
         }
     }
 }

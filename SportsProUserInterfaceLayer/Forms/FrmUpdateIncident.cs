@@ -36,8 +36,10 @@ namespace SportsProUserInterfaceLayer.Forms
             }
         }
 
-        private void LoadIncidents()
+        public void LoadIncidents()
         {
+            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Incidents);
+
             var incidents = (from incident in dc.Incidents
                             select new
                             {
@@ -55,6 +57,10 @@ namespace SportsProUserInterfaceLayer.Forms
 
         private void LoadComboBoxes()
         {
+            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Customers);
+            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Products);
+            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Technicians);
+
             var customers = (from customer in dc.Customers
                              select customer).ToList();
 
@@ -82,7 +88,7 @@ namespace SportsProUserInterfaceLayer.Forms
 
         private void DgvIncidents_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvIncidents.Focused)
+            if (dgvIncidents.Focused && dgvIncidents.SelectedRows.Count == 1)
             {
                 var incidentInformation = (from incident in dc.Incidents
                                            where incident.IncidentID == (int)dgvIncidents.SelectedCells[0].Value
@@ -158,7 +164,7 @@ namespace SportsProUserInterfaceLayer.Forms
                         if (myIncidentBLL.RequestToUpdateIncident(myIncident) is true)
                         {
                             MessageBox.Show("Incident was successfully updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Incidents);
+                            
                             this.LoadIncidents();
                             this.DisableIncidentControls();
                             this.ClearAll();
