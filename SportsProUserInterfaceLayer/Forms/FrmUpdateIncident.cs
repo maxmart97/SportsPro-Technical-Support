@@ -177,7 +177,7 @@ namespace SportsProUserInterfaceLayer.Forms
             }
         }
 
-        private void ClearAll()
+        public void ClearAll()
         {
             dgvIncidents.ClearSelection();
             cboCustomers.SelectedIndex = -1;
@@ -185,8 +185,8 @@ namespace SportsProUserInterfaceLayer.Forms
             cboTechnicians.SelectedIndex = -1;
             dtpDateOpened.ResetText();
             dtpDateClosed.ResetText();
-            tbTitle.Clear();
-            rtbDescription.Clear();
+            tbTitle.ResetText();
+            rtbDescription.ResetText();
         }
 
         private bool IsRequiredIncidentDataValid()

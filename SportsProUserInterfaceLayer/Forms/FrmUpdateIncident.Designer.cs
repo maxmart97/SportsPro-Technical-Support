@@ -36,16 +36,10 @@
             System.Windows.Forms.Label lblTechnician;
             System.Windows.Forms.Label lblProducts;
             System.Windows.Forms.Label lblName;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnReturnToMainMenu = new System.Windows.Forms.Button();
-            this.bsIncident = new System.Windows.Forms.BindingSource(this.components);
             this.dgvIncidents = new System.Windows.Forms.DataGridView();
-            this.IncidentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOpenedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateClosed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblInstructions = new System.Windows.Forms.Label();
             this.btnUpdateIncident = new System.Windows.Forms.Button();
             this.rtbDescription = new System.Windows.Forms.RichTextBox();
@@ -55,6 +49,14 @@
             this.cboTechnicians = new System.Windows.Forms.ComboBox();
             this.cboProducts = new System.Windows.Forms.ComboBox();
             this.cboCustomers = new System.Windows.Forms.ComboBox();
+            this.dgvColIncidentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColDateClosed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColDateOpened = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsIncident = new System.Windows.Forms.BindingSource(this.components);
             lblDescription = new System.Windows.Forms.Label();
             lblTitle = new System.Windows.Forms.Label();
             lblDateClosed = new System.Windows.Forms.Label();
@@ -62,8 +64,8 @@
             lblTechnician = new System.Windows.Forms.Label();
             lblProducts = new System.Windows.Forms.Label();
             lblName = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bsIncident)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncidents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsIncident)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDescription
@@ -139,11 +141,7 @@
             this.btnReturnToMainMenu.TabIndex = 68;
             this.btnReturnToMainMenu.Text = "Return to Main Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
-            this.btnReturnToMainMenu.Click += new System.EventHandler(this.btnReturnToMainMenu_Click);
-            // 
-            // bsIncident
-            // 
-            this.bsIncident.DataSource = typeof(SportsProUserInterfaceLayer.Incident);
+            this.btnReturnToMainMenu.Click += new System.EventHandler(this.BtnReturnToMainMenu_Click);
             // 
             // dgvIncidents
             // 
@@ -155,13 +153,13 @@
             this.dgvIncidents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvIncidents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIncidents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IncidentID,
-            this.Customer,
-            this.Product,
-            this.titleDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.dateOpenedDataGridViewTextBoxColumn,
-            this.DateClosed});
+            this.dgvColIncidentID,
+            this.dgvColCustomer,
+            this.dgvColProduct,
+            this.dgvColTitle,
+            this.dgvColDescription,
+            this.dgvColDateOpened,
+            this.dgvColDateClosed});
             this.dgvIncidents.DataSource = this.bsIncident;
             this.dgvIncidents.Location = new System.Drawing.Point(12, 60);
             this.dgvIncidents.MultiSelect = false;
@@ -172,55 +170,6 @@
             this.dgvIncidents.Size = new System.Drawing.Size(1424, 220);
             this.dgvIncidents.TabIndex = 69;
             this.dgvIncidents.SelectionChanged += new System.EventHandler(this.DgvIncidents_SelectionChanged);
-            // 
-            // IncidentID
-            // 
-            this.IncidentID.DataPropertyName = "IncidentID";
-            this.IncidentID.HeaderText = "IncidentID";
-            this.IncidentID.Name = "IncidentID";
-            this.IncidentID.ReadOnly = true;
-            // 
-            // Customer
-            // 
-            this.Customer.DataPropertyName = "CustomerName";
-            this.Customer.HeaderText = "Customer";
-            this.Customer.Name = "Customer";
-            this.Customer.ReadOnly = true;
-            // 
-            // Product
-            // 
-            this.Product.DataPropertyName = "ProductName";
-            this.Product.HeaderText = "Product";
-            this.Product.Name = "Product";
-            this.Product.ReadOnly = true;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateOpenedDataGridViewTextBoxColumn
-            // 
-            this.dateOpenedDataGridViewTextBoxColumn.DataPropertyName = "DateOpened";
-            this.dateOpenedDataGridViewTextBoxColumn.HeaderText = "DateOpened";
-            this.dateOpenedDataGridViewTextBoxColumn.Name = "dateOpenedDataGridViewTextBoxColumn";
-            this.dateOpenedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // DateClosed
-            // 
-            this.DateClosed.DataPropertyName = "DateClosed";
-            this.DateClosed.HeaderText = "DateClosed";
-            this.DateClosed.Name = "DateClosed";
-            this.DateClosed.ReadOnly = true;
             // 
             // lblInstructions
             // 
@@ -312,6 +261,65 @@
             this.cboCustomers.TabIndex = 73;
             this.cboCustomers.ValueMember = "CustomerID";
             // 
+            // dgvColIncidentID
+            // 
+            this.dgvColIncidentID.DataPropertyName = "IncidentID";
+            this.dgvColIncidentID.HeaderText = "IncidentID";
+            this.dgvColIncidentID.Name = "dgvColIncidentID";
+            this.dgvColIncidentID.ReadOnly = true;
+            // 
+            // dgvColCustomer
+            // 
+            this.dgvColCustomer.DataPropertyName = "CustomerName";
+            this.dgvColCustomer.HeaderText = "Customer";
+            this.dgvColCustomer.Name = "dgvColCustomer";
+            this.dgvColCustomer.ReadOnly = true;
+            // 
+            // dgvColProduct
+            // 
+            this.dgvColProduct.DataPropertyName = "ProductName";
+            this.dgvColProduct.HeaderText = "Product";
+            this.dgvColProduct.Name = "dgvColProduct";
+            this.dgvColProduct.ReadOnly = true;
+            // 
+            // dgvColDateClosed
+            // 
+            this.dgvColDateClosed.DataPropertyName = "DateClosed";
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dgvColDateClosed.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvColDateClosed.HeaderText = "DateClosed";
+            this.dgvColDateClosed.Name = "dgvColDateClosed";
+            this.dgvColDateClosed.ReadOnly = true;
+            // 
+            // dgvColTitle
+            // 
+            this.dgvColTitle.DataPropertyName = "Title";
+            this.dgvColTitle.HeaderText = "Title";
+            this.dgvColTitle.Name = "dgvColTitle";
+            this.dgvColTitle.ReadOnly = true;
+            // 
+            // dgvColDescription
+            // 
+            this.dgvColDescription.DataPropertyName = "Description";
+            this.dgvColDescription.HeaderText = "Description";
+            this.dgvColDescription.Name = "dgvColDescription";
+            this.dgvColDescription.ReadOnly = true;
+            // 
+            // dgvColDateOpened
+            // 
+            this.dgvColDateOpened.DataPropertyName = "DateOpened";
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dgvColDateOpened.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvColDateOpened.HeaderText = "DateOpened";
+            this.dgvColDateOpened.Name = "dgvColDateOpened";
+            this.dgvColDateOpened.ReadOnly = true;
+            // 
+            // bsIncident
+            // 
+            this.bsIncident.DataSource = typeof(SportsProUserInterfaceLayer.Incident);
+            // 
             // FrmUpdateIncident
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -340,8 +348,8 @@
             this.Text = "Update Incident";
             this.Load += new System.EventHandler(this.FrmUpdateIncident_Load);
             this.Shown += new System.EventHandler(this.FrmUpdateIncident_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.bsIncident)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncidents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsIncident)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,7 +359,6 @@
 
         private System.Windows.Forms.Button btnReturnToMainMenu;
         private System.Windows.Forms.BindingSource bsIncident;
-        private System.Windows.Forms.DataGridView dgvIncidents;
         private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
@@ -363,12 +370,13 @@
         private System.Windows.Forms.ComboBox cboTechnicians;
         private System.Windows.Forms.ComboBox cboProducts;
         private System.Windows.Forms.ComboBox cboCustomers;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IncidentID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateOpenedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateClosed;
+        public System.Windows.Forms.DataGridView dgvIncidents;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColIncidentID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColDateOpened;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColDateClosed;
     }
 }

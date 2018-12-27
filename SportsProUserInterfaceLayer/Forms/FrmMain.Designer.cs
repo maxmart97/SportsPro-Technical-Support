@@ -39,7 +39,7 @@
             this.tsmiMaintainIncidents = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAddIncident = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUpdateIncident = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteIncidentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDeleteIncident = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMaintainProducts = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAddProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUpdateProduct = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,19 +52,19 @@
             this.tsmiAddTechnician = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUpdateTechnician = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDeleteTechnician = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiRegistrations = new System.Windows.Forms.ToolStripMenuItem();
-            this.displayRegistrationsByProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiCustomers = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiIncidents = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDisplayAllIncidents = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDisplayIncidentsByTechnician = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDisplayOpenIncidentsByTechnician = new System.Windows.Forms.ToolStripMenuItem();
-            this.displayIncidentsByCustomerByStateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDisplayIncidentsByCustByState = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiRegistrations = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDisplayRegByProd = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTechnicians = new System.Windows.Forms.ToolStripMenuItem();
             this.ssMainMenuForm = new System.Windows.Forms.StatusStrip();
             this.tsslMainMenuForm = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsmiCustomers = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiProducts = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTechnicians = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenuForm.SuspendLayout();
             this.ssMainMenuForm.SuspendLayout();
             this.SuspendLayout();
@@ -97,7 +97,7 @@
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(216, 26);
+            this.tsmiExit.Size = new System.Drawing.Size(108, 26);
             this.tsmiExit.Text = "Exit";
             this.tsmiExit.Click += new System.EventHandler(this.ExitApplication);
             // 
@@ -126,21 +126,21 @@
             // tsmiAddCustomer
             // 
             this.tsmiAddCustomer.Name = "tsmiAddCustomer";
-            this.tsmiAddCustomer.Size = new System.Drawing.Size(216, 26);
+            this.tsmiAddCustomer.Size = new System.Drawing.Size(200, 26);
             this.tsmiAddCustomer.Text = "Add Customer";
             this.tsmiAddCustomer.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiUpdateCustomer
             // 
             this.tsmiUpdateCustomer.Name = "tsmiUpdateCustomer";
-            this.tsmiUpdateCustomer.Size = new System.Drawing.Size(216, 26);
+            this.tsmiUpdateCustomer.Size = new System.Drawing.Size(200, 26);
             this.tsmiUpdateCustomer.Text = "Update Customer";
             this.tsmiUpdateCustomer.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiDeleteCustomer
             // 
             this.tsmiDeleteCustomer.Name = "tsmiDeleteCustomer";
-            this.tsmiDeleteCustomer.Size = new System.Drawing.Size(216, 26);
+            this.tsmiDeleteCustomer.Size = new System.Drawing.Size(200, 26);
             this.tsmiDeleteCustomer.Text = "Delete Customer";
             this.tsmiDeleteCustomer.Click += new System.EventHandler(this.DisplayForm);
             // 
@@ -149,7 +149,7 @@
             this.tsmiMaintainIncidents.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiAddIncident,
             this.tsmiUpdateIncident,
-            this.deleteIncidentToolStripMenuItem});
+            this.tsmiDeleteIncident});
             this.tsmiMaintainIncidents.Name = "tsmiMaintainIncidents";
             this.tsmiMaintainIncidents.Size = new System.Drawing.Size(232, 26);
             this.tsmiMaintainIncidents.Text = "Maintain Incidents";
@@ -168,11 +168,12 @@
             this.tsmiUpdateIncident.Text = "Update Incident";
             this.tsmiUpdateIncident.Click += new System.EventHandler(this.DisplayForm);
             // 
-            // deleteIncidentToolStripMenuItem
+            // tsmiDeleteIncident
             // 
-            this.deleteIncidentToolStripMenuItem.Name = "deleteIncidentToolStripMenuItem";
-            this.deleteIncidentToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.deleteIncidentToolStripMenuItem.Text = "Delete Incident";
+            this.tsmiDeleteIncident.Name = "tsmiDeleteIncident";
+            this.tsmiDeleteIncident.Size = new System.Drawing.Size(216, 26);
+            this.tsmiDeleteIncident.Text = "Delete Incident";
+            this.tsmiDeleteIncident.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiMaintainProducts
             // 
@@ -244,35 +245,26 @@
             // tsmiAddTechnician
             // 
             this.tsmiAddTechnician.Name = "tsmiAddTechnician";
-            this.tsmiAddTechnician.Size = new System.Drawing.Size(216, 26);
+            this.tsmiAddTechnician.Size = new System.Drawing.Size(206, 26);
             this.tsmiAddTechnician.Text = "Add Technician";
             // 
             // tsmiUpdateTechnician
             // 
             this.tsmiUpdateTechnician.Name = "tsmiUpdateTechnician";
-            this.tsmiUpdateTechnician.Size = new System.Drawing.Size(216, 26);
+            this.tsmiUpdateTechnician.Size = new System.Drawing.Size(206, 26);
             this.tsmiUpdateTechnician.Text = "Update Technician";
             // 
             // tsmiDeleteTechnician
             // 
             this.tsmiDeleteTechnician.Name = "tsmiDeleteTechnician";
-            this.tsmiDeleteTechnician.Size = new System.Drawing.Size(216, 26);
+            this.tsmiDeleteTechnician.Size = new System.Drawing.Size(206, 26);
             this.tsmiDeleteTechnician.Text = "Delete Technician";
             // 
-            // tsmiRegistrations
+            // tsmiCustomers
             // 
-            this.tsmiRegistrations.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.displayRegistrationsByProductToolStripMenuItem});
-            this.tsmiRegistrations.Name = "tsmiRegistrations";
-            this.tsmiRegistrations.Size = new System.Drawing.Size(107, 24);
-            this.tsmiRegistrations.Text = "Registrations";
-            // 
-            // displayRegistrationsByProductToolStripMenuItem
-            // 
-            this.displayRegistrationsByProductToolStripMenuItem.Name = "displayRegistrationsByProductToolStripMenuItem";
-            this.displayRegistrationsByProductToolStripMenuItem.Size = new System.Drawing.Size(298, 26);
-            this.displayRegistrationsByProductToolStripMenuItem.Text = "Display Registrations by Product";
-            this.displayRegistrationsByProductToolStripMenuItem.Click += new System.EventHandler(this.DisplayForm);
+            this.tsmiCustomers.Name = "tsmiCustomers";
+            this.tsmiCustomers.Size = new System.Drawing.Size(90, 24);
+            this.tsmiCustomers.Text = "Customers";
             // 
             // tsmiIncidents
             // 
@@ -280,7 +272,7 @@
             this.tsmiDisplayAllIncidents,
             this.tsmiDisplayIncidentsByTechnician,
             this.tsmiDisplayOpenIncidentsByTechnician,
-            this.displayIncidentsByCustomerByStateToolStripMenuItem});
+            this.tsmiDisplayIncidentsByCustByState});
             this.tsmiIncidents.Name = "tsmiIncidents";
             this.tsmiIncidents.Size = new System.Drawing.Size(80, 24);
             this.tsmiIncidents.Text = "Incidents";
@@ -306,12 +298,39 @@
             this.tsmiDisplayOpenIncidentsByTechnician.Text = "Display Open Incidents By Technician";
             this.tsmiDisplayOpenIncidentsByTechnician.Click += new System.EventHandler(this.DisplayForm);
             // 
-            // displayIncidentsByCustomerByStateToolStripMenuItem
+            // tsmiDisplayIncidentsByCustByState
             // 
-            this.displayIncidentsByCustomerByStateToolStripMenuItem.Name = "displayIncidentsByCustomerByStateToolStripMenuItem";
-            this.displayIncidentsByCustomerByStateToolStripMenuItem.Size = new System.Drawing.Size(341, 26);
-            this.displayIncidentsByCustomerByStateToolStripMenuItem.Text = "Display Incidents by Customer by State";
-            this.displayIncidentsByCustomerByStateToolStripMenuItem.Click += new System.EventHandler(this.DisplayForm);
+            this.tsmiDisplayIncidentsByCustByState.Name = "tsmiDisplayIncidentsByCustByState";
+            this.tsmiDisplayIncidentsByCustByState.Size = new System.Drawing.Size(341, 26);
+            this.tsmiDisplayIncidentsByCustByState.Text = "Display Incidents by Customer by State";
+            this.tsmiDisplayIncidentsByCustByState.Click += new System.EventHandler(this.DisplayForm);
+            // 
+            // tsmiProducts
+            // 
+            this.tsmiProducts.Name = "tsmiProducts";
+            this.tsmiProducts.Size = new System.Drawing.Size(78, 24);
+            this.tsmiProducts.Text = "Products";
+            // 
+            // tsmiRegistrations
+            // 
+            this.tsmiRegistrations.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDisplayRegByProd});
+            this.tsmiRegistrations.Name = "tsmiRegistrations";
+            this.tsmiRegistrations.Size = new System.Drawing.Size(107, 24);
+            this.tsmiRegistrations.Text = "Registrations";
+            // 
+            // tsmiDisplayRegByProd
+            // 
+            this.tsmiDisplayRegByProd.Name = "tsmiDisplayRegByProd";
+            this.tsmiDisplayRegByProd.Size = new System.Drawing.Size(298, 26);
+            this.tsmiDisplayRegByProd.Text = "Display Registrations by Product";
+            this.tsmiDisplayRegByProd.Click += new System.EventHandler(this.DisplayForm);
+            // 
+            // tsmiTechnicians
+            // 
+            this.tsmiTechnicians.Name = "tsmiTechnicians";
+            this.tsmiTechnicians.Size = new System.Drawing.Size(96, 24);
+            this.tsmiTechnicians.Text = "Technicians";
             // 
             // ssMainMenuForm
             // 
@@ -337,24 +356,6 @@
             this.tsslVersion.Name = "tsslVersion";
             this.tsslVersion.Size = new System.Drawing.Size(91, 20);
             this.tsslVersion.Text = "Version 2.0.0";
-            // 
-            // tsmiCustomers
-            // 
-            this.tsmiCustomers.Name = "tsmiCustomers";
-            this.tsmiCustomers.Size = new System.Drawing.Size(90, 24);
-            this.tsmiCustomers.Text = "Customers";
-            // 
-            // tsmiProducts
-            // 
-            this.tsmiProducts.Name = "tsmiProducts";
-            this.tsmiProducts.Size = new System.Drawing.Size(78, 24);
-            this.tsmiProducts.Text = "Products";
-            // 
-            // tsmiTechnicians
-            // 
-            this.tsmiTechnicians.Name = "tsmiTechnicians";
-            this.tsmiTechnicians.Size = new System.Drawing.Size(96, 24);
-            this.tsmiTechnicians.Text = "Technicians";
             // 
             // FrmMain
             // 
@@ -409,9 +410,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiMaintainIncidents;
         private System.Windows.Forms.ToolStripMenuItem tsmiAddIncident;
         private System.Windows.Forms.ToolStripMenuItem tsmiUpdateIncident;
-        private System.Windows.Forms.ToolStripMenuItem deleteIncidentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem displayRegistrationsByProductToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem displayIncidentsByCustomerByStateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDeleteIncident;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDisplayRegByProd;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDisplayIncidentsByCustByState;
         private System.Windows.Forms.ToolStripStatusLabel tsslVersion;
         private System.Windows.Forms.ToolStripMenuItem tsmiCustomers;
         private System.Windows.Forms.ToolStripMenuItem tsmiProducts;
