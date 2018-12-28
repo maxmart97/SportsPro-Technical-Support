@@ -47,26 +47,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.bsProduct)).BeginInit();
             this.SuspendLayout();
             // 
-            // bsProduct
-            // 
-            this.bsProduct.DataSource = typeof(SportsProUserInterfaceLayer.Product);
-            // 
             // lblProductName
             // 
             lblProductName.AutoSize = true;
             lblProductName.Location = new System.Drawing.Point(435, 222);
             lblProductName.Name = "lblProductName";
-            lblProductName.Size = new System.Drawing.Size(49, 17);
+            lblProductName.Size = new System.Drawing.Size(102, 17);
             lblProductName.TabIndex = 1;
-            lblProductName.Text = "Name:";
-            // 
-            // tbProductName
-            // 
-            this.tbProductName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsProduct, "Name", true));
-            this.tbProductName.Location = new System.Drawing.Point(554, 219);
-            this.tbProductName.Name = "tbProductName";
-            this.tbProductName.Size = new System.Drawing.Size(398, 22);
-            this.tbProductName.TabIndex = 2;
+            lblProductName.Text = "Product Name:";
             // 
             // lblReleaseDate
             // 
@@ -77,14 +65,6 @@
             lblReleaseDate.TabIndex = 3;
             lblReleaseDate.Text = "Release Date:";
             // 
-            // dtpReleaseDate
-            // 
-            this.dtpReleaseDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bsProduct, "ReleaseDate", true));
-            this.dtpReleaseDate.Location = new System.Drawing.Point(554, 351);
-            this.dtpReleaseDate.Name = "dtpReleaseDate";
-            this.dtpReleaseDate.Size = new System.Drawing.Size(398, 22);
-            this.dtpReleaseDate.TabIndex = 4;
-            // 
             // lblVersion
             // 
             lblVersion.AutoSize = true;
@@ -93,35 +73,6 @@
             lblVersion.Size = new System.Drawing.Size(60, 17);
             lblVersion.TabIndex = 5;
             lblVersion.Text = "Version:";
-            // 
-            // tbVersion
-            // 
-            this.tbVersion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsProduct, "Version", true));
-            this.tbVersion.Location = new System.Drawing.Point(554, 284);
-            this.tbVersion.Name = "tbVersion";
-            this.tbVersion.Size = new System.Drawing.Size(398, 22);
-            this.tbVersion.TabIndex = 6;
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.Location = new System.Drawing.Point(554, 442);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(294, 65);
-            this.btnAddProduct.TabIndex = 74;
-            this.btnAddProduct.Text = "Add Product";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            // 
-            // btnReturnToMainMenu
-            // 
-            this.btnReturnToMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReturnToMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnReturnToMainMenu.Location = new System.Drawing.Point(1282, 742);
-            this.btnReturnToMainMenu.Name = "btnReturnToMainMenu";
-            this.btnReturnToMainMenu.Size = new System.Drawing.Size(162, 47);
-            this.btnReturnToMainMenu.TabIndex = 86;
-            this.btnReturnToMainMenu.Text = "Return to Main Menu";
-            this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
             // 
             // lblProductCode
             // 
@@ -132,19 +83,70 @@
             lblProductCode.TabIndex = 86;
             lblProductCode.Text = "Product Code:";
             // 
+            // bsProduct
+            // 
+            this.bsProduct.DataSource = typeof(SportsProUserInterfaceLayer.Product);
+            // 
+            // tbProductName
+            // 
+            this.tbProductName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsProduct, "Name", true));
+            this.tbProductName.Location = new System.Drawing.Point(554, 219);
+            this.tbProductName.Name = "tbProductName";
+            this.tbProductName.Size = new System.Drawing.Size(398, 22);
+            this.tbProductName.TabIndex = 1;
+            // 
+            // dtpReleaseDate
+            // 
+            this.dtpReleaseDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bsProduct, "ReleaseDate", true));
+            this.dtpReleaseDate.Location = new System.Drawing.Point(554, 351);
+            this.dtpReleaseDate.Name = "dtpReleaseDate";
+            this.dtpReleaseDate.Size = new System.Drawing.Size(398, 22);
+            this.dtpReleaseDate.TabIndex = 3;
+            // 
+            // tbVersion
+            // 
+            this.tbVersion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsProduct, "Version", true));
+            this.tbVersion.Location = new System.Drawing.Point(554, 284);
+            this.tbVersion.Name = "tbVersion";
+            this.tbVersion.Size = new System.Drawing.Size(398, 22);
+            this.tbVersion.TabIndex = 2;
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.Location = new System.Drawing.Point(554, 442);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(294, 65);
+            this.btnAddProduct.TabIndex = 4;
+            this.btnAddProduct.Text = "Add Product";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.BtnAddProduct_Click);
+            // 
+            // btnReturnToMainMenu
+            // 
+            this.btnReturnToMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReturnToMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnReturnToMainMenu.Location = new System.Drawing.Point(1282, 742);
+            this.btnReturnToMainMenu.Name = "btnReturnToMainMenu";
+            this.btnReturnToMainMenu.Size = new System.Drawing.Size(162, 47);
+            this.btnReturnToMainMenu.TabIndex = 5;
+            this.btnReturnToMainMenu.Text = "Return to Main Menu";
+            this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
+            this.btnReturnToMainMenu.Click += new System.EventHandler(this.BtnReturnToMainMenu_Click);
+            // 
             // tbProductCode
             // 
             this.tbProductCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsProduct, "ProductCode", true));
             this.tbProductCode.Location = new System.Drawing.Point(554, 164);
             this.tbProductCode.Name = "tbProductCode";
             this.tbProductCode.Size = new System.Drawing.Size(398, 22);
-            this.tbProductCode.TabIndex = 87;
+            this.tbProductCode.TabIndex = 0;
             // 
             // FrmAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1456, 801);
+            this.ControlBox = false;
             this.Controls.Add(lblProductCode);
             this.Controls.Add(this.tbProductCode);
             this.Controls.Add(this.btnReturnToMainMenu);

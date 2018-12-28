@@ -132,3 +132,4 @@ C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUs
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.exe
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.pdb
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Forms.FrmDeleteIncident.resources
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Forms.FrmAddProduct.resources

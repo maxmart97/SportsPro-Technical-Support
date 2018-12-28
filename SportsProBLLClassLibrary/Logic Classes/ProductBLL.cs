@@ -10,6 +10,8 @@ namespace SportsProBLLClassLibrary
 {
     public class ProductBLL
     {
+        private static ProductDAL myProductDAL = new ProductDAL();
+
         public ProductBLL()
         {
             //Default Constructor
@@ -23,7 +25,6 @@ namespace SportsProBLLClassLibrary
         {
             DataTable dtProductNameAndCode = new DataTable();
             List<Product> lstProductNameAndCode = new List<Product>();
-            ProductDAL myProductDAL = new ProductDAL();
 
             try
             {
@@ -37,6 +38,21 @@ namespace SportsProBLLClassLibrary
             DataTableToList.Transfer_Products(dtProductNameAndCode, lstProductNameAndCode);
 
             return lstProductNameAndCode;
+        }
+
+        public bool RequestToAddProduct(Product prod)
+        {
+            try
+            {
+                if (myProductDAL.AddProduct(prod.ProductCode, prod.Name, prod.Version, prod.ReleaseDate) is true)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

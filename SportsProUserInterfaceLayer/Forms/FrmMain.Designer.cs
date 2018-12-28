@@ -157,21 +157,21 @@
             // tsmiAddIncident
             // 
             this.tsmiAddIncident.Name = "tsmiAddIncident";
-            this.tsmiAddIncident.Size = new System.Drawing.Size(216, 26);
+            this.tsmiAddIncident.Size = new System.Drawing.Size(190, 26);
             this.tsmiAddIncident.Text = "Add Incident";
             this.tsmiAddIncident.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiUpdateIncident
             // 
             this.tsmiUpdateIncident.Name = "tsmiUpdateIncident";
-            this.tsmiUpdateIncident.Size = new System.Drawing.Size(216, 26);
+            this.tsmiUpdateIncident.Size = new System.Drawing.Size(190, 26);
             this.tsmiUpdateIncident.Text = "Update Incident";
             this.tsmiUpdateIncident.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiDeleteIncident
             // 
             this.tsmiDeleteIncident.Name = "tsmiDeleteIncident";
-            this.tsmiDeleteIncident.Size = new System.Drawing.Size(216, 26);
+            this.tsmiDeleteIncident.Size = new System.Drawing.Size(190, 26);
             this.tsmiDeleteIncident.Text = "Delete Incident";
             this.tsmiDeleteIncident.Click += new System.EventHandler(this.DisplayForm);
             // 
@@ -190,6 +190,7 @@
             this.tsmiAddProduct.Name = "tsmiAddProduct";
             this.tsmiAddProduct.Size = new System.Drawing.Size(216, 26);
             this.tsmiAddProduct.Text = "Add Product";
+            this.tsmiAddProduct.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiUpdateProduct
             // 

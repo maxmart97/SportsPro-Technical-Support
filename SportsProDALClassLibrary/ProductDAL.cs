@@ -10,6 +10,8 @@ namespace SportsProDALClassLibrary
 {
     public class ProductDAL
     {
+        private static readonly SqlConnection connTsDb = TechSupportDB.RetrieveTechSupportConnection();
+
         public ProductDAL()
         {
             //Default Constructor
@@ -28,7 +30,7 @@ namespace SportsProDALClassLibrary
                 "FROM dbo.Products;";
 
             //Creates a SqlCommand using the parameterized constructor. CommandType by default is Text.
-            SqlCommand selectCommand = new SqlCommand(selectStatement, TechSupportDB.RetrieveTechSupportConnection());
+            SqlCommand selectCommand = new SqlCommand(selectStatement, connTsDb);
 
             try
             {
@@ -47,6 +49,60 @@ namespace SportsProDALClassLibrary
             }
 
             return dtProductNameAndCode;
+        }
+
+        public bool AddProduct(string productCode, string productName, decimal version, DateTime releaseDate)
+        {
+            string selectStatement =
+                "SELECT COUNT(*) " +
+                "FROM Products " +
+                "WHERE ProductCode = @ProductCode AND Name = @ProductName " +
+                "AND Version = @Version AND ReleaseDate = @ReleaseDate;";
+
+            string insertStatement =
+                "INSERT INTO Products " +
+                "VALUES (@ProductCode, @ProductName, @Version, @ReleaseDate);";
+
+            SqlCommand cmdAddProduct = new SqlCommand();
+
+            cmdAddProduct.Connection = connTsDb;
+            cmdAddProduct.CommandText = selectStatement;
+
+            cmdAddProduct.Parameters.AddWithValue("@ProductCode", productCode);
+            cmdAddProduct.Parameters.AddWithValue("@ProductName", productName);
+            cmdAddProduct.Parameters.AddWithValue("@Version", version);
+            cmdAddProduct.Parameters.AddWithValue("@ReleaseDate", releaseDate);
+
+            try
+            {
+                cmdAddProduct.Connection.Open();
+
+                int numberOfIncidents = (int)cmdAddProduct.ExecuteScalar();
+
+                if (numberOfIncidents == 0)
+                {
+                    cmdAddProduct.CommandText = insertStatement;
+
+                    int numberOfRowsAffected = cmdAddProduct.ExecuteNonQuery();
+
+                    if (numberOfRowsAffected == 1)
+                        return true;
+                    else
+                        return false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cmdAddProduct.Connection.Close();
+            }
         }
     }
 }
