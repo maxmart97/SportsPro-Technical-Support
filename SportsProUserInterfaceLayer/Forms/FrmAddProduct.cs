@@ -65,7 +65,7 @@ namespace SportsProUserInterfaceLayer.Forms
 
                     if (regexVersion.IsMatch(tbVersion.Text))
                     {
-                        if (dtpReleaseDate.Value >= DateTime.Now)
+                        if (dtpReleaseDate.Value >= DateTime.Today)
                         {
                             return true;
                         }

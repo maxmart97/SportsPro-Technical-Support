@@ -197,6 +197,7 @@
             this.tsmiUpdateProduct.Name = "tsmiUpdateProduct";
             this.tsmiUpdateProduct.Size = new System.Drawing.Size(216, 26);
             this.tsmiUpdateProduct.Text = "Update Product";
+            this.tsmiUpdateProduct.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiDeleteProduct
             // 

@@ -104,5 +104,42 @@ namespace SportsProDALClassLibrary
                 cmdAddProduct.Connection.Close();
             }
         }
+
+        public bool UpdateProduct(string oldProductCode, string productCode, string name, decimal version, DateTime releaseDate)
+        {
+            string updateStatement =
+                "UPDATE Products " +
+                "SET ProductCode = @ProductCode, Name = @Name, Version = @Version, " +
+                "ReleaseDate = @ReleaseDate " +
+                "WHERE ProductCode = @OldProductCode;";
+
+            SqlCommand cmdUpdateProduct = new SqlCommand(updateStatement, connTsDb);
+
+            cmdUpdateProduct.Parameters.AddWithValue("@ProductCode", productCode);
+            cmdUpdateProduct.Parameters.AddWithValue("@Name", name);
+            cmdUpdateProduct.Parameters.AddWithValue("@Version", version);
+            cmdUpdateProduct.Parameters.AddWithValue("@ReleaseDate", releaseDate);
+            cmdUpdateProduct.Parameters.AddWithValue("@OldProductCode", oldProductCode);
+
+            try
+            {
+                cmdUpdateProduct.Connection.Open();
+
+                int numberOfRowsAffected = cmdUpdateProduct.ExecuteNonQuery();
+
+                if (numberOfRowsAffected == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cmdUpdateProduct.Connection.Close();
+            }
+        }
     }
 }

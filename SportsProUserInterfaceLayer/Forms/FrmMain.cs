@@ -28,6 +28,7 @@ namespace SportsProUserInterfaceLayer
         static FrmUpdateIncident updateIncidentFrm = new FrmUpdateIncident();
         static FrmDeleteIncident deleteIncidentFrm = new FrmDeleteIncident();
         static FrmAddProduct addProductFrm = new FrmAddProduct();
+        static FrmUpdateProduct updateProductFrm = new FrmUpdateProduct();
 
         public FrmMain()
         {
@@ -55,6 +56,7 @@ namespace SportsProUserInterfaceLayer
             GenericMethods.FormatMdiChild(updateIncidentFrm, this);
             GenericMethods.FormatMdiChild(deleteIncidentFrm, this);
             GenericMethods.FormatMdiChild(addProductFrm, this);
+            GenericMethods.FormatMdiChild(updateProductFrm, this);
         }
 
         private void DisplayForm(object sender, EventArgs e)
@@ -128,6 +130,10 @@ namespace SportsProUserInterfaceLayer
                     addProductFrm.Show();
                     addProductFrm.ClearAll();
                     break;
+                case "Update Product":
+                    HideAndResetOtherForms(updateProductFrm.Name);
+                    updateProductFrm.Show();
+                    break;
                 default: //Do nothing.
                     break;
             }
@@ -197,6 +203,9 @@ namespace SportsProUserInterfaceLayer
                             frm.Hide();
                             break;
                         case "FrmAddProduct":
+                            frm.Hide();
+                            break;
+                        case "FrmUpdateProduct":
                             frm.Hide();
                             break;
                         default: //Do nothing.

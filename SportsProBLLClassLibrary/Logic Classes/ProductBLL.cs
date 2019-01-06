@@ -54,5 +54,22 @@ namespace SportsProBLLClassLibrary
                 throw;
             }
         }
+
+        public bool RequestToUpdateProduct(string oldProdCode, Product prod)
+        {
+            ProductDAL myProductDAL = new ProductDAL();
+
+            try
+            {
+                if (myProductDAL.UpdateProduct(oldProdCode, prod.ProductCode, prod.Name, prod.Version, prod.ReleaseDate) is true)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }

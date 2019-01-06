@@ -40,6 +40,7 @@
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.btnReturnToMainMenu = new System.Windows.Forms.Button();
             this.tbProductCode = new System.Windows.Forms.TextBox();
+            this.lblInstructions = new System.Windows.Forms.Label();
             lblProductName = new System.Windows.Forms.Label();
             lblReleaseDate = new System.Windows.Forms.Label();
             lblVersion = new System.Windows.Forms.Label();
@@ -141,12 +142,23 @@
             this.tbProductCode.Size = new System.Drawing.Size(398, 22);
             this.tbProductCode.TabIndex = 0;
             // 
+            // lblInstructions
+            // 
+            this.lblInstructions.AutoSize = true;
+            this.lblInstructions.Location = new System.Drawing.Point(399, 72);
+            this.lblInstructions.Name = "lblInstructions";
+            this.lblInstructions.Size = new System.Drawing.Size(617, 17);
+            this.lblInstructions.TabIndex = 87;
+            this.lblInstructions.Text = "Enter data in the textboxes below. Select a release date from the date picker. Cl" +
+    "ick \'Add Product.\'";
+            // 
             // FrmAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1456, 801);
             this.ControlBox = false;
+            this.Controls.Add(this.lblInstructions);
             this.Controls.Add(lblProductCode);
             this.Controls.Add(this.tbProductCode);
             this.Controls.Add(this.btnReturnToMainMenu);
@@ -174,5 +186,6 @@
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.Button btnReturnToMainMenu;
         private System.Windows.Forms.TextBox tbProductCode;
+        private System.Windows.Forms.Label lblInstructions;
     }
 }
