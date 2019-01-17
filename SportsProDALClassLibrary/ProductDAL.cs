@@ -141,5 +141,36 @@ namespace SportsProDALClassLibrary
                 cmdUpdateProduct.Connection.Close();
             }
         }
+
+        public bool DeleteProduct(string productCode)
+        {
+            string deleteStatement =
+                "DELETE FROM Products " +
+                "WHERE ProductCode = @ProductCode;";
+
+            SqlCommand cmdDeleteProduct = new SqlCommand(deleteStatement, connTsDb);
+
+            cmdDeleteProduct.Parameters.AddWithValue("@ProductCode", productCode);
+
+            try
+            {
+                cmdDeleteProduct.Connection.Open();
+
+                int numberOfRowsAffected = cmdDeleteProduct.ExecuteNonQuery();
+
+                if (numberOfRowsAffected == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cmdDeleteProduct.Connection.Close();
+            }
+        }
     }
 }

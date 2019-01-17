@@ -176,7 +176,7 @@
             this.btnReturnToMainMenu.TabIndex = 98;
             this.btnReturnToMainMenu.Text = "Return to Main Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
-            this.btnReturnToMainMenu.Click += new System.EventHandler(this.btnReturnToMainMenu_Click);
+            this.btnReturnToMainMenu.Click += new System.EventHandler(this.BtnReturnToMainMenu_Click);
             // 
             // FrmUpdateProduct
             // 

@@ -169,6 +169,7 @@ namespace SportsProUserInterfaceLayer.Forms
         {
             this.Hide();
             this.ClearAll();
+            this.DisableProductControls();
         }
     }
 }

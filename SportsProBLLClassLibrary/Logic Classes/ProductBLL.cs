@@ -71,5 +71,20 @@ namespace SportsProBLLClassLibrary
                 throw;
             }
         }
+
+        public bool RequestToDeleteProduct(string productCode)
+        {
+            try
+            {
+                if (myProductDAL.DeleteProduct(productCode) is true)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }

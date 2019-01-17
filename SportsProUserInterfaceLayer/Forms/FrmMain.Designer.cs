@@ -204,6 +204,7 @@
             this.tsmiDeleteProduct.Name = "tsmiDeleteProduct";
             this.tsmiDeleteProduct.Size = new System.Drawing.Size(216, 26);
             this.tsmiDeleteProduct.Text = "Delete Product";
+            this.tsmiDeleteProduct.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiMaintainRegistrations
             // 
@@ -227,6 +228,7 @@
             this.tsmiUpdateRegistration.Name = "tsmiUpdateRegistration";
             this.tsmiUpdateRegistration.Size = new System.Drawing.Size(217, 26);
             this.tsmiUpdateRegistration.Text = "Update Registration";
+            this.tsmiUpdateRegistration.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiDeleteRegistration
             // 

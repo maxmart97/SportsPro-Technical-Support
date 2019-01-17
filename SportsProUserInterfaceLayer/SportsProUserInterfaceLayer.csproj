@@ -81,6 +81,12 @@
     <Compile Include="Forms\FrmDeleteIncident.Designer.cs">
       <DependentUpon>FrmDeleteIncident.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmDeleteProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDeleteProduct.Designer.cs">
+      <DependentUpon>FrmDeleteProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmIncidentsByCustomerByState.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     <Compile Include="Forms\FrmUpdateProduct.Designer.cs">
       <DependentUpon>FrmUpdateProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmUpdateRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUpdateRegistration.Designer.cs">
+      <DependentUpon>FrmUpdateRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmViewAllIncidents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,9 @@
     <EmbeddedResource Include="Forms\FrmDeleteIncident.resx">
       <DependentUpon>FrmDeleteIncident.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDeleteProduct.resx">
+      <DependentUpon>FrmDeleteProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmIncidentsByCustomerByState.resx">
       <DependentUpon>FrmIncidentsByCustomerByState.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmUpdateProduct.resx">
       <DependentUpon>FrmUpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUpdateRegistration.resx">
+      <DependentUpon>FrmUpdateRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmViewAllIncidents.resx">
       <DependentUpon>FrmViewAllIncidents.cs</DependentUpon>

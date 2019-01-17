@@ -29,6 +29,8 @@ namespace SportsProUserInterfaceLayer
         static FrmDeleteIncident deleteIncidentFrm = new FrmDeleteIncident();
         static FrmAddProduct addProductFrm = new FrmAddProduct();
         static FrmUpdateProduct updateProductFrm = new FrmUpdateProduct();
+        static FrmDeleteProduct deleteProductFrm = new FrmDeleteProduct();
+        static FrmUpdateRegistration updateRegistrationFrm = new FrmUpdateRegistration();
 
         public FrmMain()
         {
@@ -57,6 +59,8 @@ namespace SportsProUserInterfaceLayer
             GenericMethods.FormatMdiChild(deleteIncidentFrm, this);
             GenericMethods.FormatMdiChild(addProductFrm, this);
             GenericMethods.FormatMdiChild(updateProductFrm, this);
+            GenericMethods.FormatMdiChild(deleteProductFrm, this);
+            GenericMethods.FormatMdiChild(updateRegistrationFrm, this);
         }
 
         private void DisplayForm(object sender, EventArgs e)
@@ -134,6 +138,17 @@ namespace SportsProUserInterfaceLayer
                     HideAndResetOtherForms(updateProductFrm.Name);
                     updateProductFrm.Show();
                     break;
+                case "Delete Product":
+                    HideAndResetOtherForms(deleteProductFrm.Name);
+                    deleteProductFrm.Show();
+                    deleteProductFrm.LoadIncidents();
+                    deleteProductFrm.ClearAll();
+                    break;
+                case "Update Registration":
+                    HideAndResetOtherForms(updateRegistrationFrm.Name);
+                    updateRegistrationFrm.Show();
+                    updateRegistrationFrm.ClearAll();
+                    break;
                 default: //Do nothing.
                     break;
             }
@@ -173,11 +188,6 @@ namespace SportsProUserInterfaceLayer
                             allOpenIncidentsByTechnicianFrm.lblTechnicianPhone.Text = string.Empty;
                             allOpenIncidentsByTechnicianFrm.dgvOpenIncidentsByTechnician.DataSource = null;
                             break;
-                        case "FrmAddRegistration":
-                            frm.Hide();
-                            addRegistrationFrm.cboCustomer.SelectedIndex = -1;
-                            addRegistrationFrm.cboProduct.SelectedIndex = -1;
-                            break;
                         case "FrmIncidentsByCustomerByState":
                             frm.Hide();
                             break;
@@ -206,6 +216,17 @@ namespace SportsProUserInterfaceLayer
                             frm.Hide();
                             break;
                         case "FrmUpdateProduct":
+                            frm.Hide();
+                            break;
+                        case "FrmDeleteProduct":
+                            frm.Hide();
+                            break;
+                        case "FrmAddRegistration":
+                            frm.Hide();
+                            addRegistrationFrm.cboCustomer.SelectedIndex = -1;
+                            addRegistrationFrm.cboProduct.SelectedIndex = -1;
+                            break;
+                        case "FrmUpdateRegistration":
                             frm.Hide();
                             break;
                         default: //Do nothing.
