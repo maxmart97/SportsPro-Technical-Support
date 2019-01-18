@@ -34,15 +34,15 @@
             System.Windows.Forms.Label lblRegistrationDate;
             this.lblInstructions = new System.Windows.Forms.Label();
             this.dgvRegistrations = new System.Windows.Forms.DataGridView();
+            this.dgvColCustName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColRegDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsRegistration = new System.Windows.Forms.BindingSource(this.components);
             this.cboCustomers = new System.Windows.Forms.ComboBox();
             this.cboProducts = new System.Windows.Forms.ComboBox();
             this.dtpRegistrationDate = new System.Windows.Forms.DateTimePicker();
             this.btnUpdateRegistration = new System.Windows.Forms.Button();
             this.btnReturnToMainMenu = new System.Windows.Forms.Button();
-            this.dgvColCustName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColRegDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             lblCustomer = new System.Windows.Forms.Label();
             lblProduct = new System.Windows.Forms.Label();
             lblRegistrationDate = new System.Windows.Forms.Label();
@@ -110,6 +110,27 @@
             this.dgvRegistrations.TabIndex = 2;
             this.dgvRegistrations.SelectionChanged += new System.EventHandler(this.DgvRegistrations_SelectionChanged);
             // 
+            // dgvColCustName
+            // 
+            this.dgvColCustName.DataPropertyName = "CustomerName";
+            this.dgvColCustName.HeaderText = "CustomerName";
+            this.dgvColCustName.Name = "dgvColCustName";
+            this.dgvColCustName.ReadOnly = true;
+            // 
+            // dgvColProductName
+            // 
+            this.dgvColProductName.DataPropertyName = "ProductName";
+            this.dgvColProductName.HeaderText = "ProductName";
+            this.dgvColProductName.Name = "dgvColProductName";
+            this.dgvColProductName.ReadOnly = true;
+            // 
+            // dgvColRegDate
+            // 
+            this.dgvColRegDate.DataPropertyName = "RegistrationDate";
+            this.dgvColRegDate.HeaderText = "RegistrationDate";
+            this.dgvColRegDate.Name = "dgvColRegDate";
+            this.dgvColRegDate.ReadOnly = true;
+            // 
             // bsRegistration
             // 
             this.bsRegistration.DataSource = typeof(SportsProUserInterfaceLayer.Registration);
@@ -163,27 +184,7 @@
             this.btnReturnToMainMenu.TabIndex = 105;
             this.btnReturnToMainMenu.Text = "Return to Main Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
-            // 
-            // dgvColCustName
-            // 
-            this.dgvColCustName.DataPropertyName = "CustomerName";
-            this.dgvColCustName.HeaderText = "CustomerName";
-            this.dgvColCustName.Name = "dgvColCustName";
-            this.dgvColCustName.ReadOnly = true;
-            // 
-            // dgvColProductName
-            // 
-            this.dgvColProductName.DataPropertyName = "ProductName";
-            this.dgvColProductName.HeaderText = "ProductName";
-            this.dgvColProductName.Name = "dgvColProductName";
-            this.dgvColProductName.ReadOnly = true;
-            // 
-            // dgvColRegDate
-            // 
-            this.dgvColRegDate.DataPropertyName = "RegistrationDate";
-            this.dgvColRegDate.HeaderText = "RegistrationDate";
-            this.dgvColRegDate.Name = "dgvColRegDate";
-            this.dgvColRegDate.ReadOnly = true;
+            this.btnReturnToMainMenu.Click += new System.EventHandler(this.BtnReturnToMainMenu_Click);
             // 
             // FrmUpdateRegistration
             // 

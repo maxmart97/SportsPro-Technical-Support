@@ -14,6 +14,8 @@ namespace SportsProUserInterfaceLayer.Forms
     public partial class FrmUpdateRegistration : Form
     {
         TechSupportDB_LINQ2SQLDataContext dc = new TechSupportDB_LINQ2SQLDataContext();
+        int oldCustomerID;
+        string oldProductCode;
 
         public FrmUpdateRegistration()
         {
@@ -75,13 +77,12 @@ namespace SportsProUserInterfaceLayer.Forms
         {
             if (dgvRegistrations.Focused && dgvRegistrations.SelectedRows.Count == 1)
             {
-                int indexOfCustomerInCbo = GetCustomerIndex(dgvRegistrations.SelectedCells[0].Value.ToString());
-                int indexOfProductInCbo = GetProductIndex(dgvRegistrations.SelectedCells[1].Value.ToString());
-
-                cboCustomers.SelectedIndex = indexOfCustomerInCbo;
-                cboProducts.SelectedIndex = indexOfProductInCbo;
-
+                cboCustomers.SelectedIndex = GetCustomerIndex(dgvRegistrations.SelectedCells[0].Value.ToString());
+                cboProducts.SelectedIndex = GetProductIndex(dgvRegistrations.SelectedCells[1].Value.ToString());
                 dtpRegistrationDate.Value = (DateTime)dgvRegistrations.SelectedCells[2].Value;
+
+                oldCustomerID = (int)cboCustomers.SelectedValue;
+                oldProductCode = cboProducts.SelectedValue.ToString();
 
                 this.EnableControls();
             }
@@ -144,6 +145,7 @@ namespace SportsProUserInterfaceLayer.Forms
             cboCustomers.Enabled = true;
             cboProducts.Enabled = true;
             dtpRegistrationDate.Enabled = true;
+            btnUpdateRegistration.Enabled = true;
         }
 
         public void DisableControls()
@@ -151,12 +153,13 @@ namespace SportsProUserInterfaceLayer.Forms
             cboCustomers.Enabled = false;
             cboProducts.Enabled = false;
             dtpRegistrationDate.Enabled = false;
+            btnUpdateRegistration.Enabled = false;
         }
 
 
         private void BtnUpdateRegistration_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
                 SportsProBLLClassLibrary.Registration newRegistration = new SportsProBLLClassLibrary.Registration
                 {
@@ -165,26 +168,33 @@ namespace SportsProUserInterfaceLayer.Forms
                     RegistrationDate = dtpRegistrationDate.Value
                 };
 
-                Product oldProduct = (Product)lbName.Items[lbName.SelectedIndex];
+                RegistrationBLL myRegistrationBLL = new RegistrationBLL();
 
-                if (myProductBLL.RequestToUpdateProduct(oldProduct.ProductCode, newProduct) is true)
+                if (myRegistrationBLL.RequestToUpdateRegistration(oldCustomerID, oldProductCode, newRegistration) is true)
                 {
-                    MessageBox.Show(newProduct.Name + " has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("The registration has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    this.LoadProducts();
+                    this.LoadRegistrations();
                     this.ClearAll();
-                    this.DisableProductControls();
+                    this.DisableControls();
                 }
                 else
                 {
-                    MessageBox.Show("Product update unsuccessful.", "Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Registration update unsuccessful.", "Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch
             {
                 MessageBox.Show("Error accessing database. Please contact software developer.", "Database Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            }
+        }
+
+        private void BtnReturnToMainMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.ClearAll();
+            this.DisableControls();
         }
     }
 }

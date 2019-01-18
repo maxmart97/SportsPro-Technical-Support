@@ -63,5 +63,23 @@ namespace SportsProBLLClassLibrary
 
             return registrationStatus;
         }
+
+        public bool RequestToUpdateRegistration(int oldCustomerID, string oldProductCode, Registration newRegistration)
+        {
+            RegistrationDAL myRegistrationDAL = new RegistrationDAL();
+
+            try
+            {
+                if (myRegistrationDAL.UpdateRegistration(oldCustomerID, oldProductCode, newRegistration.CustomerID, 
+                        newRegistration.ProductCode, newRegistration.RegistrationDate) is true)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }

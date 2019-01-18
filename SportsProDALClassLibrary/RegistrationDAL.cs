@@ -11,7 +11,7 @@ namespace SportsProDALClassLibrary
     public class RegistrationDAL
     {
         //A "global" SqlConnection object that can be used as needed for methods below.
-        private static readonly SqlConnection tsDBConn = TechSupportDB.RetrieveTechSupportConnection();
+        private static readonly SqlConnection connTsDb = TechSupportDB.RetrieveTechSupportConnection();
 
         public RegistrationDAL()
         {
@@ -31,7 +31,7 @@ namespace SportsProDALClassLibrary
             /* Sets up SqlCommand using the parameterized constructor.
              * CommandText is set to the name of the stored procedure. */
             SqlCommand cmdCustRegForSpecifiedProd =
-                new SqlCommand("spCustomerProductRegistrations", tsDBConn);
+                new SqlCommand("spCustomerProductRegistrations", connTsDb);
 
             //Changes SqlCommand's CommandType to StoredProcedure and sets up the needed parameter.
             cmdCustRegForSpecifiedProd.CommandType = CommandType.StoredProcedure;
@@ -66,7 +66,7 @@ namespace SportsProDALClassLibrary
         private bool AddRegistration(int customerID, string productCode, DateTime regDate)
         {
             //Creates a SqlCommand using the parameterized constructor. CommandText is name of StoredProcedure.
-            SqlCommand addCommand = new SqlCommand("spAddRegistration", tsDBConn);
+            SqlCommand addCommand = new SqlCommand("spAddRegistration", connTsDb);
 
             //Sets CommandType to StoredProcedure and sets up parameters.
             addCommand.CommandType = CommandType.StoredProcedure;
@@ -110,7 +110,7 @@ namespace SportsProDALClassLibrary
                 "WHERE CustomerID = @customerID AND ProductCode = @productCode;";
 
             //Creates a SqlCommand using the parameterized constructor. CommandType by default is Text.
-            SqlCommand checkCommand = new SqlCommand(selectStatement, tsDBConn);
+            SqlCommand checkCommand = new SqlCommand(selectStatement, connTsDb);
 
             //ets up and adds parameter to command. Default direction is 'Input'.
             checkCommand.Parameters.AddWithValue("@customerID", customerID);
@@ -164,6 +164,42 @@ namespace SportsProDALClassLibrary
             catch //Throws exception to calling method.
             {
                 throw;
+            }
+        }
+
+        public bool UpdateRegistration(int oldCustomerID, string oldProductCode, int customerID, string productCode, DateTime registrationDate)
+        {
+            string updateStatement =
+                "UPDATE Registrations " +
+                "SET CustomerID = @CustomerID, ProductCode = @ProductCode, RegistrationDate = @RegistrationDate " +
+                "WHERE CustomerID = @OldCustomerID AND ProductCode = @OldProductCode;";
+
+            SqlCommand cmdUpdateRegistration = new SqlCommand(updateStatement, connTsDb);
+
+            cmdUpdateRegistration.Parameters.AddWithValue("@OldCustomerID", oldCustomerID);
+            cmdUpdateRegistration.Parameters.AddWithValue("@OldProductCode", oldProductCode);
+            cmdUpdateRegistration.Parameters.AddWithValue("@CustomerID", customerID);
+            cmdUpdateRegistration.Parameters.AddWithValue("@ProductCode", productCode);
+            cmdUpdateRegistration.Parameters.AddWithValue("@RegistrationDate", registrationDate);
+
+            try
+            {
+                cmdUpdateRegistration.Connection.Open();
+
+                int numberOfRowsAffected = cmdUpdateRegistration.ExecuteNonQuery();
+
+                if (numberOfRowsAffected == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cmdUpdateRegistration.Connection.Close();
             }
         }
     }
