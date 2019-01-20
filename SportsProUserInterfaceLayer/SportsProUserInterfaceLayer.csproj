@@ -87,6 +87,12 @@
     <Compile Include="Forms\FrmDeleteProduct.Designer.cs">
       <DependentUpon>FrmDeleteProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmDeleteRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDeleteRegistration.Designer.cs">
+      <DependentUpon>FrmDeleteRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmIncidentsByCustomerByState.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDeleteProduct.resx">
       <DependentUpon>FrmDeleteProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDeleteRegistration.resx">
+      <DependentUpon>FrmDeleteRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmIncidentsByCustomerByState.resx">
       <DependentUpon>FrmIncidentsByCustomerByState.cs</DependentUpon>

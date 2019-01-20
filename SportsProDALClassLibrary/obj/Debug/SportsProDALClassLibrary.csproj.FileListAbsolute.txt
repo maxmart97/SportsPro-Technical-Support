@@ -38,3 +38,4 @@ C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDA
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.dll
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Debug\SportsProDALClassLibrary.csprojAssemblyReference.cache

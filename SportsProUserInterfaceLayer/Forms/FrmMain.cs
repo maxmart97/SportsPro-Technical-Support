@@ -31,6 +31,7 @@ namespace SportsProUserInterfaceLayer
         static FrmUpdateProduct updateProductFrm = new FrmUpdateProduct();
         static FrmDeleteProduct deleteProductFrm = new FrmDeleteProduct();
         static FrmUpdateRegistration updateRegistrationFrm = new FrmUpdateRegistration();
+        static FrmDeleteRegistration deleteRegistrationFrm = new FrmDeleteRegistration();
 
         public FrmMain()
         {
@@ -61,6 +62,7 @@ namespace SportsProUserInterfaceLayer
             GenericMethods.FormatMdiChild(updateProductFrm, this);
             GenericMethods.FormatMdiChild(deleteProductFrm, this);
             GenericMethods.FormatMdiChild(updateRegistrationFrm, this);
+            GenericMethods.FormatMdiChild(deleteRegistrationFrm, this);
         }
 
         private void DisplayForm(object sender, EventArgs e)
@@ -149,6 +151,11 @@ namespace SportsProUserInterfaceLayer
                     updateRegistrationFrm.Show();
                     updateRegistrationFrm.ClearAll();
                     break;
+                case "Delete Registration":
+                    HideAndResetOtherForms(deleteRegistrationFrm.Name);
+                    deleteRegistrationFrm.Show();
+                    deleteRegistrationFrm.ClearAll();
+                    break;
                 default: //Do nothing.
                     break;
             }
@@ -227,6 +234,9 @@ namespace SportsProUserInterfaceLayer
                             addRegistrationFrm.cboProduct.SelectedIndex = -1;
                             break;
                         case "FrmUpdateRegistration":
+                            frm.Hide();
+                            break;
+                        case "FrmDeleteRegistration":
                             frm.Hide();
                             break;
                         default: //Do nothing.

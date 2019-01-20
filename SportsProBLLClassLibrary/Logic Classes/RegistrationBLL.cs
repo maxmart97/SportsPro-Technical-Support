@@ -10,6 +10,8 @@ namespace SportsProBLLClassLibrary
 {
     public class RegistrationBLL
     {
+        private readonly RegistrationDAL myRegistrationDAL = new RegistrationDAL();
+
         public RegistrationBLL()
         {
             //Default Constructor
@@ -24,11 +26,10 @@ namespace SportsProBLLClassLibrary
         {
             DataTable dtCustRegForSpecifiedProd = new DataTable();
             List<Registration> lstCustRegForSpecifiedProd = new List<Registration>();
-            RegistrationDAL myCustRegDAL = new RegistrationDAL();
 
             try
             {
-                dtCustRegForSpecifiedProd = myCustRegDAL.RetrieveCustRegForSpecifiedProduct(prodCode);
+                dtCustRegForSpecifiedProd = myRegistrationDAL.RetrieveCustRegForSpecifiedProduct(prodCode);
             }
             catch //Throws exception to calling method.
             {
@@ -47,8 +48,6 @@ namespace SportsProBLLClassLibrary
         /// <returns>True if registration succeeded and false if registration failed.</returns>
         public bool AddNewRegistration(Registration aRegistration)
         {
-            RegistrationDAL myRegistrationDAL = new RegistrationDAL();
-
             bool registrationStatus;
 
             try
@@ -66,12 +65,25 @@ namespace SportsProBLLClassLibrary
 
         public bool RequestToUpdateRegistration(int oldCustomerID, string oldProductCode, Registration newRegistration)
         {
-            RegistrationDAL myRegistrationDAL = new RegistrationDAL();
-
             try
             {
                 if (myRegistrationDAL.UpdateRegistration(oldCustomerID, oldProductCode, newRegistration.CustomerID, 
                         newRegistration.ProductCode, newRegistration.RegistrationDate) is true)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool RequestToDeleteRegistration(int customerID, string productCode)
+        {
+            try
+            {
+                if (myRegistrationDAL.DeleteRegistration(customerID, productCode) is true)
                     return true;
                 else
                     return false;

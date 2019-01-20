@@ -202,5 +202,37 @@ namespace SportsProDALClassLibrary
                 cmdUpdateRegistration.Connection.Close();
             }
         }
+
+        public bool DeleteRegistration(int customerID, string productCode)
+        {
+            string deleteStatement =
+                "DELETE FROM Registrations " +
+                "WHERE CustomerID = @CustomerID AND ProductCode = @ProductCode;";
+
+            SqlCommand cmdDeleteRegistration = new SqlCommand(deleteStatement, connTsDb);
+
+            cmdDeleteRegistration.Parameters.AddWithValue("@CustomerID", customerID);
+            cmdDeleteRegistration.Parameters.AddWithValue("@ProductCode", productCode);
+
+            try
+            {
+                cmdDeleteRegistration.Connection.Open();
+
+                int numberOfRowsAffected = cmdDeleteRegistration.ExecuteNonQuery();
+
+                if (numberOfRowsAffected == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cmdDeleteRegistration.Connection.Close();
+            }
+        }
     }
 }

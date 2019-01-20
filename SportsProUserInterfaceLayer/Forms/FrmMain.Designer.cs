@@ -188,21 +188,21 @@
             // tsmiAddProduct
             // 
             this.tsmiAddProduct.Name = "tsmiAddProduct";
-            this.tsmiAddProduct.Size = new System.Drawing.Size(216, 26);
+            this.tsmiAddProduct.Size = new System.Drawing.Size(188, 26);
             this.tsmiAddProduct.Text = "Add Product";
             this.tsmiAddProduct.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiUpdateProduct
             // 
             this.tsmiUpdateProduct.Name = "tsmiUpdateProduct";
-            this.tsmiUpdateProduct.Size = new System.Drawing.Size(216, 26);
+            this.tsmiUpdateProduct.Size = new System.Drawing.Size(188, 26);
             this.tsmiUpdateProduct.Text = "Update Product";
             this.tsmiUpdateProduct.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiDeleteProduct
             // 
             this.tsmiDeleteProduct.Name = "tsmiDeleteProduct";
-            this.tsmiDeleteProduct.Size = new System.Drawing.Size(216, 26);
+            this.tsmiDeleteProduct.Size = new System.Drawing.Size(188, 26);
             this.tsmiDeleteProduct.Text = "Delete Product";
             this.tsmiDeleteProduct.Click += new System.EventHandler(this.DisplayForm);
             // 
@@ -235,6 +235,7 @@
             this.tsmiDeleteRegistration.Name = "tsmiDeleteRegistration";
             this.tsmiDeleteRegistration.Size = new System.Drawing.Size(217, 26);
             this.tsmiDeleteRegistration.Text = "Delete Registration";
+            this.tsmiDeleteRegistration.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiMaintainTechnicians
             // 
@@ -249,19 +250,19 @@
             // tsmiAddTechnician
             // 
             this.tsmiAddTechnician.Name = "tsmiAddTechnician";
-            this.tsmiAddTechnician.Size = new System.Drawing.Size(206, 26);
+            this.tsmiAddTechnician.Size = new System.Drawing.Size(216, 26);
             this.tsmiAddTechnician.Text = "Add Technician";
             // 
             // tsmiUpdateTechnician
             // 
             this.tsmiUpdateTechnician.Name = "tsmiUpdateTechnician";
-            this.tsmiUpdateTechnician.Size = new System.Drawing.Size(206, 26);
+            this.tsmiUpdateTechnician.Size = new System.Drawing.Size(216, 26);
             this.tsmiUpdateTechnician.Text = "Update Technician";
             // 
             // tsmiDeleteTechnician
             // 
             this.tsmiDeleteTechnician.Name = "tsmiDeleteTechnician";
-            this.tsmiDeleteTechnician.Size = new System.Drawing.Size(206, 26);
+            this.tsmiDeleteTechnician.Size = new System.Drawing.Size(216, 26);
             this.tsmiDeleteTechnician.Text = "Delete Technician";
             // 
             // tsmiCustomers
