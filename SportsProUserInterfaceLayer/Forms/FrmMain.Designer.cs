@@ -65,6 +65,7 @@
             this.ssMainMenuForm = new System.Windows.Forms.StatusStrip();
             this.tsslMainMenuForm = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsmiLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenuForm.SuspendLayout();
             this.ssMainMenuForm.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +90,7 @@
             // tsmiFile
             // 
             this.tsmiFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiLogout,
             this.tsmiExit});
             this.tsmiFile.Name = "tsmiFile";
             this.tsmiFile.Size = new System.Drawing.Size(44, 24);
@@ -97,7 +99,7 @@
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(108, 26);
+            this.tsmiExit.Size = new System.Drawing.Size(216, 26);
             this.tsmiExit.Text = "Exit";
             this.tsmiExit.Click += new System.EventHandler(this.ExitApplication);
             // 
@@ -250,14 +252,14 @@
             // tsmiAddTechnician
             // 
             this.tsmiAddTechnician.Name = "tsmiAddTechnician";
-            this.tsmiAddTechnician.Size = new System.Drawing.Size(216, 26);
+            this.tsmiAddTechnician.Size = new System.Drawing.Size(206, 26);
             this.tsmiAddTechnician.Text = "Add Technician";
             this.tsmiAddTechnician.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiUpdateTechnician
             // 
             this.tsmiUpdateTechnician.Name = "tsmiUpdateTechnician";
-            this.tsmiUpdateTechnician.Size = new System.Drawing.Size(216, 26);
+            this.tsmiUpdateTechnician.Size = new System.Drawing.Size(206, 26);
             this.tsmiUpdateTechnician.Text = "Update Technician";
             this.tsmiUpdateTechnician.Click += new System.EventHandler(this.DisplayForm);
             // 
@@ -266,6 +268,7 @@
             this.tsmiDeleteTechnician.Name = "tsmiDeleteTechnician";
             this.tsmiDeleteTechnician.Size = new System.Drawing.Size(216, 26);
             this.tsmiDeleteTechnician.Text = "Delete Technician";
+            this.tsmiDeleteTechnician.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiCustomers
             // 
@@ -364,6 +367,13 @@
             this.tsslVersion.Size = new System.Drawing.Size(91, 20);
             this.tsslVersion.Text = "Version 2.0.0";
             // 
+            // tsmiLogout
+            // 
+            this.tsmiLogout.Name = "tsmiLogout";
+            this.tsmiLogout.Size = new System.Drawing.Size(216, 26);
+            this.tsmiLogout.Text = "Logout";
+            this.tsmiLogout.Click += new System.EventHandler(this.LogoutUser);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -424,6 +434,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiCustomers;
         private System.Windows.Forms.ToolStripMenuItem tsmiProducts;
         private System.Windows.Forms.ToolStripMenuItem tsmiTechnicians;
+        private System.Windows.Forms.ToolStripMenuItem tsmiLogout;
     }
 }
 

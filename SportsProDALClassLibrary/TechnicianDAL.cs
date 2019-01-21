@@ -142,5 +142,71 @@ namespace SportsProDALClassLibrary
                 cmdAddTechnician.Connection.Close();
             }
         }
+
+        public bool UpdateTechnician(int techID, string name, string email, string phone)
+        {
+            string updateStatement =
+                "UPDATE Technicians " +
+                "SET [Name] = @Name, Email = @Email, Phone = @Phone " +
+                "WHERE TechID = @TechID;";
+
+            SqlCommand cmdUpdateTechnician = new SqlCommand(updateStatement, connTsDb);
+
+            cmdUpdateTechnician.Parameters.AddWithValue("@TechID", techID);
+            cmdUpdateTechnician.Parameters.AddWithValue("@Name", name);
+            cmdUpdateTechnician.Parameters.AddWithValue("@Email", email);
+            cmdUpdateTechnician.Parameters.AddWithValue("@Phone", phone);
+
+            try
+            {
+                cmdUpdateTechnician.Connection.Open();
+
+                int numberOfRowsAffected = cmdUpdateTechnician.ExecuteNonQuery();
+
+                if (numberOfRowsAffected == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cmdUpdateTechnician.Connection.Close();
+            }
+        }
+
+        public bool DeleteTechnician(int techID)
+        {
+            string deleteStatement =
+                "DELETE FROM Technicians " +
+                "WHERE TechID = @TechID;";
+
+            SqlCommand cmdDeleteTechnician = new SqlCommand(deleteStatement, connTsDb);
+
+            cmdDeleteTechnician.Parameters.AddWithValue("@TechID", techID);
+
+            try
+            {
+                cmdDeleteTechnician.Connection.Open();
+
+                int numberOfRowsAffected = cmdDeleteTechnician.ExecuteNonQuery();
+
+                if (numberOfRowsAffected == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cmdDeleteTechnician.Connection.Close();
+            }
+        }
     }
 }

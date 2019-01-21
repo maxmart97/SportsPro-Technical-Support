@@ -44,6 +44,7 @@ namespace SportsProUserInterfaceLayer
         //Technicians Forms
         static FrmAddTechnician addTechnicianFrm = new FrmAddTechnician();
         static FrmUpdateTechnician updateTechnicianFrm = new FrmUpdateTechnician();
+        static FrmDeleteTechnician deleteTechnicianFrm = new FrmDeleteTechnician();
 
         public FrmMain()
         {
@@ -77,6 +78,7 @@ namespace SportsProUserInterfaceLayer
             GenericMethods.FormatMdiChild(deleteRegistrationFrm, this);
             GenericMethods.FormatMdiChild(addTechnicianFrm, this);
             GenericMethods.FormatMdiChild(updateTechnicianFrm, this);
+            GenericMethods.FormatMdiChild(deleteTechnicianFrm, this);
         }
 
         private void DisplayForm(object sender, EventArgs e)
@@ -180,6 +182,11 @@ namespace SportsProUserInterfaceLayer
                     updateTechnicianFrm.Show();
                     updateTechnicianFrm.ClearAll();
                     break;
+                case "Delete Technician":
+                    HideAndResetOtherForms(deleteTechnicianFrm.Name);
+                    deleteTechnicianFrm.Show();
+                    deleteTechnicianFrm.ClearAll();
+                    break;
                 default: //Do nothing.
                     break;
             }
@@ -263,6 +270,15 @@ namespace SportsProUserInterfaceLayer
                         case "FrmDeleteRegistration":
                             frm.Hide();
                             break;
+                        case "FrmAddTechnician":
+                            frm.Hide();
+                            break;
+                        case "FrmUpdateTechnician":
+                            frm.Hide();
+                            break;
+                        case "FrmDeleteTechnician":
+                            frm.Hide();
+                            break;
                         default: //Do nothing.
                             break;
                     }
@@ -276,17 +292,28 @@ namespace SportsProUserInterfaceLayer
         
         private void ExitApplication(object sender, EventArgs e)
         {
-            //Disposes and closes all child forms.
-            foreach (Form frm in this.MdiChildren)
-            {
-                frm.Close();
-            }
+            Environment.Exit(0);
 
-            //Disposes and closes the main form.
-            this.Close();
+            /*
+             * Old way of doing things.
+             * 
+                //Disposes and closes all child forms.
+                foreach (Form frm in this.MdiChildren)
+                {
+                    frm.Close();
+                }
 
-            //Exits the application.
-            Application.Exit();
+                //Disposes and closes the main form.
+                this.Close();
+
+                //Exits the application.
+                Application.Exit();
+            */
+        }
+
+        private void LogoutUser(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

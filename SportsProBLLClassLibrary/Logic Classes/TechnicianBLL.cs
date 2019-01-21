@@ -11,7 +11,7 @@ namespace SportsProBLLClassLibrary
     public class TechnicianBLL
     {
         //A "global" instance of the TechnicianDAL class to be used wherever needed.
-        private static TechnicianDAL myTechnicianDAL = new TechnicianDAL();
+        private readonly static TechnicianDAL myTechnicianDAL = new TechnicianDAL();
 
         public TechnicianBLL()
         {
@@ -93,6 +93,36 @@ namespace SportsProBLLClassLibrary
             try
             {
                 if (myTechnicianDAL.AddTechnician(tech.Name, tech.Email, tech.Phone) is true)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool RequestToUpdateTechnician(Technician tech)
+        {
+            try
+            {
+                if (myTechnicianDAL.UpdateTechnician(tech.TechID, tech.Name, tech.Email, tech.Phone) is true)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool RequestToDeleteTechnician(int techID)
+        {
+            try
+            {
+                if (myTechnicianDAL.DeleteTechnician(techID) is true)
                     return true;
                 else
                     return false;

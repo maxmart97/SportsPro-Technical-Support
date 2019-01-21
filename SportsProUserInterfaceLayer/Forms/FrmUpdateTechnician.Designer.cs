@@ -33,11 +33,11 @@
             System.Windows.Forms.Label lblEmail;
             System.Windows.Forms.Label lblPhone;
             this.lbTechnicians = new System.Windows.Forms.ListBox();
+            this.bsTechnicians = new System.Windows.Forms.BindingSource(this.components);
             this.lblInstructions = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbPhone = new System.Windows.Forms.TextBox();
-            this.bsTechnicians = new System.Windows.Forms.BindingSource(this.components);
             this.btnUpdateTechnician = new System.Windows.Forms.Button();
             this.btnReturnToMainMenu = new System.Windows.Forms.Button();
             lblName = new System.Windows.Forms.Label();
@@ -45,6 +45,33 @@
             lblPhone = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bsTechnicians)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Location = new System.Drawing.Point(484, 307);
+            lblName.Name = "lblName";
+            lblName.Size = new System.Drawing.Size(54, 17);
+            lblName.TabIndex = 36;
+            lblName.Text = "*Name:";
+            // 
+            // lblEmail
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new System.Drawing.Point(484, 357);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new System.Drawing.Size(51, 17);
+            lblEmail.TabIndex = 38;
+            lblEmail.Text = "*Email:";
+            // 
+            // lblPhone
+            // 
+            lblPhone.AutoSize = true;
+            lblPhone.Location = new System.Drawing.Point(484, 405);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new System.Drawing.Size(58, 17);
+            lblPhone.TabIndex = 40;
+            lblPhone.Text = "*Phone:";
             // 
             // lbTechnicians
             // 
@@ -59,6 +86,10 @@
             this.lbTechnicians.ValueMember = "TechID";
             this.lbTechnicians.SelectedIndexChanged += new System.EventHandler(this.LbTechnicians_SelectedIndexChanged);
             // 
+            // bsTechnicians
+            // 
+            this.bsTechnicians.DataSource = typeof(SportsProUserInterfaceLayer.Technician);
+            // 
             // lblInstructions
             // 
             this.lblInstructions.Location = new System.Drawing.Point(449, 147);
@@ -67,30 +98,12 @@
             this.lblInstructions.TabIndex = 4;
             this.lblInstructions.Text = "Select a Technician and then modify his or her information in the textboxes.";
             // 
-            // lblName
-            // 
-            lblName.AutoSize = true;
-            lblName.Location = new System.Drawing.Point(484, 307);
-            lblName.Name = "lblName";
-            lblName.Size = new System.Drawing.Size(54, 17);
-            lblName.TabIndex = 36;
-            lblName.Text = "*Name:";
-            // 
             // tbName
             // 
             this.tbName.Location = new System.Drawing.Point(567, 304);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(337, 22);
             this.tbName.TabIndex = 35;
-            // 
-            // lblEmail
-            // 
-            lblEmail.AutoSize = true;
-            lblEmail.Location = new System.Drawing.Point(484, 357);
-            lblEmail.Name = "lblEmail";
-            lblEmail.Size = new System.Drawing.Size(51, 17);
-            lblEmail.TabIndex = 38;
-            lblEmail.Text = "*Email:";
             // 
             // tbEmail
             // 
@@ -99,25 +112,12 @@
             this.tbEmail.Size = new System.Drawing.Size(337, 22);
             this.tbEmail.TabIndex = 37;
             // 
-            // lblPhone
-            // 
-            lblPhone.AutoSize = true;
-            lblPhone.Location = new System.Drawing.Point(484, 405);
-            lblPhone.Name = "lblPhone";
-            lblPhone.Size = new System.Drawing.Size(58, 17);
-            lblPhone.TabIndex = 40;
-            lblPhone.Text = "*Phone:";
-            // 
             // tbPhone
             // 
             this.tbPhone.Location = new System.Drawing.Point(567, 402);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(337, 22);
             this.tbPhone.TabIndex = 39;
-            // 
-            // bsTechnicians
-            // 
-            this.bsTechnicians.DataSource = typeof(SportsProUserInterfaceLayer.Technician);
             // 
             // btnUpdateTechnician
             // 
@@ -127,6 +127,7 @@
             this.btnUpdateTechnician.TabIndex = 41;
             this.btnUpdateTechnician.Text = "Update Technician";
             this.btnUpdateTechnician.UseVisualStyleBackColor = true;
+            this.btnUpdateTechnician.Click += new System.EventHandler(this.BtnUpdateTechnician_Click);
             // 
             // btnReturnToMainMenu
             // 

@@ -139,3 +139,5 @@ C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUs
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Forms.FrmDeleteRegistration.resources
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Forms.FrmAddTechnician.resources
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Forms.FrmUpdateTechnician.resources
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Forms.FrmTitleScreen.resources
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Forms.FrmDeleteTechnician.resources
