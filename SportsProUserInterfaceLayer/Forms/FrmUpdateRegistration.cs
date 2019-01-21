@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SportsProBLLClassLibrary;
+using SportsProUserInterfaceLayer.LINQ_to_SQL;
 
 namespace SportsProUserInterfaceLayer.Forms
 {
@@ -96,7 +97,7 @@ namespace SportsProUserInterfaceLayer.Forms
             
             while (index < cboCustomers.Items.Count && found is false)
             {
-                Customer cust = (Customer)cboCustomers.Items[index];
+                SportsProUserInterfaceLayer.LINQ_to_SQL.Customer cust = (SportsProUserInterfaceLayer.LINQ_to_SQL.Customer)cboCustomers.Items[index];
 
                 if (custName == cust.Name)
                 {
@@ -118,7 +119,7 @@ namespace SportsProUserInterfaceLayer.Forms
 
             while (index < cboProducts.Items.Count && found is false)
             {
-                Product prod = (Product)cboProducts.Items[index];
+                SportsProUserInterfaceLayer.LINQ_to_SQL.Product prod = (SportsProUserInterfaceLayer.LINQ_to_SQL.Product)cboProducts.Items[index];
 
                 if (prodName == prod.Name)
                 {

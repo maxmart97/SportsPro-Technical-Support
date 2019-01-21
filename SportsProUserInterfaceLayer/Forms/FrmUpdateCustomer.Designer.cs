@@ -176,7 +176,7 @@
             // 
             // bsState
             // 
-            this.bsState.DataSource = typeof(SportsProUserInterfaceLayer.State);
+            this.bsState.DataSource = typeof(SportsProUserInterfaceLayer.LINQ_to_SQL.State);
             // 
             // txtAddress
             // 

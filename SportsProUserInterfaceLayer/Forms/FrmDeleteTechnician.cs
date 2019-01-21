@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SportsProBLLClassLibrary;
+using SportsProUserInterfaceLayer.LINQ_to_SQL;
 
 namespace SportsProUserInterfaceLayer.Forms
 {
     public partial class FrmDeleteTechnician : Form
     {
         TechSupportDB_LINQ2SQLDataContext dc = new TechSupportDB_LINQ2SQLDataContext();
-        List<Technician> lstTechnicians = new List<Technician>();
+        List<SportsProUserInterfaceLayer.LINQ_to_SQL.Technician> lstTechnicians = new List<SportsProUserInterfaceLayer.LINQ_to_SQL.Technician>();
 
         public FrmDeleteTechnician()
         {
@@ -48,7 +49,7 @@ namespace SportsProUserInterfaceLayer.Forms
         {
             if (lbTechnicians.Focused && lbTechnicians.Items.Count >= 1 && lbTechnicians.SelectedItem != null)
             {
-                Technician myTechnician = lstTechnicians[lbTechnicians.SelectedIndex];
+                SportsProUserInterfaceLayer.LINQ_to_SQL.Technician myTechnician = lstTechnicians[lbTechnicians.SelectedIndex];
 
                 lblName.Text = myTechnician.Name;
                 lblEmail.Text = myTechnician.Email;

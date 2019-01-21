@@ -38,42 +38,42 @@
         <elementListCompartment Id="b40305ff-4661-47d8-afe0-3957b6a09a20" absoluteBounds="8.14, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.5 : 2.54890055338542); (4.75 : 2.54890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.5 : 2.54890055338542); (4.75 : 2.54890055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TechSupportDB_LINQ2SQLDataContext/Customer/Customer_Incident" />
       <nodes>
         <classShapeMoniker Id="22985eb4-c350-4ead-bfd9-7590a5c0ba03" />
         <classShapeMoniker Id="809f845a-ba0e-4677-9774-8a06be0f8b0d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.875 : 4.41429768880208); (6.01103131674568 : 4.41429768880208); (6.01103131674568 : 2.97280110677083)]" fixedFrom="Algorithm" fixedTo="Caller">
+    <associationConnector edgePoints="[(7.875 : 4.41429768880208); (6.01103131674568 : 4.41429768880208); (6.01103131674568 : 2.97280110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TechSupportDB_LINQ2SQLDataContext/Product/Product_Incident" />
       <nodes>
         <classShapeMoniker Id="e2be874f-af54-4044-a8c8-4bc7e7a98cd6" />
         <classShapeMoniker Id="809f845a-ba0e-4677-9774-8a06be0f8b0d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3.5 : 4.13280012512009); (5.44301565837284 : 4.13280012512009); (5.44301565837284 : 5.25)]" fixedFrom="Caller" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.5 : 4.13280012512009); (5.44301565837284 : 4.13280012512009); (5.44301565837284 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TechSupportDB_LINQ2SQLDataContext/Customer/Customer_Registration" />
       <nodes>
         <classShapeMoniker Id="22985eb4-c350-4ead-bfd9-7590a5c0ba03" />
         <classShapeMoniker Id="1f5099e2-554b-4b86-a395-37bdd8ff3698" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.875 : 5.20359537760417); (8.875 : 5.9643462188627); (6.875 : 5.9643462188627)]" fixedFrom="Algorithm" fixedTo="Caller">
+    <associationConnector edgePoints="[(8.875 : 5.20359537760417); (8.875 : 5.9643462188627); (6.875 : 5.9643462188627)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TechSupportDB_LINQ2SQLDataContext/Product/Product_Registration" />
       <nodes>
         <classShapeMoniker Id="e2be874f-af54-4044-a8c8-4bc7e7a98cd6" />
         <classShapeMoniker Id="1f5099e2-554b-4b86-a395-37bdd8ff3698" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.6875 : 5.75); (2.6875 : 4.47280110677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.6875 : 5.75); (2.6875 : 4.47280110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TechSupportDB_LINQ2SQLDataContext/State/State_Customer" />
       <nodes>
         <classShapeMoniker Id="ed71803c-3346-4e2e-9c17-de19f388abad" />
         <classShapeMoniker Id="22985eb4-c350-4ead-bfd9-7590a5c0ba03" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.125 : 1.78929768880208); (6.75 : 1.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.125 : 1.78929768880208); (6.75 : 1.78929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TechSupportDB_LINQ2SQLDataContext/Technician/Technician_Incident" />
       <nodes>
         <classShapeMoniker Id="604f9334-b858-442e-a3d6-40ead140e7db" />

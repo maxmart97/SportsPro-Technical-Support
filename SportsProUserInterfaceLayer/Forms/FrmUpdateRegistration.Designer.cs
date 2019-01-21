@@ -133,7 +133,7 @@
             // 
             // bsRegistration
             // 
-            this.bsRegistration.DataSource = typeof(SportsProUserInterfaceLayer.Registration);
+            this.bsRegistration.DataSource = typeof(SportsProUserInterfaceLayer.LINQ_to_SQL.Registration);
             // 
             // cboCustomers
             // 

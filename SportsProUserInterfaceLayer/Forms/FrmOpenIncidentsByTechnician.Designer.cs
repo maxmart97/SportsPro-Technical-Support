@@ -197,11 +197,11 @@
             // 
             // technicianBindingSource
             // 
-            this.technicianBindingSource.DataSource = typeof(SportsProUserInterfaceLayer.Technician);
+            this.technicianBindingSource.DataSource = typeof(SportsProUserInterfaceLayer.LINQ_to_SQL.Technician);
             // 
             // incidentsBindingSource
             // 
-            this.incidentsBindingSource.DataSource = typeof(SportsProUserInterfaceLayer.Incident);
+            this.incidentsBindingSource.DataSource = typeof(SportsProUserInterfaceLayer.LINQ_to_SQL.Incident);
             // 
             // incidentIDDataGridViewTextBoxColumn
             // 

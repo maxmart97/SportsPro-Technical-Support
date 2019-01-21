@@ -86,7 +86,7 @@
             // 
             // bsProduct
             // 
-            this.bsProduct.DataSource = typeof(SportsProUserInterfaceLayer.Product);
+            this.bsProduct.DataSource = typeof(SportsProUserInterfaceLayer.LINQ_to_SQL.Product);
             // 
             // tbProductName
             // 

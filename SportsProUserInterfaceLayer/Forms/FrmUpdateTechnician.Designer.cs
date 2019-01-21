@@ -88,7 +88,7 @@
             // 
             // bsTechnicians
             // 
-            this.bsTechnicians.DataSource = typeof(SportsProUserInterfaceLayer.Technician);
+            this.bsTechnicians.DataSource = typeof(SportsProUserInterfaceLayer.LINQ_to_SQL.Technician);
             // 
             // lblInstructions
             // 

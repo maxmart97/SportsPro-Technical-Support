@@ -30,6 +30,7 @@
         {
             this.msMainMenuForm = new System.Windows.Forms.MenuStrip();
             this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMaintenance = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMaintainCustomers = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +66,6 @@
             this.ssMainMenuForm = new System.Windows.Forms.StatusStrip();
             this.tsslMainMenuForm = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsmiLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenuForm.SuspendLayout();
             this.ssMainMenuForm.SuspendLayout();
             this.SuspendLayout();
@@ -96,10 +96,17 @@
             this.tsmiFile.Size = new System.Drawing.Size(44, 24);
             this.tsmiFile.Text = "File";
             // 
+            // tsmiLogout
+            // 
+            this.tsmiLogout.Name = "tsmiLogout";
+            this.tsmiLogout.Size = new System.Drawing.Size(131, 26);
+            this.tsmiLogout.Text = "Logout";
+            this.tsmiLogout.Click += new System.EventHandler(this.LogoutUser);
+            // 
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(216, 26);
+            this.tsmiExit.Size = new System.Drawing.Size(131, 26);
             this.tsmiExit.Text = "Exit";
             this.tsmiExit.Click += new System.EventHandler(this.ExitApplication);
             // 
@@ -266,7 +273,7 @@
             // tsmiDeleteTechnician
             // 
             this.tsmiDeleteTechnician.Name = "tsmiDeleteTechnician";
-            this.tsmiDeleteTechnician.Size = new System.Drawing.Size(216, 26);
+            this.tsmiDeleteTechnician.Size = new System.Drawing.Size(206, 26);
             this.tsmiDeleteTechnician.Text = "Delete Technician";
             this.tsmiDeleteTechnician.Click += new System.EventHandler(this.DisplayForm);
             // 
@@ -367,13 +374,6 @@
             this.tsslVersion.Size = new System.Drawing.Size(91, 20);
             this.tsslVersion.Text = "Version 2.0.0";
             // 
-            // tsmiLogout
-            // 
-            this.tsmiLogout.Name = "tsmiLogout";
-            this.tsmiLogout.Size = new System.Drawing.Size(216, 26);
-            this.tsmiLogout.Text = "Logout";
-            this.tsmiLogout.Click += new System.EventHandler(this.LogoutUser);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -386,6 +386,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SportsPro Technical Support";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.msMainMenuForm.ResumeLayout(false);
             this.msMainMenuForm.PerformLayout();
             this.ssMainMenuForm.ResumeLayout(false);

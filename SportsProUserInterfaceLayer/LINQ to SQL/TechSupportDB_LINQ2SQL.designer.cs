@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SportsProUserInterfaceLayer
+namespace SportsProUserInterfaceLayer.LINQ_to_SQL
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;

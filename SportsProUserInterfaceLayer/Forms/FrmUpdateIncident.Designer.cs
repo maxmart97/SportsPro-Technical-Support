@@ -318,7 +318,7 @@
             // 
             // bsIncident
             // 
-            this.bsIncident.DataSource = typeof(SportsProUserInterfaceLayer.Incident);
+            this.bsIncident.DataSource = typeof(SportsProUserInterfaceLayer.LINQ_to_SQL.Incident);
             // 
             // FrmUpdateIncident
             // 

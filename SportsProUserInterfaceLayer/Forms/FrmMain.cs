@@ -180,11 +180,13 @@ namespace SportsProUserInterfaceLayer
                 case "Update Technician":
                     HideAndResetOtherForms(updateTechnicianFrm.Name);
                     updateTechnicianFrm.Show();
+                    updateTechnicianFrm.LoadTechnicians();
                     updateTechnicianFrm.ClearAll();
                     break;
                 case "Delete Technician":
                     HideAndResetOtherForms(deleteTechnicianFrm.Name);
                     deleteTechnicianFrm.Show();
+                    deleteTechnicianFrm.LoadTechnicians();
                     deleteTechnicianFrm.ClearAll();
                     break;
                 default: //Do nothing.
@@ -292,7 +294,7 @@ namespace SportsProUserInterfaceLayer
         
         private void ExitApplication(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Application.Exit();
 
             /*
              * Old way of doing things.
@@ -314,6 +316,11 @@ namespace SportsProUserInterfaceLayer
         private void LogoutUser(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

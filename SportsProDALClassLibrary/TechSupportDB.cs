@@ -23,8 +23,8 @@ namespace SportsProDALClassLibrary
             SqlConnection connection = new SqlConnection();
 
             //Sets connection string to specified SQL Server database location.
-            connection.ConnectionString = "Data Source = DESKTOP-JC5KKHH\\SQLEXPRESS; " +
-                "Initial Catalog = TechSupport; Integrated Security = True;";
+            connection.ConnectionString = "Server=den1.mssql8.gear.host; " +
+                "Database=techsupport1; User Id=techsupport1; Password=Tt1??EE0Z029";
 
             return connection;
         }

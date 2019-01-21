@@ -95,7 +95,7 @@
             // 
             // bsState
             // 
-            this.bsState.DataSource = typeof(SportsProUserInterfaceLayer.State);
+            this.bsState.DataSource = typeof(SportsProUserInterfaceLayer.LINQ_to_SQL.State);
             // 
             // cboState
             // 
@@ -115,7 +115,7 @@
             // 
             // bsCustomer
             // 
-            this.bsCustomer.DataSource = typeof(SportsProUserInterfaceLayer.Customer);
+            this.bsCustomer.DataSource = typeof(SportsProUserInterfaceLayer.LINQ_to_SQL.Customer);
             // 
             // dgvCustomers
             // 
@@ -379,7 +379,7 @@
             // 
             // bsIncident
             // 
-            this.bsIncident.DataSource = typeof(SportsProUserInterfaceLayer.Incident);
+            this.bsIncident.DataSource = typeof(SportsProUserInterfaceLayer.LINQ_to_SQL.Incident);
             // 
             // btnReturnToMainMenu
             // 

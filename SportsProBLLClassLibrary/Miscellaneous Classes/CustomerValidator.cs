@@ -26,7 +26,7 @@ namespace SportsProBLLClassLibrary.Miscellaneous_Classes
                                 {
                                     if (IsEmailValid(email))
                                     {
-                                        return "Valid.";
+                                        return "Valid";
                                     }
                                     else
                                     {

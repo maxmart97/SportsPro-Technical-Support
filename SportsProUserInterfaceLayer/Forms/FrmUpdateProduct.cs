@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using SportsProBLLClassLibrary;
+using SportsProUserInterfaceLayer.LINQ_to_SQL;
 
 namespace SportsProUserInterfaceLayer.Forms
 {
@@ -51,7 +52,7 @@ namespace SportsProUserInterfaceLayer.Forms
             {
                 this.EnableProductControls();
 
-                Product myProduct = (Product)lbName.Items[lbName.SelectedIndex];
+                SportsProUserInterfaceLayer.LINQ_to_SQL.Product myProduct = (SportsProUserInterfaceLayer.LINQ_to_SQL.Product)lbName.Items[lbName.SelectedIndex];
 
                 tbProductCode.Text = myProduct.ProductCode;
                 tbProductName.Text = myProduct.Name;
@@ -76,7 +77,7 @@ namespace SportsProUserInterfaceLayer.Forms
                         ReleaseDate = dtpReleaseDate.Value
                     };
 
-                    Product oldProduct = (Product)lbName.Items[lbName.SelectedIndex];
+                    SportsProUserInterfaceLayer.LINQ_to_SQL.Product oldProduct = (SportsProUserInterfaceLayer.LINQ_to_SQL.Product)lbName.Items[lbName.SelectedIndex];
 
                     if (myProductBLL.RequestToUpdateProduct(oldProduct.ProductCode, newProduct) is true)
                     {

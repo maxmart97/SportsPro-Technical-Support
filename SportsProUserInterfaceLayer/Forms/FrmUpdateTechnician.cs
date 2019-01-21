@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using SportsProBLLClassLibrary;
 using SportsProBLLClassLibrary.Miscellaneous_Classes;
+using SportsProUserInterfaceLayer.LINQ_to_SQL;
 
 namespace SportsProUserInterfaceLayer.Forms
 {
     public partial class FrmUpdateTechnician : Form
     {
         TechSupportDB_LINQ2SQLDataContext dc = new TechSupportDB_LINQ2SQLDataContext();
-        List<Technician> lstTechnicians = new List<Technician>();
+        List<SportsProUserInterfaceLayer.LINQ_to_SQL.Technician> lstTechnicians = new List<SportsProUserInterfaceLayer.LINQ_to_SQL.Technician>();
 
         string errorMessage;
 
@@ -66,7 +67,7 @@ namespace SportsProUserInterfaceLayer.Forms
         {
             if (lbTechnicians.Focused && lbTechnicians.Items.Count >= 1 && lbTechnicians.SelectedItem != null)
             {
-                Technician myTechnician = lstTechnicians[lbTechnicians.SelectedIndex];
+                SportsProUserInterfaceLayer.LINQ_to_SQL.Technician myTechnician = lstTechnicians[lbTechnicians.SelectedIndex];
 
                 tbName.Text = myTechnician.Name;
                 tbEmail.Text = myTechnician.Email;

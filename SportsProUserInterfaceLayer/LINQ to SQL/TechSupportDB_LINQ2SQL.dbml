@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TechSupport" Class="TechSupportDB_LINQ2SQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-JC5KKHH\SQLEXPRESS;Initial Catalog=TechSupport;Integrated Security=True" SettingsObjectName="SportsProUserInterfaceLayer.Properties.Settings" SettingsPropertyName="TechSupportConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=den1.mssql8.gear.host;Initial Catalog=techsupport1;User ID=techsupport1" SettingsObjectName="SportsProUserInterfaceLayer.Properties.Settings" SettingsPropertyName="TechSupportConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Customers" Member="Customers">
     <Type Name="Customer">
       <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

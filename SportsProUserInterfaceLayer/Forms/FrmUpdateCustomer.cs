@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SportsProBLLClassLibrary;
 using SportsProBLLClassLibrary.Miscellaneous_Classes;
+using SportsProUserInterfaceLayer.LINQ_to_SQL;
 
 namespace SportsProUserInterfaceLayer.Forms
 {
@@ -87,7 +88,7 @@ namespace SportsProUserInterfaceLayer.Forms
                 string validatorResult = CustomerValidator.IsCustomerDataValid(txtName.Text, txtAddress.Text,
                     cboState.SelectedValue.ToString(), txtCity.Text, txtZipCode.Text, txtPhone.Text, txtEmail.Text);
 
-                if (validatorResult == "Data entered is valid.")
+                if (validatorResult == "Valid")
                 {
                     SportsProBLLClassLibrary.Customer myCustomer = new SportsProBLLClassLibrary.Customer
                     {
