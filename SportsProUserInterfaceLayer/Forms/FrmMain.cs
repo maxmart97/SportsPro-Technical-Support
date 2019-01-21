@@ -20,6 +20,7 @@ namespace SportsProUserInterfaceLayer
         static FrmAddCustomer addCustomerFrm = new FrmAddCustomer();
         static FrmUpdateCustomer updateCustomerFrm = new FrmUpdateCustomer();
         static FrmDeleteCustomer deleteCustomerFrm = new FrmDeleteCustomer();
+        static FrmViewAllCustomers allCustomersFrm = new FrmViewAllCustomers();
 
         //Incidents Forms
         static FrmAddIncident addIncidentFrm = new FrmAddIncident();
@@ -79,6 +80,7 @@ namespace SportsProUserInterfaceLayer
             GenericMethods.FormatMdiChild(addTechnicianFrm, this);
             GenericMethods.FormatMdiChild(updateTechnicianFrm, this);
             GenericMethods.FormatMdiChild(deleteTechnicianFrm, this);
+            GenericMethods.FormatMdiChild(allCustomersFrm, this);
         }
 
         private void DisplayForm(object sender, EventArgs e)
@@ -189,6 +191,11 @@ namespace SportsProUserInterfaceLayer
                     deleteTechnicianFrm.LoadTechnicians();
                     deleteTechnicianFrm.ClearAll();
                     break;
+                case "Display All Customers":
+                    HideAndResetOtherForms(allCustomersFrm.Name);
+                    allCustomersFrm.LoadCustomers();
+                    allCustomersFrm.Show();
+                    break;
                 default: //Do nothing.
                     break;
             }
@@ -279,6 +286,9 @@ namespace SportsProUserInterfaceLayer
                             frm.Hide();
                             break;
                         case "FrmDeleteTechnician":
+                            frm.Hide();
+                            break;
+                        case "FrmViewAllCustomers":
                             frm.Hide();
                             break;
                         default: //Do nothing.

@@ -105,5 +105,11 @@ namespace SportsProUserInterfaceLayer.Forms
             lblEmail.ResetText();
             lblPhone.ResetText();
         }
+
+        private void BtnReturnToMainMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.ClearAll();
+        }
     }
 }

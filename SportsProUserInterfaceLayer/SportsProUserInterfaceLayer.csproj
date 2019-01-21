@@ -165,11 +165,23 @@
     <Compile Include="Forms\FrmUpdateTechnician.Designer.cs">
       <DependentUpon>FrmUpdateTechnician.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmViewAllCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewAllCustomers.Designer.cs">
+      <DependentUpon>FrmViewAllCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmViewAllIncidents.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmViewAllIncidents.Designer.cs">
       <DependentUpon>FrmViewAllIncidents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewAllProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewAllProducts.Designer.cs">
+      <DependentUpon>FrmViewAllProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmViewIncidentsByTechnician.cs">
       <SubType>Form</SubType>
@@ -241,8 +253,14 @@
     <EmbeddedResource Include="Forms\FrmUpdateTechnician.resx">
       <DependentUpon>FrmUpdateTechnician.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewAllCustomers.resx">
+      <DependentUpon>FrmViewAllCustomers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmViewAllIncidents.resx">
       <DependentUpon>FrmViewAllIncidents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewAllProducts.resx">
+      <DependentUpon>FrmViewAllProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmViewIncidentsByTechnician.resx">
       <DependentUpon>FrmViewIncidentsByTechnician.cs</DependentUpon>
@@ -267,17 +285,17 @@
     <None Include="LINQ to SQL\TechSupportDB_LINQ2SQL.dbml.layout">
       <DependentUpon>TechSupportDB_LINQ2SQL.dbml</DependentUpon>
     </None>
-    <None Include="Properties\DataSources\Customer.datasource" />
-    <None Include="Properties\DataSources\Incident.datasource" />
-    <None Include="Properties\DataSources\Product.datasource" />
-    <None Include="Properties\DataSources\Registration.datasource" />
     <None Include="Properties\DataSources\SportsProBLLClassLibrary.Customer.datasource" />
     <None Include="Properties\DataSources\SportsProBLLClassLibrary.Incident.datasource" />
     <None Include="Properties\DataSources\SportsProBLLClassLibrary.Product.datasource" />
     <None Include="Properties\DataSources\SportsProBLLClassLibrary.Registration.datasource" />
     <None Include="Properties\DataSources\SportsProBLLClassLibrary.Technician.datasource" />
-    <None Include="Properties\DataSources\State.datasource" />
-    <None Include="Properties\DataSources\Technician.datasource" />
+    <None Include="Properties\DataSources\SportsProUserInterfaceLayer.LINQ_to_SQL.Customer.datasource" />
+    <None Include="Properties\DataSources\SportsProUserInterfaceLayer.LINQ_to_SQL.Incident.datasource" />
+    <None Include="Properties\DataSources\SportsProUserInterfaceLayer.LINQ_to_SQL.Product.datasource" />
+    <None Include="Properties\DataSources\SportsProUserInterfaceLayer.LINQ_to_SQL.Registration.datasource" />
+    <None Include="Properties\DataSources\SportsProUserInterfaceLayer.LINQ_to_SQL.State.datasource" />
+    <None Include="Properties\DataSources\SportsProUserInterfaceLayer.LINQ_to_SQL.Technician.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

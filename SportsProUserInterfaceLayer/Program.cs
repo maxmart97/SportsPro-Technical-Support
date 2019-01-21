@@ -17,7 +17,7 @@ namespace SportsProUserInterfaceLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmTitleScreen());
+            Application.Run(new FrmMain());
         }
     }
 }

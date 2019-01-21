@@ -66,6 +66,7 @@
             this.ssMainMenuForm = new System.Windows.Forms.StatusStrip();
             this.tsslMainMenuForm = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsmiDisplayAllCustomers = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenuForm.SuspendLayout();
             this.ssMainMenuForm.SuspendLayout();
             this.SuspendLayout();
@@ -279,6 +280,8 @@
             // 
             // tsmiCustomers
             // 
+            this.tsmiCustomers.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDisplayAllCustomers});
             this.tsmiCustomers.Name = "tsmiCustomers";
             this.tsmiCustomers.Size = new System.Drawing.Size(90, 24);
             this.tsmiCustomers.Text = "Customers";
@@ -374,6 +377,13 @@
             this.tsslVersion.Size = new System.Drawing.Size(91, 20);
             this.tsslVersion.Text = "Version 2.0.0";
             // 
+            // tsmiDisplayAllCustomers
+            // 
+            this.tsmiDisplayAllCustomers.Name = "tsmiDisplayAllCustomers";
+            this.tsmiDisplayAllCustomers.Size = new System.Drawing.Size(228, 26);
+            this.tsmiDisplayAllCustomers.Text = "Display All Customers";
+            this.tsmiDisplayAllCustomers.Click += new System.EventHandler(this.DisplayForm);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -436,6 +446,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiProducts;
         private System.Windows.Forms.ToolStripMenuItem tsmiTechnicians;
         private System.Windows.Forms.ToolStripMenuItem tsmiLogout;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDisplayAllCustomers;
     }
 }
 

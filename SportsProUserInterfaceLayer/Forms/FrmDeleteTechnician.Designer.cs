@@ -39,6 +39,7 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.btnDeleteTechnician = new System.Windows.Forms.Button();
+            this.btnReturnToMainMenu = new System.Windows.Forms.Button();
             lblOutputDescPhone = new System.Windows.Forms.Label();
             lblOutputDescEmail = new System.Windows.Forms.Label();
             lblOutputDescName = new System.Windows.Forms.Label();
@@ -134,12 +135,25 @@
             this.btnDeleteTechnician.UseVisualStyleBackColor = true;
             this.btnDeleteTechnician.Click += new System.EventHandler(this.BtnDeleteTechnician_Click);
             // 
+            // btnReturnToMainMenu
+            // 
+            this.btnReturnToMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReturnToMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnReturnToMainMenu.Location = new System.Drawing.Point(1282, 742);
+            this.btnReturnToMainMenu.Name = "btnReturnToMainMenu";
+            this.btnReturnToMainMenu.Size = new System.Drawing.Size(162, 47);
+            this.btnReturnToMainMenu.TabIndex = 117;
+            this.btnReturnToMainMenu.Text = "Return to Main Menu";
+            this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
+            this.btnReturnToMainMenu.Click += new System.EventHandler(this.BtnReturnToMainMenu_Click);
+            // 
             // FrmDeleteTechnician
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1456, 801);
             this.ControlBox = false;
+            this.Controls.Add(this.btnReturnToMainMenu);
             this.Controls.Add(this.btnDeleteTechnician);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.lblEmail);
@@ -167,5 +181,6 @@
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Button btnDeleteTechnician;
         private System.Windows.Forms.BindingSource bsTechnicians;
+        private System.Windows.Forms.Button btnReturnToMainMenu;
     }
 }

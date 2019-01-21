@@ -132,6 +132,7 @@ C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUs
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Forms.FrmUpdateProduct.resources
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Forms.FrmUpdateRegistration.resources
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Forms.FrmUpdateTechnician.resources
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.Forms.FrmViewAllCustomers.resources
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewAllIncidents.resources
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmViewIncidentsByTechnician.resources
 C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProUserInterfaceLayer\obj\Debug\SportsProUserInterfaceLayer.FrmAddCustomer.resources
