@@ -11,7 +11,7 @@ namespace SportsProDALClassLibrary
     public class TechnicianDAL
     {
         //A "global" SqlConnection object that can be use as needed for methods below.
-        private static readonly SqlConnection tsDBConn = TechSupportDB.RetrieveTechSupportConnection();
+        private static readonly SqlConnection connTsDb = TechSupportDB.RetrieveTechSupportConnection();
 
         public TechnicianDAL()
         {
@@ -32,7 +32,7 @@ namespace SportsProDALClassLibrary
                 "FROM dbo.Technicians;";
 
             //Creates a SqlCommand using the parameterized constructor. CommandType by default is Text.
-            SqlCommand selectTechnicianNames = new SqlCommand(selectStatement, tsDBConn);
+            SqlCommand selectTechnicianNames = new SqlCommand(selectStatement, connTsDb);
 
             try
             {
@@ -69,7 +69,7 @@ namespace SportsProDALClassLibrary
                 "WHERE TechID = @techID;";
 
             //Creates a SqlCommand using the parameterized constructor. CommandType by default is Text.
-            SqlCommand selectTechnicianDetails = new SqlCommand(selectStatement, tsDBConn);
+            SqlCommand selectTechnicianDetails = new SqlCommand(selectStatement, connTsDb);
 
             //Sets up and adds parameter to SqlCommand.
             selectTechnicianDetails.Parameters.AddWithValue("@techID", techID);
@@ -91,6 +91,56 @@ namespace SportsProDALClassLibrary
             }
 
             return dtTechnicianDetails;
+        }
+
+        public bool AddTechnician(string name, string email, string phone)
+        {
+            string selectStatement =
+                "SELECT COUNT(*) " +
+                "FROM Technicians " +
+                "WHERE Name = @Name AND Email = @Email AND Phone = @Phone;";
+
+            string insertStatement =
+                "INSERT INTO Technicians " +
+                "VALUES (@Name, @Email, @Phone);";
+
+            SqlCommand cmdAddTechnician = new SqlCommand();
+
+            cmdAddTechnician.Connection = connTsDb;
+            cmdAddTechnician.CommandText = selectStatement;
+
+            cmdAddTechnician.Parameters.AddWithValue("@Name", name);
+            cmdAddTechnician.Parameters.AddWithValue("@Email", email);
+            cmdAddTechnician.Parameters.AddWithValue("@Phone", phone);
+
+            try
+            {
+                cmdAddTechnician.Connection.Open();
+
+                if ((int)cmdAddTechnician.ExecuteScalar() == 0)
+                {
+                    cmdAddTechnician.CommandText = insertStatement;
+
+                    int numberOfRowsAffected = cmdAddTechnician.ExecuteNonQuery();
+
+                    if (numberOfRowsAffected == 1)
+                        return true;
+                    else
+                        return false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                cmdAddTechnician.Connection.Close();
+            }
         }
     }
 }

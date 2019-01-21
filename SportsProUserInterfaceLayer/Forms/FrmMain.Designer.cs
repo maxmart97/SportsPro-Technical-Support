@@ -252,12 +252,14 @@
             this.tsmiAddTechnician.Name = "tsmiAddTechnician";
             this.tsmiAddTechnician.Size = new System.Drawing.Size(216, 26);
             this.tsmiAddTechnician.Text = "Add Technician";
+            this.tsmiAddTechnician.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiUpdateTechnician
             // 
             this.tsmiUpdateTechnician.Name = "tsmiUpdateTechnician";
             this.tsmiUpdateTechnician.Size = new System.Drawing.Size(216, 26);
             this.tsmiUpdateTechnician.Text = "Update Technician";
+            this.tsmiUpdateTechnician.Click += new System.EventHandler(this.DisplayForm);
             // 
             // tsmiDeleteTechnician
             // 

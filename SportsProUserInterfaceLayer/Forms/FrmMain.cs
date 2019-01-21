@@ -15,23 +15,35 @@ namespace SportsProUserInterfaceLayer
     public partial class FrmMain : Form
     {
         //Instances of the currently available forms.
-        static FrmViewAllIncidents allIncidentsFrm = new FrmViewAllIncidents();
-        static FrmViewIncidentsByTechnician allIncidentsByTechnicianFrm = new FrmViewIncidentsByTechnician();
-        static FrmOpenIncidentsByTechnician allOpenIncidentsByTechnicianFrm = new FrmOpenIncidentsByTechnician();
-        static FrmAddRegistration addRegistrationFrm = new FrmAddRegistration();
-        static FrmIncidentsByCustomerByState incidentByCustomerByStateFrm = new FrmIncidentsByCustomerByState();
-        static FrmRegistrationsByProduct registrationsByProductFrm = new FrmRegistrationsByProduct();
+
+        //Customers Forms
         static FrmAddCustomer addCustomerFrm = new FrmAddCustomer();
         static FrmUpdateCustomer updateCustomerFrm = new FrmUpdateCustomer();
         static FrmDeleteCustomer deleteCustomerFrm = new FrmDeleteCustomer();
+
+        //Incidents Forms
         static FrmAddIncident addIncidentFrm = new FrmAddIncident();
         static FrmUpdateIncident updateIncidentFrm = new FrmUpdateIncident();
         static FrmDeleteIncident deleteIncidentFrm = new FrmDeleteIncident();
+        static FrmViewAllIncidents allIncidentsFrm = new FrmViewAllIncidents();
+        static FrmViewIncidentsByTechnician allIncidentsByTechnicianFrm = new FrmViewIncidentsByTechnician();
+        static FrmOpenIncidentsByTechnician allOpenIncidentsByTechnicianFrm = new FrmOpenIncidentsByTechnician();
+        static FrmIncidentsByCustomerByState incidentByCustomerByStateFrm = new FrmIncidentsByCustomerByState();
+
+        //Products Forms
         static FrmAddProduct addProductFrm = new FrmAddProduct();
         static FrmUpdateProduct updateProductFrm = new FrmUpdateProduct();
         static FrmDeleteProduct deleteProductFrm = new FrmDeleteProduct();
+
+        //Registrations Forms
+        static FrmAddRegistration addRegistrationFrm = new FrmAddRegistration();
         static FrmUpdateRegistration updateRegistrationFrm = new FrmUpdateRegistration();
         static FrmDeleteRegistration deleteRegistrationFrm = new FrmDeleteRegistration();
+        static FrmRegistrationsByProduct registrationsByProductFrm = new FrmRegistrationsByProduct();
+
+        //Technicians Forms
+        static FrmAddTechnician addTechnicianFrm = new FrmAddTechnician();
+        static FrmUpdateTechnician updateTechnicianFrm = new FrmUpdateTechnician();
 
         public FrmMain()
         {
@@ -63,6 +75,8 @@ namespace SportsProUserInterfaceLayer
             GenericMethods.FormatMdiChild(deleteProductFrm, this);
             GenericMethods.FormatMdiChild(updateRegistrationFrm, this);
             GenericMethods.FormatMdiChild(deleteRegistrationFrm, this);
+            GenericMethods.FormatMdiChild(addTechnicianFrm, this);
+            GenericMethods.FormatMdiChild(updateTechnicianFrm, this);
         }
 
         private void DisplayForm(object sender, EventArgs e)
@@ -155,6 +169,16 @@ namespace SportsProUserInterfaceLayer
                     HideAndResetOtherForms(deleteRegistrationFrm.Name);
                     deleteRegistrationFrm.Show();
                     deleteRegistrationFrm.ClearAll();
+                    break;
+                case "Add Technician":
+                    HideAndResetOtherForms(addTechnicianFrm.Name);
+                    addTechnicianFrm.Show();
+                    addTechnicianFrm.ClearAll();
+                    break;
+                case "Update Technician":
+                    HideAndResetOtherForms(updateTechnicianFrm.Name);
+                    updateTechnicianFrm.Show();
+                    updateTechnicianFrm.ClearAll();
                     break;
                 default: //Do nothing.
                     break;

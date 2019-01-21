@@ -87,5 +87,20 @@ namespace SportsProBLLClassLibrary
 
             return myTechnician;
         }
+
+        public bool RequestToAddTechnician(Technician tech)
+        {
+            try
+            {
+                if (myTechnicianDAL.AddTechnician(tech.Name, tech.Email, tech.Phone) is true)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }

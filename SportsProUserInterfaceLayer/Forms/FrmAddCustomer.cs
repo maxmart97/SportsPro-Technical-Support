@@ -50,7 +50,7 @@ namespace SportsProUserInterfaceLayer
                     City = city,
                     State = stateCode,
                     ZipCode = zipCode,
-                    Phone = Format.PhoneNumber(phone),
+                    Phone = Format.PhoneNumber_Parentheses(phone),
                     Email = email,
                 };
 

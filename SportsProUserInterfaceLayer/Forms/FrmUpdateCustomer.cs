@@ -97,7 +97,7 @@ namespace SportsProUserInterfaceLayer.Forms
                         City = txtCity.Text,
                         State = cboState.SelectedValue.ToString(),
                         ZipCode = txtZipCode.Text,
-                        Phone = Format.PhoneNumber(txtPhone.Text),
+                        Phone = Format.PhoneNumber_Parentheses(txtPhone.Text),
                         Email = txtEmail.Text,
                     };
 

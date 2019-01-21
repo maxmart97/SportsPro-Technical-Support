@@ -77,9 +77,7 @@ namespace SportsProDALClassLibrary
             {
                 cmdAddProduct.Connection.Open();
 
-                int numberOfIncidents = (int)cmdAddProduct.ExecuteScalar();
-
-                if (numberOfIncidents == 0)
+                if ((int)cmdAddProduct.ExecuteScalar() == 0)
                 {
                     cmdAddProduct.CommandText = insertStatement;
 
