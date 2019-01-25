@@ -62,11 +62,17 @@ namespace SportsProUserInterfaceLayer
                 {
                     //Checks if the registration was successful.
                     if (myRegistrationBLL.AddNewRegistration(myRegistration) is true)
-                        MessageBox.Show("The product was successfully registered.", "Add Registration", 
+                    {
+                        MessageBox.Show("The product was successfully registered.", "Add Registration",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cboCustomer.SelectedIndex = -1;
+                        cboProduct.SelectedIndex = -1;
+                    } 
                     else
-                        MessageBox.Show("The registration already exists.", "Add Registration", 
+                    {
+                        MessageBox.Show("The registration already exists.", "Add Registration",
                             MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }  
                 }
                 /* Action performed after exception has bubbled up from DAL
                  * when the database is unreachable. */

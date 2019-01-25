@@ -28,14 +28,24 @@ namespace SportsProDALClassLibrary
         {
             DataTable dtCustRegForSpecifiedProd = new DataTable();
 
+            string selectStatement = "SELECT Registrations.CustomerID, [Name], Email, RegistrationDate " +
+                                     "FROM Registrations INNER JOIN Customers ON Registrations.CustomerID = Customers.CustomerID " +
+                                     "WHERE ProductCode = @ProductCode;";
+
             /* Sets up SqlCommand using the parameterized constructor.
              * CommandText is set to the name of the stored procedure. */
-            SqlCommand cmdCustRegForSpecifiedProd =
-                new SqlCommand("spCustomerProductRegistrations", connTsDb);
+            SqlCommand cmdCustRegForSpecifiedProd = new SqlCommand(selectStatement, connTsDb);
 
             //Changes SqlCommand's CommandType to StoredProcedure and sets up the needed parameter.
-            cmdCustRegForSpecifiedProd.CommandType = CommandType.StoredProcedure;
             cmdCustRegForSpecifiedProd.Parameters.AddWithValue("@ProductCode", prodCode);
+
+            /*
+             * WITH STORED PROCEDURE IN DATABASE ON LAPTOP AND SCHOOL SERVERS
+             * 
+             * SqlCommand cmdCustRegForSpecifiedProd = new SqlCommand("spCustomerProductRegistrations", connTsDb);
+             * 
+             * cmdCustRegForSpecifiedProd.CommandType = CommandType.StoredProcedure;
+            */
 
             try
             {
@@ -65,14 +75,24 @@ namespace SportsProDALClassLibrary
         /// <returns>True if registration is successful and false if registration failed.</returns>
         private bool AddRegistration(int customerID, string productCode, DateTime regDate)
         {
+            string insertStatement = "INSERT INTO dbo.Registrations " +
+                                     "VALUES (@customerID, @productCode, @registrationDate);";
+
             //Creates a SqlCommand using the parameterized constructor. CommandText is name of StoredProcedure.
-            SqlCommand addCommand = new SqlCommand("spAddRegistration", connTsDb);
+            SqlCommand addCommand = new SqlCommand(insertStatement, connTsDb);
 
             //Sets CommandType to StoredProcedure and sets up parameters.
-            addCommand.CommandType = CommandType.StoredProcedure;
             addCommand.Parameters.AddWithValue("@customerID", customerID);
             addCommand.Parameters.AddWithValue("@productCode", productCode);
             addCommand.Parameters.AddWithValue("@registrationDate", regDate);
+
+            /* 
+             * WITH USE OF STORED PROCEDURE IN DATABASE ON LAPTOP AND SCHOOL SERVERS
+             * 
+             * SqlCommand addCommand = new SqlCommand("spAddRegistration", connTsDb);
+             * addCommand.CommandType = CommandType.StoredProcedure;
+             * 
+            */
 
             try
             {
@@ -193,9 +213,9 @@ namespace SportsProDALClassLibrary
                 else
                     return false;
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             finally
             {

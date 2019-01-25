@@ -19,12 +19,23 @@ namespace SportsProUserInterfaceLayer.Forms
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if (tbUsername.Text == "Admin" && tbPassword.Text == "password")
+            if (tbUsername.Text == "admin")
             {
-                FrmMain myFrmMain = new FrmMain();
+                if (tbPassword.Text == "password")
+                {
+                    FrmMain myFrmMain = new FrmMain();
 
-                myFrmMain.Show();
-                this.Hide();
+                    myFrmMain.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Password is incorrect.", "Incorrect Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Username is incorrect.", "Incorrect Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

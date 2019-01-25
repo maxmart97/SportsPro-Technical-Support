@@ -198,7 +198,6 @@
             this.Controls.Add(this.tbProductName);
             this.Name = "FrmUpdateProduct";
             this.Text = "Update Product";
-            this.Load += new System.EventHandler(this.FrmUpdateProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsProduct)).EndInit();
             this.grpProducts.ResumeLayout(false);
             this.ResumeLayout(false);

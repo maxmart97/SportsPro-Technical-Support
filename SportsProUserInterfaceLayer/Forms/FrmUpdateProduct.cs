@@ -22,12 +22,16 @@ namespace SportsProUserInterfaceLayer.Forms
             InitializeComponent();
         }
 
-        private void FrmUpdateProduct_Load(object sender, EventArgs e)
+        public void LoadProducts()
         {
             try
             {
-                this.LoadProducts();
-                this.ClearAll();
+                dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Products);
+
+                var products = (from product in dc.Products
+                                select product).ToList();
+
+                bsProduct.DataSource = products;
             }
             catch
             {
@@ -36,19 +40,9 @@ namespace SportsProUserInterfaceLayer.Forms
             }
         }
 
-        public void LoadProducts()
-        {
-            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Products);
-
-            var products = (from product in dc.Products
-                            select product).ToList();
-
-            bsProduct.DataSource = products;
-        }
-
         private void LbName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lbName.Focused)
+            if (lbName.Focused && lbName.Items.Count > 1 && lbName.SelectedItem != null)
             {
                 this.EnableProductControls();
 

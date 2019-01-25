@@ -35,14 +35,14 @@
             this.btnReturnToMainMenu = new System.Windows.Forms.Button();
             this.lblInstructions = new System.Windows.Forms.Label();
             this.dgvRegistrations = new System.Windows.Forms.DataGridView();
-            this.dgvColCustName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColRegistrationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsRegistration = new System.Windows.Forms.BindingSource(this.components);
             this.lblCustomer = new System.Windows.Forms.Label();
             this.lblProduct = new System.Windows.Forms.Label();
             this.lblRegDate = new System.Windows.Forms.Label();
             this.btnDeleteRegistration = new System.Windows.Forms.Button();
+            this.dgvColCustName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColRegistrationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             lblCustomerOutputDesc = new System.Windows.Forms.Label();
             lblProductOutputDesc = new System.Windows.Forms.Label();
             lblRegDateOutputDesc = new System.Windows.Forms.Label();
@@ -122,27 +122,6 @@
             this.dgvRegistrations.TabIndex = 108;
             this.dgvRegistrations.SelectionChanged += new System.EventHandler(this.DgvRegistrations_SelectionChanged);
             // 
-            // dgvColCustName
-            // 
-            this.dgvColCustName.DataPropertyName = "CustomerName";
-            this.dgvColCustName.HeaderText = "CustomerName";
-            this.dgvColCustName.Name = "dgvColCustName";
-            this.dgvColCustName.ReadOnly = true;
-            // 
-            // dgvColProductName
-            // 
-            this.dgvColProductName.DataPropertyName = "ProductName";
-            this.dgvColProductName.HeaderText = "ProductName";
-            this.dgvColProductName.Name = "dgvColProductName";
-            this.dgvColProductName.ReadOnly = true;
-            // 
-            // dgvColRegistrationDate
-            // 
-            this.dgvColRegistrationDate.DataPropertyName = "RegistrationDate";
-            this.dgvColRegistrationDate.HeaderText = "RegistrationDate";
-            this.dgvColRegistrationDate.Name = "dgvColRegistrationDate";
-            this.dgvColRegistrationDate.ReadOnly = true;
-            // 
             // bsRegistration
             // 
             this.bsRegistration.DataSource = typeof(SportsProUserInterfaceLayer.LINQ_to_SQL.Registration);
@@ -188,6 +167,27 @@
             this.btnDeleteRegistration.UseVisualStyleBackColor = true;
             this.btnDeleteRegistration.Click += new System.EventHandler(this.BtnDeleteRegistration_Click);
             // 
+            // dgvColCustName
+            // 
+            this.dgvColCustName.DataPropertyName = "CustomerName";
+            this.dgvColCustName.HeaderText = "Customer Name";
+            this.dgvColCustName.Name = "dgvColCustName";
+            this.dgvColCustName.ReadOnly = true;
+            // 
+            // dgvColProductName
+            // 
+            this.dgvColProductName.DataPropertyName = "ProductName";
+            this.dgvColProductName.HeaderText = "Product Name";
+            this.dgvColProductName.Name = "dgvColProductName";
+            this.dgvColProductName.ReadOnly = true;
+            // 
+            // dgvColRegistrationDate
+            // 
+            this.dgvColRegistrationDate.DataPropertyName = "RegistrationDate";
+            this.dgvColRegistrationDate.HeaderText = "Registration Date";
+            this.dgvColRegistrationDate.Name = "dgvColRegistrationDate";
+            this.dgvColRegistrationDate.ReadOnly = true;
+            // 
             // FrmDeleteRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -206,7 +206,6 @@
             this.Controls.Add(this.btnReturnToMainMenu);
             this.Name = "FrmDeleteRegistration";
             this.Text = "Delete Registration";
-            this.Load += new System.EventHandler(this.FrmDeleteRegistration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrations)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRegistration)).EndInit();
             this.ResumeLayout(false);
@@ -220,12 +219,12 @@
         private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.DataGridView dgvRegistrations;
         private System.Windows.Forms.BindingSource bsRegistration;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCustName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColProductName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColRegistrationDate;
         private System.Windows.Forms.Label lblCustomer;
         private System.Windows.Forms.Label lblProduct;
         private System.Windows.Forms.Label lblRegDate;
         private System.Windows.Forms.Button btnDeleteRegistration;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCustName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColRegistrationDate;
     }
 }

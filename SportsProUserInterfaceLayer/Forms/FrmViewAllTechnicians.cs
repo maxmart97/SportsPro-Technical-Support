@@ -11,23 +11,23 @@ using SportsProUserInterfaceLayer.LINQ_to_SQL;
 
 namespace SportsProUserInterfaceLayer.Forms
 {
-    public partial class FrmViewAllProducts : Form
+    public partial class FrmViewAllTechnicians : Form
     {
         TechSupportDB_LINQ2SQLDataContext dc = new TechSupportDB_LINQ2SQLDataContext();
 
-        public FrmViewAllProducts()
+        public FrmViewAllTechnicians()
         {
             InitializeComponent();
         }
 
-        public void LoadProducts()
+        public void LoadTechnicians()
         {
-            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Products);
+            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Technicians);
 
-            var products = (from product in dc.Products
-                            select product).ToList();
+            var technicians = (from technician in dc.Technicians
+                               select technician).ToList();
 
-            bsProducts.DataSource = products;
+            bsTechnicians.DataSource = technicians;
         }
 
         private void BtnReturnToMainMenu_Click(object sender, EventArgs e)

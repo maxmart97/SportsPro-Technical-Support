@@ -40,7 +40,7 @@ namespace SportsProUserInterfaceLayer
 
             string validatorResult = CustomerValidator.IsCustomerDataValid(name, address, stateCode, city, zipCode, phone, email);
 
-            if (validatorResult == "Data entered is valid.")
+            if (validatorResult == "Valid")
             {
                 CustomerBLL myBLL = new CustomerBLL();
 

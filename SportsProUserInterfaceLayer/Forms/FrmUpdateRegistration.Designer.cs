@@ -204,7 +204,6 @@
             this.Controls.Add(this.lblInstructions);
             this.Name = "FrmUpdateRegistration";
             this.Text = "Update Registration";
-            this.Load += new System.EventHandler(this.FrmUpdateRegistration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrations)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRegistration)).EndInit();
             this.ResumeLayout(false);

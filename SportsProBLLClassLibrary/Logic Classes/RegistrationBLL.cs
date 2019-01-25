@@ -73,9 +73,9 @@ namespace SportsProBLLClassLibrary
                 else
                     return false;
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 

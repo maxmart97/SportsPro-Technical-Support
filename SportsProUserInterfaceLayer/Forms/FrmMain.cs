@@ -35,17 +35,23 @@ namespace SportsProUserInterfaceLayer
         static FrmAddProduct addProductFrm = new FrmAddProduct();
         static FrmUpdateProduct updateProductFrm = new FrmUpdateProduct();
         static FrmDeleteProduct deleteProductFrm = new FrmDeleteProduct();
+        static FrmViewAllProducts allProductsFrm = new FrmViewAllProducts();
 
         //Registrations Forms
         static FrmAddRegistration addRegistrationFrm = new FrmAddRegistration();
         static FrmUpdateRegistration updateRegistrationFrm = new FrmUpdateRegistration();
         static FrmDeleteRegistration deleteRegistrationFrm = new FrmDeleteRegistration();
         static FrmRegistrationsByProduct registrationsByProductFrm = new FrmRegistrationsByProduct();
+        static FrmViewAllRegistrations allRegistrationsFrm = new FrmViewAllRegistrations();
 
         //Technicians Forms
         static FrmAddTechnician addTechnicianFrm = new FrmAddTechnician();
         static FrmUpdateTechnician updateTechnicianFrm = new FrmUpdateTechnician();
         static FrmDeleteTechnician deleteTechnicianFrm = new FrmDeleteTechnician();
+        static FrmViewAllTechnicians allTechniciansFrm = new FrmViewAllTechnicians();
+
+        //Miscellaneous Forms
+        static FrmContactDeveloper contactDeveloperFrm = new FrmContactDeveloper();
 
         public FrmMain()
         {
@@ -81,6 +87,10 @@ namespace SportsProUserInterfaceLayer
             GenericMethods.FormatMdiChild(updateTechnicianFrm, this);
             GenericMethods.FormatMdiChild(deleteTechnicianFrm, this);
             GenericMethods.FormatMdiChild(allCustomersFrm, this);
+            GenericMethods.FormatMdiChild(allProductsFrm, this);
+            GenericMethods.FormatMdiChild(allRegistrationsFrm, this);
+            GenericMethods.FormatMdiChild(allTechniciansFrm, this);
+            GenericMethods.FormatMdiChild(contactDeveloperFrm, this);
         }
 
         private void DisplayForm(object sender, EventArgs e)
@@ -156,7 +166,9 @@ namespace SportsProUserInterfaceLayer
                     break;
                 case "Update Product":
                     HideAndResetOtherForms(updateProductFrm.Name);
+                    updateProductFrm.LoadProducts();
                     updateProductFrm.Show();
+                    updateProductFrm.ClearAll();
                     break;
                 case "Delete Product":
                     HideAndResetOtherForms(deleteProductFrm.Name);
@@ -166,11 +178,14 @@ namespace SportsProUserInterfaceLayer
                     break;
                 case "Update Registration":
                     HideAndResetOtherForms(updateRegistrationFrm.Name);
+                    updateRegistrationFrm.LoadRegistrations();
+                    updateRegistrationFrm.LoadComboBoxes();
                     updateRegistrationFrm.Show();
                     updateRegistrationFrm.ClearAll();
                     break;
                 case "Delete Registration":
                     HideAndResetOtherForms(deleteRegistrationFrm.Name);
+                    deleteRegistrationFrm.LoadRegistrations();
                     deleteRegistrationFrm.Show();
                     deleteRegistrationFrm.ClearAll();
                     break;
@@ -195,6 +210,26 @@ namespace SportsProUserInterfaceLayer
                     HideAndResetOtherForms(allCustomersFrm.Name);
                     allCustomersFrm.LoadCustomers();
                     allCustomersFrm.Show();
+                    break;
+                case "Display All Products":
+                    HideAndResetOtherForms(allProductsFrm.Name);
+                    allProductsFrm.LoadProducts();
+                    allProductsFrm.Show();
+                    break;
+                case "Display All Registrations":
+                    HideAndResetOtherForms(allRegistrationsFrm.Name);
+                    allRegistrationsFrm.LoadRegistrations();
+                    allRegistrationsFrm.Show();
+                    break;
+                case "Display All Technicians":
+                    HideAndResetOtherForms(allTechniciansFrm.Name);
+                    allTechniciansFrm.LoadTechnicians();
+                    allTechniciansFrm.Show();
+                    break;
+                case "Contact Developer":
+                    HideAndResetOtherForms(contactDeveloperFrm.Name);
+                    contactDeveloperFrm.ClearAll();
+                    contactDeveloperFrm.Show();
                     break;
                 default: //Do nothing.
                     break;
@@ -289,6 +324,18 @@ namespace SportsProUserInterfaceLayer
                             frm.Hide();
                             break;
                         case "FrmViewAllCustomers":
+                            frm.Hide();
+                            break;
+                        case "FrmViewAllProducts":
+                            frm.Hide();
+                            break;
+                        case "FrmViewAllRegistrations":
+                            frm.Hide();
+                            break;
+                        case "FrmViewAllTechnicians":
+                            frm.Hide();
+                            break;
+                        case "FrmContactDeveloper":
                             frm.Hide();
                             break;
                         default: //Do nothing.

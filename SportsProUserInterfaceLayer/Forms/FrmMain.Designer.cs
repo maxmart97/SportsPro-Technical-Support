@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.msMainMenuForm = new System.Windows.Forms.MenuStrip();
             this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLogout = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +55,7 @@
             this.tsmiUpdateTechnician = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDeleteTechnician = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCustomers = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDisplayAllCustomers = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiIncidents = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDisplayAllIncidents = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDisplayIncidentsByTechnician = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +68,11 @@
             this.ssMainMenuForm = new System.Windows.Forms.StatusStrip();
             this.tsslMainMenuForm = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsmiDisplayAllCustomers = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDisplayAllProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDisplayAllRegistrations = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDisplayAllTechnicians = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiContactDeveloper = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenuForm.SuspendLayout();
             this.ssMainMenuForm.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +87,8 @@
             this.tsmiIncidents,
             this.tsmiProducts,
             this.tsmiRegistrations,
-            this.tsmiTechnicians});
+            this.tsmiTechnicians,
+            this.tsmiHelp});
             this.msMainMenuForm.Location = new System.Drawing.Point(0, 0);
             this.msMainMenuForm.Name = "msMainMenuForm";
             this.msMainMenuForm.Size = new System.Drawing.Size(1464, 28);
@@ -286,6 +293,13 @@
             this.tsmiCustomers.Size = new System.Drawing.Size(90, 24);
             this.tsmiCustomers.Text = "Customers";
             // 
+            // tsmiDisplayAllCustomers
+            // 
+            this.tsmiDisplayAllCustomers.Name = "tsmiDisplayAllCustomers";
+            this.tsmiDisplayAllCustomers.Size = new System.Drawing.Size(228, 26);
+            this.tsmiDisplayAllCustomers.Text = "Display All Customers";
+            this.tsmiDisplayAllCustomers.Click += new System.EventHandler(this.DisplayForm);
+            // 
             // tsmiIncidents
             // 
             this.tsmiIncidents.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -327,6 +341,8 @@
             // 
             // tsmiProducts
             // 
+            this.tsmiProducts.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDisplayAllProducts});
             this.tsmiProducts.Name = "tsmiProducts";
             this.tsmiProducts.Size = new System.Drawing.Size(78, 24);
             this.tsmiProducts.Text = "Products";
@@ -334,6 +350,7 @@
             // tsmiRegistrations
             // 
             this.tsmiRegistrations.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDisplayAllRegistrations,
             this.tsmiDisplayRegByProd});
             this.tsmiRegistrations.Name = "tsmiRegistrations";
             this.tsmiRegistrations.Size = new System.Drawing.Size(107, 24);
@@ -348,6 +365,8 @@
             // 
             // tsmiTechnicians
             // 
+            this.tsmiTechnicians.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDisplayAllTechnicians});
             this.tsmiTechnicians.Name = "tsmiTechnicians";
             this.tsmiTechnicians.Size = new System.Drawing.Size(96, 24);
             this.tsmiTechnicians.Text = "Technicians";
@@ -377,12 +396,41 @@
             this.tsslVersion.Size = new System.Drawing.Size(91, 20);
             this.tsslVersion.Text = "Version 2.0.0";
             // 
-            // tsmiDisplayAllCustomers
+            // tsmiDisplayAllProducts
             // 
-            this.tsmiDisplayAllCustomers.Name = "tsmiDisplayAllCustomers";
-            this.tsmiDisplayAllCustomers.Size = new System.Drawing.Size(228, 26);
-            this.tsmiDisplayAllCustomers.Text = "Display All Customers";
-            this.tsmiDisplayAllCustomers.Click += new System.EventHandler(this.DisplayForm);
+            this.tsmiDisplayAllProducts.Name = "tsmiDisplayAllProducts";
+            this.tsmiDisplayAllProducts.Size = new System.Drawing.Size(216, 26);
+            this.tsmiDisplayAllProducts.Text = "Display All Products";
+            this.tsmiDisplayAllProducts.Click += new System.EventHandler(this.DisplayForm);
+            // 
+            // tsmiDisplayAllRegistrations
+            // 
+            this.tsmiDisplayAllRegistrations.Name = "tsmiDisplayAllRegistrations";
+            this.tsmiDisplayAllRegistrations.Size = new System.Drawing.Size(298, 26);
+            this.tsmiDisplayAllRegistrations.Text = "Display All Registrations";
+            this.tsmiDisplayAllRegistrations.Click += new System.EventHandler(this.DisplayForm);
+            // 
+            // tsmiDisplayAllTechnicians
+            // 
+            this.tsmiDisplayAllTechnicians.Name = "tsmiDisplayAllTechnicians";
+            this.tsmiDisplayAllTechnicians.Size = new System.Drawing.Size(234, 26);
+            this.tsmiDisplayAllTechnicians.Text = "Display All Technicians";
+            this.tsmiDisplayAllTechnicians.Click += new System.EventHandler(this.DisplayForm);
+            // 
+            // tsmiHelp
+            // 
+            this.tsmiHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiContactDeveloper});
+            this.tsmiHelp.Name = "tsmiHelp";
+            this.tsmiHelp.Size = new System.Drawing.Size(53, 24);
+            this.tsmiHelp.Text = "Help";
+            // 
+            // tsmiContactDeveloper
+            // 
+            this.tsmiContactDeveloper.Name = "tsmiContactDeveloper";
+            this.tsmiContactDeveloper.Size = new System.Drawing.Size(216, 26);
+            this.tsmiContactDeveloper.Text = "Contact Developer";
+            this.tsmiContactDeveloper.Click += new System.EventHandler(this.DisplayForm);
             // 
             // FrmMain
             // 
@@ -391,6 +439,7 @@
             this.ClientSize = new System.Drawing.Size(1464, 798);
             this.Controls.Add(this.ssMainMenuForm);
             this.Controls.Add(this.msMainMenuForm);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msMainMenuForm;
             this.Name = "FrmMain";
@@ -447,6 +496,11 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiTechnicians;
         private System.Windows.Forms.ToolStripMenuItem tsmiLogout;
         private System.Windows.Forms.ToolStripMenuItem tsmiDisplayAllCustomers;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDisplayAllProducts;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDisplayAllRegistrations;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDisplayAllTechnicians;
+        private System.Windows.Forms.ToolStripMenuItem tsmiHelp;
+        private System.Windows.Forms.ToolStripMenuItem tsmiContactDeveloper;
     }
 }
 

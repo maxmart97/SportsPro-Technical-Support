@@ -21,32 +21,27 @@ namespace SportsProUserInterfaceLayer.Forms
             InitializeComponent();
         }
 
-        private void FrmDeleteRegistration_Load(object sender, EventArgs e)
+        public void LoadRegistrations()
         {
             try
             {
-                this.LoadRegistrations();
+                dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Registrations);
+
+                var registrations = (from registration in dc.Registrations
+                                     select new
+                                     {
+                                         CustomerName = registration.Customer.Name,
+                                         ProductName = registration.Product.Name,
+                                         registration.RegistrationDate
+                                     }).ToList();
+
+                bsRegistration.DataSource = registrations;
             }
             catch
             {
                 MessageBox.Show("Error accessing database. Please contact software developer.", "Database Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        public void LoadRegistrations()
-        {
-            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Registrations);
-
-            var registrations = (from registration in dc.Registrations
-                                 select new
-                                 {
-                                     CustomerName = registration.Customer.Name,
-                                     ProductName = registration.Product.Name,
-                                     registration.RegistrationDate
-                                 }).ToList();
-
-            bsRegistration.DataSource = registrations;
         }
 
         private void DgvRegistrations_SelectionChanged(object sender, EventArgs e)
@@ -99,17 +94,26 @@ namespace SportsProUserInterfaceLayer.Forms
                 var customerID = selectedRegInfo[0].CustomerID;
                 var productCode = selectedRegInfo[0].ProductCode;
 
-                if (myRegistrationBLL.RequestToDeleteRegistration(customerID, productCode) is true)
+                if (DialogResult.Yes == MessageBox.Show("Are you sure you want to delete " + 
+                    dgvRegistrations.SelectedCells[0].Value.ToString() + "'s registration?", 
+                    "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
-                    MessageBox.Show("The registration has been deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (myRegistrationBLL.RequestToDeleteRegistration(customerID, productCode) is true)
+                    {
+                        MessageBox.Show("The registration has been deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    this.LoadRegistrations();
-                    this.ClearAll();
-                    this.DisableControls();
+                        this.LoadRegistrations();
+                        this.ClearAll();
+                        this.DisableControls();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registration deletion unsuccessful.", "Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Registration deletion unsuccessful.", "Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Deletion canceled.");
                 }
             }
             catch

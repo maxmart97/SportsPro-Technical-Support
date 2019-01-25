@@ -51,7 +51,7 @@
             // lblProductName
             // 
             lblProductName.AutoSize = true;
-            lblProductName.Location = new System.Drawing.Point(235, 242);
+            lblProductName.Location = new System.Drawing.Point(432, 282);
             lblProductName.Name = "lblProductName";
             lblProductName.Size = new System.Drawing.Size(102, 17);
             lblProductName.TabIndex = 1;
@@ -60,7 +60,7 @@
             // lblReleaseDate
             // 
             lblReleaseDate.AutoSize = true;
-            lblReleaseDate.Location = new System.Drawing.Point(235, 376);
+            lblReleaseDate.Location = new System.Drawing.Point(432, 416);
             lblReleaseDate.Name = "lblReleaseDate";
             lblReleaseDate.Size = new System.Drawing.Size(98, 17);
             lblReleaseDate.TabIndex = 3;
@@ -69,7 +69,7 @@
             // lblVersion
             // 
             lblVersion.AutoSize = true;
-            lblVersion.Location = new System.Drawing.Point(235, 309);
+            lblVersion.Location = new System.Drawing.Point(432, 349);
             lblVersion.Name = "lblVersion";
             lblVersion.Size = new System.Drawing.Size(60, 17);
             lblVersion.TabIndex = 5;
@@ -78,7 +78,7 @@
             // lblProductCode
             // 
             lblProductCode.AutoSize = true;
-            lblProductCode.Location = new System.Drawing.Point(235, 187);
+            lblProductCode.Location = new System.Drawing.Point(432, 227);
             lblProductCode.Name = "lblProductCode";
             lblProductCode.Size = new System.Drawing.Size(98, 17);
             lblProductCode.TabIndex = 86;
@@ -91,7 +91,7 @@
             // tbProductName
             // 
             this.tbProductName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsProduct, "Name", true));
-            this.tbProductName.Location = new System.Drawing.Point(354, 239);
+            this.tbProductName.Location = new System.Drawing.Point(551, 279);
             this.tbProductName.Name = "tbProductName";
             this.tbProductName.Size = new System.Drawing.Size(398, 22);
             this.tbProductName.TabIndex = 1;
@@ -99,7 +99,7 @@
             // dtpReleaseDate
             // 
             this.dtpReleaseDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bsProduct, "ReleaseDate", true));
-            this.dtpReleaseDate.Location = new System.Drawing.Point(354, 371);
+            this.dtpReleaseDate.Location = new System.Drawing.Point(551, 411);
             this.dtpReleaseDate.Name = "dtpReleaseDate";
             this.dtpReleaseDate.Size = new System.Drawing.Size(398, 22);
             this.dtpReleaseDate.TabIndex = 3;
@@ -107,14 +107,14 @@
             // tbVersion
             // 
             this.tbVersion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsProduct, "Version", true));
-            this.tbVersion.Location = new System.Drawing.Point(354, 304);
+            this.tbVersion.Location = new System.Drawing.Point(551, 344);
             this.tbVersion.Name = "tbVersion";
             this.tbVersion.Size = new System.Drawing.Size(398, 22);
             this.tbVersion.TabIndex = 2;
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(354, 462);
+            this.btnAddProduct.Location = new System.Drawing.Point(551, 502);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(294, 65);
             this.btnAddProduct.TabIndex = 4;
@@ -126,7 +126,7 @@
             // 
             this.btnReturnToMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReturnToMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnReturnToMainMenu.Location = new System.Drawing.Point(887, 671);
+            this.btnReturnToMainMenu.Location = new System.Drawing.Point(1272, 637);
             this.btnReturnToMainMenu.Name = "btnReturnToMainMenu";
             this.btnReturnToMainMenu.Size = new System.Drawing.Size(162, 47);
             this.btnReturnToMainMenu.TabIndex = 5;
@@ -137,7 +137,7 @@
             // tbProductCode
             // 
             this.tbProductCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsProduct, "ProductCode", true));
-            this.tbProductCode.Location = new System.Drawing.Point(354, 184);
+            this.tbProductCode.Location = new System.Drawing.Point(551, 224);
             this.tbProductCode.Name = "tbProductCode";
             this.tbProductCode.Size = new System.Drawing.Size(398, 22);
             this.tbProductCode.TabIndex = 0;
@@ -145,7 +145,7 @@
             // lblInstructions
             // 
             this.lblInstructions.AutoSize = true;
-            this.lblInstructions.Location = new System.Drawing.Point(199, 92);
+            this.lblInstructions.Location = new System.Drawing.Point(396, 132);
             this.lblInstructions.Name = "lblInstructions";
             this.lblInstructions.Size = new System.Drawing.Size(617, 17);
             this.lblInstructions.TabIndex = 87;
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1061, 730);
+            this.ClientSize = new System.Drawing.Size(1446, 696);
             this.ControlBox = false;
             this.Controls.Add(this.lblInstructions);
             this.Controls.Add(lblProductCode);

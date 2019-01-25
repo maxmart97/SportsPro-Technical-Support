@@ -23,55 +23,57 @@ namespace SportsProUserInterfaceLayer.Forms
             InitializeComponent();
         }
 
-        private void FrmUpdateRegistration_Load(object sender, EventArgs e)
+        public void LoadRegistrations()
         {
             try
             {
-                this.LoadRegistrations();
-                this.LoadComboBoxes();
+                dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Registrations);
+
+                var registrations = (from registration in dc.Registrations
+                                     select new
+                                     {
+                                         CustomerName = registration.Customer.Name,
+                                         ProductName = registration.Product.Name,
+                                         registration.RegistrationDate,
+                                         registration.CustomerID,
+                                         registration.ProductCode
+                                     }).ToList();
+
+                bsRegistration.DataSource = registrations;
             }
             catch
             {
-                MessageBox.Show("Error accessing database. Please contact software developer.", "Database Error",
+                MessageBox.Show("Error loading registrations. Please contact software developer.", "Database Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        public void LoadRegistrations()
-        {
-            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Registrations);
-
-            var registrations = (from registration in dc.Registrations
-                                 select new
-                                 {
-                                     CustomerName = registration.Customer.Name,
-                                     ProductName = registration.Product.Name,
-                                     registration.RegistrationDate,
-                                     registration.CustomerID,
-                                     registration.ProductCode
-                                 }).ToList();
-
-            bsRegistration.DataSource = registrations;
-        }
-
         public void LoadComboBoxes()
         {
-            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Customers);
-            dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Products);
+            try
+            {
+                dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Customers);
+                dc.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, dc.Products);
 
-            var customers = from customer in dc.Customers
-                            select customer;
+                var customers = from customer in dc.Customers
+                                select customer;
 
-            cboCustomers.DisplayMember = "Name";
-            cboCustomers.ValueMember = "CustomerID";
-            cboCustomers.DataSource = customers;
+                cboCustomers.DisplayMember = "Name";
+                cboCustomers.ValueMember = "CustomerID";
+                cboCustomers.DataSource = customers;
 
-            var products = from product in dc.Products
-                           select product;
+                var products = from product in dc.Products
+                               select product;
 
-            cboProducts.DisplayMember = "Name";
-            cboProducts.ValueMember = "ProductCode";
-            cboProducts.DataSource = products;
+                cboProducts.DisplayMember = "Name";
+                cboProducts.ValueMember = "ProductCode";
+                cboProducts.DataSource = products;
+            }
+            catch
+            {
+                MessageBox.Show("Error loading combobox data. Please contact software developer.", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void DgvRegistrations_SelectionChanged(object sender, EventArgs e)
@@ -184,9 +186,9 @@ namespace SportsProUserInterfaceLayer.Forms
                     MessageBox.Show("Registration update unsuccessful.", "Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Error accessing database. Please contact software developer.", "Database Error",
+                MessageBox.Show(ex + "\n\n\nPlease contact software developer.", "Database Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
