@@ -74,7 +74,7 @@
             this.tbUsername.Location = new System.Drawing.Point(634, 342);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(367, 38);
-            this.tbUsername.TabIndex = 3;
+            this.tbUsername.TabIndex = 0;
             this.tbUsername.WordWrap = false;
             // 
             // tbPassword
@@ -84,7 +84,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(367, 38);
-            this.tbPassword.TabIndex = 4;
+            this.tbPassword.TabIndex = 1;
             this.tbPassword.WordWrap = false;
             // 
             // btnLogin
@@ -93,13 +93,14 @@
             this.btnLogin.Location = new System.Drawing.Point(577, 578);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(294, 65);
-            this.btnLogin.TabIndex = 40;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // FrmTitleScreen
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
