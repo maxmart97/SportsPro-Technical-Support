@@ -1,0 +1,9 @@
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Release\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Release\SportsProBLLClassLibrary.pdb
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Release\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\bin\Release\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Release\SportsProBLLClassLibrary.csprojAssemblyReference.cache
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Release\SportsProBLLClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Release\SportsProBLLClassLibrary.csproj.CopyComplete
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Release\SportsProBLLClassLibrary.dll
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProBLLClassLibrary\obj\Release\SportsProBLLClassLibrary.pdb

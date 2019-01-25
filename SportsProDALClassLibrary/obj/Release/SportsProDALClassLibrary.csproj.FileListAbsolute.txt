@@ -1,0 +1,6 @@
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\bin\Release\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\bin\Release\SportsProDALClassLibrary.pdb
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Release\SportsProDALClassLibrary.csprojAssemblyReference.cache
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Release\SportsProDALClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Release\SportsProDALClassLibrary.dll
+C:\Users\maxma\Desktop\Programming\Projects\SportsPro_TechSupportApp\SportsProDALClassLibrary\obj\Release\SportsProDALClassLibrary.pdb
