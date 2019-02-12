@@ -13,3 +13,5 @@ for consistency and unnecessary code. I am back in school for the spring semeste
 
 1. Go to: /SportsProSetupProject/Release/SportsProSetupProject.msi
 2. Download the .msi file and run it. It will take you through a Windows installer and install the program to your computer. It will also add the program as a shortcut to your desktop and start menu.
+
+TEST
